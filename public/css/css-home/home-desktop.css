@@ -168,7 +168,7 @@ main .recetas{
 
 main .recetas .product{
     background-color: rgba(255, 255, 255, 0.589);
-    margin: 1rem;
+    margin: 2.5rem;
     border-radius: 2rem 2rem 0 0;
     height: 20rem;
     width: 15rem;
@@ -194,7 +194,6 @@ main .recetas .product p{
     font-size: 1.2rem;
     padding: 1.5rem;
 }
-
 
 
 
