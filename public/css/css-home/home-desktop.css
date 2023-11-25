@@ -1,3 +1,13 @@
+:root{
+    --colorTittleClear: #ffebda;
+    --fondoGeneral: #ffffff96;
+    --colorTittleDark: #5c2f05;
+    --colorText: #833f00;
+}
+
+
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,14 +15,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-
-
 /* ESTILOS - BARRA DE OPCIONES */
 
 header nav{
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
 }
 
 header nav ul {
@@ -31,7 +37,7 @@ header nav ul li{
 
 header nav ul li a{
     text-decoration: none;
-    color: rgb(21, 21, 34);
+    color: #151522;
     font-size: 1.6rem;
     font-weight: bold;
 }
@@ -45,7 +51,7 @@ header nav ul li a{
 /* Fondo del header */
 header .headerImg{
     display: flex;
-    background-image: url(./img/fondoimg.jpg);
+    background-image: url(/public/img/fondoimg.jpg);
     width: 100%;
     height: 39rem;
 }
@@ -54,12 +60,12 @@ header .headerImg{
 /* Texto del header */
 
 header .headerImg h1{
-    padding-left: 20rem;
+    padding-left: 24rem;
     padding-right: 15rem;
     padding-top: 16rem;
     font-size: 8rem;
     font-weight: bold;
-    color: #ffebda;
+    color: var(--colorTittleClear);
 }
 
 
@@ -85,7 +91,7 @@ main .recetas::-webkit-scrollbar{
 }
 
 main .container .product{
-    background-color: rgba(255, 255, 255, 0.589);
+    background-color: #ffffff96;
     margin: 1rem;
     border-radius: 2rem 2rem 0 0;
     height: 20rem;
@@ -122,12 +128,12 @@ main .container-img{
 
 }
 main .container-img .box1{
-    background-image: url(./img/img-box1.png);
+    background-image: url(/public/img/img-box1.png);
     width: 50%;
     height: 30rem;
 }
 main .container-img .box2{
-    background-image: url(./img/img-box2.png);
+    background-image: url(/public/img/img-box2.png);
     width: 50%;
     height: 30rem;
 }
@@ -198,6 +204,8 @@ main .winner{
     padding-top: 3rem;
     display: flex;
     padding-bottom: 5rem;
+    margin-left: 7rem;
+    margin-right: 5rem;
 }
 
 main .winner img{
@@ -237,57 +245,11 @@ main .winner .descrip-winner a{
     border: 4px dotted #ffebda;
 }
 
-
-
-
-/* ESTILOS PARA OPINIONES DE USUARIOS */
-
-/* 
-main .title-testonial .content-testi h1{
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #6d3500;
-
-}
-
-main .wrapper{
-    padding-left: 20rem;
-    padding-right: 20rem;
-}
-
-main .wrapper .testimonial-item{
-    display: flex;
-    margin: 3rem;
-    justify-content: center;
-    background-color: #3d1e00;
-}
-
-main .wrapper .testimonial-item img{
-    width: 5rem;
-    padding-top: 1.2rem;
-} 
-
-main .wrapper .testimonial-item .client-name{
-    font-size: 1.3rem;
-    padding-left: 0.5rem;
-    color: #ffd9b5;
-}
-
-main .wrapper .testimonial-item .testimonial-text p{
-    padding-left: 8rem;
-}
- */
-
-
-
-
-
  /* ESTILOS CARRUCEL AUTOMATICO */
 
  main .marquee-img{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
  }
  main .marquee-img .marq-box img{
     width: 20rem;
@@ -307,8 +269,8 @@ main .wrapper .testimonial-item .testimonial-text p{
     background-color: #3b1c00;
  }
  footer .preguntas-frecuentes{
-    padding-left: 15rem;
- }
+    text-align: center;
+}
  footer .preguntas-frecuentes a{
     font-size: 1.5rem;
     color: #ffebda;
