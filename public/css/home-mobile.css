@@ -1,0 +1,295 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+/* ESTILOS - BARRA DE OPCIONES */
+
+header nav{
+    background-color: rgb(255, 255, 255);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li{
+    margin: 0.2rem;
+}
+
+header nav ul li{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: rgb(21, 21, 34);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* ESTILOS DEL HEADER COMO TAL */
+
+/* Fondo del header */
+header .headerImg{
+    display: flex;
+    background-image: url(./img/fondoimg.jpg);
+    width: auto;
+    height: 25rem;
+}
+
+
+/* Texto del header */
+
+header .headerImg h1{
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-top: 9rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffebda;
+}
+
+
+
+
+
+
+/* ESTILOS PRODUCTOS PRINCIPALES AL INICIO DEL MAIN*/
+
+main{
+    display: flex;
+    padding-top: 2rem;
+    background-color: #ffebda;
+    padding-bottom: 5rem;
+    flex-direction: column;
+}
+
+main .container{
+    padding-left: 1.9rem;
+    
+}
+
+
+
+
+main .container .product{
+    background-color: rgba(255, 255, 255, 0.589);
+    margin: 1rem;
+    height: 20rem;
+    width: 15rem;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    border-radius: 2rem 2rem 1rem 1rem;
+}
+
+main .container .product:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+}
+
+main .container .product a img{
+    width: 15rem;
+    height: 12rem;
+    border-radius: 2rem 2rem 0 0;
+    /* margin: 2rem; */
+}
+
+main .container .product p{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+}
+
+
+/* ESTILOS DE 2 IMG GRANDES */
+
+main .container-img{
+    margin-top: 3rem;
+    display: flex;
+}
+
+main .container-img{
+    flex-direction: column;
+}
+main .container-img .box1{
+    background-image: url(./img/img-box1.png);
+    width: auto;
+    height: 15rem;
+}
+main .container-img .box2{
+    background-image: url(./img/img-box2.png);
+    width: auto;
+    height: 15rem;
+}
+
+
+main .container-img .box h3{
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 2rem;
+    color: #fff4ea;
+    padding-bottom: 3rem;
+}
+
+main .container-img .box  a{
+    /* display: flex; */
+    padding-left: 43%;
+    padding-top: 1rem;
+    font-size: 1rem;
+    color: #ffebda;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+
+
+
+main .recetas{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column;
+    padding-left: 1.5rem; */
+    overflow-x: auto;
+}
+
+main .recetas::-webkit-scrollbar{
+    width:  0;
+}
+
+main .recetas .product{
+    background-color: rgba(255, 255, 255, 0.589);
+    margin: 1rem;
+    border-radius: 2rem 2rem 1rem 1rem;
+    height: 20rem;
+    width: 15rem;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    line-height: 110px;
+    text-align: center; 
+    margin-right: 2px;
+}
+
+main .recetas .product:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+}
+
+main .recetas .product a img{
+    width: 15rem;
+    height: 12rem;
+    border-radius: 2rem 2rem 0 0;
+    /* margin: 2rem; */
+}
+
+
+
+
+
+/* ESTILOS DEL WINNER */
+
+
+main .winner{
+    padding-top: 3rem;
+    display: flex;
+    padding-bottom: 5rem;
+    flex-direction: column;
+}
+
+main .winner img{
+    width: auto;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+main .winner .descrip-winner{
+    padding-left: 2rem;
+}
+
+
+main .winner  .descrip-winner h1{
+    padding-top: 1.5rem;
+    font-size: 1.6rem;
+    color: #5c2f05;
+    padding-right: 1.8rem;
+    padding-bottom: 1.3rem;
+}
+
+main .winner .descrip-winner p{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #833f00;
+    padding-right: 1.8rem;
+    padding-bottom: 3rem;
+}
+
+
+
+
+
+main .winner .descrip-winner a{
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffebda;
+    background-color: #5c2f05;
+    padding: 1rem;
+    border: 4px dotted #ffebda;
+}
+
+
+
+
+/* ESTILOS DEL MARQUEE */
+
+
+main .marquee-img{
+    display: flex;
+    justify-content: center;
+ }
+ main .marquee-img .marq-box img{
+    width: 2rem;
+    margin: 1.2rem;
+    flex-direction: center;
+    border-radius: 5px;
+    /*justify-content: center; */
+ }
+
+
+
+
+  /* ESTILOS DEL FOOTER */
+
+
+  footer{
+    display: flex;
+    padding: 5rem;
+    background-color: #3b1c00;
+ }
+ footer .preguntas-frecuentes a{
+    flex-direction: column;
+    font-size: 1.5rem;
+    color: #ffebda;
+    margin: 2rem;
+    text-decoration: none;
+ }
+

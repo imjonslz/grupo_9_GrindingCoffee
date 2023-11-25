@@ -1,0 +1,317 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+/* ESTILOS - BARRA DE OPCIONES */
+
+header nav{
+    background-color: rgb(255, 255, 255);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li{
+    margin: 1rem;
+}
+
+header nav ul li{
+    padding-top: 3rem;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: rgb(21, 21, 34);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+
+
+
+
+/* ESTILOS DEL HEADER COMO TAL */
+
+/* Fondo del header */
+header .headerImg{
+    display: flex;
+    background-image: url(./img/fondoimg.jpg);
+    width: 100%;
+    height: 39rem;
+}
+
+
+/* Texto del header */
+
+header .headerImg h1{
+    padding-left: 20rem;
+    padding-right: 15rem;
+    padding-top: 16rem;
+    font-size: 8rem;
+    font-weight: bold;
+    color: #ffebda;
+}
+
+
+
+
+/* ESTILOS PRODUCTOS PRINCIPALES AL INICIO DEL MAIN*/
+
+main{
+    padding-top: 2rem;
+    background-color: #ffebda;
+    padding-bottom: 5rem;
+}
+
+main .container{
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+
+main .recetas::-webkit-scrollbar{
+    width:  0;
+}
+
+main .container .product{
+    background-color: rgba(255, 255, 255, 0.589);
+    margin: 1rem;
+    border-radius: 2rem 2rem 0 0;
+    height: 20rem;
+    width: 15rem;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+main .container .product:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+}
+
+main .container .product a img{
+    width: 15rem;
+    height: 12rem;
+    border-radius: 2rem 2rem 0 0;
+    /* margin: 2rem; */
+}
+
+main .container .product p{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+}
+
+
+/* ESTILOS DE 2 IMG GRANDES */
+
+main .container-img{
+    display: flex;
+    margin-top: 3rem;
+
+}
+main .container-img .box1{
+    background-image: url(./img/img-box1.png);
+    width: 50%;
+    height: 30rem;
+}
+main .container-img .box2{
+    background-image: url(./img/img-box2.png);
+    width: 50%;
+    height: 30rem;
+}
+
+main .container-img .box h3{
+    text-align: center;
+    padding-top: 12rem;
+    font-size: 4rem;
+    color: #fff4ea;
+    padding-bottom: 3rem;
+}
+
+main .container-img .box  a{
+    /* display: flex; */
+    padding-left: 48%;
+    padding-top: 4rem;
+    font-size: 2rem;
+    color: #ffebda;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* ESTILOS PARA MAS PRODUCTOS */
+
+main .recetas{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+main .recetas .product{
+    background-color: rgba(255, 255, 255, 0.589);
+    margin: 1rem;
+    border-radius: 2rem 2rem 0 0;
+    height: 20rem;
+    width: 15rem;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+main .recetas .product:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+}
+
+main .recetas .product a img{
+    width: 15rem;
+    height: 12rem;
+    border-radius: 2rem 2rem 0 0;
+    /* margin: 2rem; */
+}
+
+main .recetas .product p{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+}
+
+
+
+
+/* ESTILOS DE PRODUCTO WINNER */
+
+main .winner{
+    padding-top: 3rem;
+    display: flex;
+    padding-bottom: 5rem;
+}
+
+main .winner img{
+    width: 60%;
+    padding: 5rem;
+    border-radius: 7rem;
+}
+
+
+main .winner .descrip-winner{
+    padding-top: 2rem;
+    padding-right: 10rem;
+}
+
+
+main .winner  .descrip-winner h1{
+    padding-top: 5rem;
+    font-size: 3rem;
+    color: #5c2f05;
+    padding-bottom: 2.4rem;
+}
+
+main .winner .descrip-winner p{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #833f00;
+    padding-bottom: 3rem;
+}
+
+main .winner .descrip-winner a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffebda;
+    background-color: #5c2f05;
+    padding: 1.1rem;
+    border: 4px dotted #ffebda;
+}
+
+
+
+
+/* ESTILOS PARA OPINIONES DE USUARIOS */
+
+/* 
+main .title-testonial .content-testi h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6d3500;
+
+}
+
+main .wrapper{
+    padding-left: 20rem;
+    padding-right: 20rem;
+}
+
+main .wrapper .testimonial-item{
+    display: flex;
+    margin: 3rem;
+    justify-content: center;
+    background-color: #3d1e00;
+}
+
+main .wrapper .testimonial-item img{
+    width: 5rem;
+    padding-top: 1.2rem;
+} 
+
+main .wrapper .testimonial-item .client-name{
+    font-size: 1.3rem;
+    padding-left: 0.5rem;
+    color: #ffd9b5;
+}
+
+main .wrapper .testimonial-item .testimonial-text p{
+    padding-left: 8rem;
+}
+ */
+
+
+
+
+
+ /* ESTILOS CARRUCEL AUTOMATICO */
+
+ main .marquee-img{
+    display: flex;
+    justify-content: center;
+ }
+ main .marquee-img .marq-box img{
+    width: 20rem;
+    margin: 3rem;
+    flex-direction: center;
+    border-radius: 5px;
+    /*justify-content: center; */
+ }
+
+
+
+ /* ESTILOS DEL FOOTER */
+
+
+ footer{
+    padding: 5rem;
+    background-color: #3b1c00;
+ }
+ footer .preguntas-frecuentes{
+    padding-left: 15rem;
+ }
+ footer .preguntas-frecuentes a{
+    font-size: 1.5rem;
+    color: #ffebda;
+    margin: 2rem;
+    text-decoration: none;
+ }
