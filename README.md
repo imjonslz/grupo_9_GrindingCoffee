@@ -2,12 +2,12 @@
 
 Integrantes:  
   
-Jonathan Salazar: Product Designer, camino a Front Developer, Venezolano residenciado en Argentina desde el 2017.  
+Jonathan Salazar: Product Designer, camino a Front End Developer, Venezolano residenciado en Argentina desde el 2017.  
   
-Juan Jose Tellez  	
-Mariano Herrera  	
-Daniel Contreras  	
-Agustin Allende  	
+Juan Jose Tellez  
+Mariano Herrera  
+Daniel Contreras  
+Agustin Allende  
 Bernardo Di Leo  	
   
 Descripcion de los productos ofrecidos:  
