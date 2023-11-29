@@ -51,7 +51,7 @@ header nav ul li a{
 /* Fondo del header */
 header .headerImg{
     display: flex;
-    background-image: url(/public/img/fondoimg.jpg);
+    background-image: url(/img/fondoimg.jpg);
     width: 100%;
     height: 39rem;
 }
@@ -130,12 +130,12 @@ main .container-img{
 
 }
 main .container-img .box1{
-    background-image: url(/public/img/img-box1.png);
+    background-image: url(/img/img-box1.png);
     width: 50%;
     height: 30rem;
 }
 main .container-img .box2{
-    background-image: url(/public/img/img-box2.png);
+    background-image: url(/img/img-box2.png);
     width: 50%;
     height: 30rem;
 }
@@ -324,7 +324,7 @@ footer .content-footer ul li a{
 
     header .headerImg{
         display: flex;
-        background-image: url(/public/img/fondoimg.jpg);
+        background-image: url(/img/fondoimg.jpg);
         width: 100%;
         height: 20rem;
     }
