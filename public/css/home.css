@@ -6,8 +6,6 @@
 }
 
 
-
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -16,7 +14,9 @@
 }
 
 /* ESTILOS - BARRA DE OPCIONES */
-
+body{
+    width: 100%;
+}
 header nav{
     background-color: #ffffff;
 }
@@ -51,7 +51,7 @@ header nav ul li a{
 /* Fondo del header */
 header .headerImg{
     display: flex;
-    background-image: url(/public/img/fondoimg.jpg);
+    background-image: url(/img/fondoimg.jpg);
     width: 100%;
     height: 39rem;
 }
@@ -66,6 +66,8 @@ header .headerImg h1{
     font-size: 8rem;
     font-weight: bold;
     color: var(--colorTittleClear);
+    /* ESTO FUE LO QUE MODIFIQUE */
+    width: 100%;
 }
 
 
@@ -128,12 +130,12 @@ main .container-img{
 
 }
 main .container-img .box1{
-    background-image: url(/public/img/img-box1.png);
+    background-image: url(/img/img-box1.png);
     width: 50%;
     height: 30rem;
 }
 main .container-img .box2{
-    background-image: url(/public/img/img-box2.png);
+    background-image: url(/img/img-box2.png);
     width: 50%;
     height: 30rem;
 }
@@ -163,6 +165,8 @@ main .recetas{
     padding-top: 5rem;
     display: flex;
     justify-content: center;
+    /* ESTO FUE LO QUE MODIFIQUE */
+    overflow: scroll;
 }
 
 
@@ -320,7 +324,7 @@ footer .content-footer ul li a{
 
     header .headerImg{
         display: flex;
-        background-image: url(/public/img/fondoimg.jpg);
+        background-image: url(/img/fondoimg.jpg);
         width: 100%;
         height: 20rem;
     }
