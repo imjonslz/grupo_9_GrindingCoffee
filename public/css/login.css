@@ -1,0 +1,145 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #833f00;
+}
+
+
+body{
+    width: 100%;
+    background-color: #ffffff96;
+
+    
+}
+
+nav{
+    background-color: #ffffff;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li{
+    margin: 1rem;
+}
+
+nav ul li{
+    padding-top: 3rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #151522;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.headerImg{
+    display: flex;
+    background-image: url(/img/fondoimg.jpg);
+    width: 100%;
+    height: 39rem;
+}
+
+
+
+.headerImg h1{
+    padding-left: 24rem;
+    padding-right: 15rem;
+    padding-top: 16rem;
+    font-size: 8rem;
+    font-weight: bold;
+    color: rgb(252, 228, 225);
+    width: 100%;
+
+}
+
+
+.cajalogin{
+    width: 50%;
+    background-color: #9f9a9ad2;
+    box-shadow: 0px 0px 10px #6e6d6da7;
+    margin-left: 20%;
+    border-radius: 30px 30px 40px 40px;
+    padding-bottom: 5%;
+    text-align: center;
+    margin-bottom: 5%;
+    border-left: solid 5px #833f008e;
+    border-right:  solid 1px #f8f4f4bd;
+    border-bottom: solid 2.7px #94470078;
+    margin-top: 5%;
+    
+}
+
+.inputlogin{
+    color: white;
+    width: 60%;
+    margin: 5% 3% 0% 3%;
+    height: 40px;
+    border-radius: 40px 40px 40px 40px; 
+    border: solid 1px white;
+    text-align: center;
+ }
+
+ .botones{
+    margin-top: 2%;
+    
+ }
+
+.h3{
+    border: solid 1px #ffffff96;
+    background-color: rgba(255, 255, 255, 0.898);
+    box-shadow: #9f9a9a96;
+    width: 30%;
+    margin: 0% 20% 5% 35%;
+    border-radius: 0px 20px 0px 20px;
+    color: #4a2504f5;
+}
+.marca{
+    color: black;
+    font-size: 18px;
+    text-align:left;
+    margin-left: 20px; 
+    padding-bottom: 25px;
+
+}
+
+
+footer{
+    background-color: #3b1c00;
+ }
+
+ footer .content-footer ul{
+    display: flex;
+    justify-content: center;
+}
+
+footer .content-footer ul li{
+    padding-top: 7rem;
+    margin: 3rem;
+    margin-bottom: 10rem;
+    list-style: none;
+    justify-content: center;
+}
+
+footer .content-footer ul li a{
+    color: snow;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width: 326px) and (max-width: 750px){
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
