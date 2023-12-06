@@ -1,0 +1,225 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #833f00;
+}
+/*  HEADER */
+header nav{
+    background-color: #ffffff;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li{
+    margin: 1rem;
+}
+
+header nav ul li{
+    padding-top: 3rem;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #151522;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+
+
+
+
+/* ESTILOS DEL HEADER COMO TAL */
+
+/* Fondo del header */
+header .headerImg{
+    display: flex;
+    background-image: url(/img/fondoimg.jpg);
+    width: 100%;
+    height: 39rem;
+}
+
+
+/* Texto del header */
+
+header .headerImg h1{
+    padding-left: 24rem;
+    padding-right: 15rem;
+    padding-top: 16rem;
+    font-size: 7rem;
+    font-weight: bold;
+    color: white;
+    /* ESTO FUE LO QUE MODIFIQUE */
+    width: 100%;
+    
+    
+}
+
+/* BODY */
+body{
+    width: 100%;
+    background-color: #d2d2d27c;
+    
+    
+}
+.cajaregistro{
+    width: 50%;
+    background-color: #9f9a9a96;
+    box-shadow: 0px 0px 10px #6e6d6da7;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-bottom: 10%;
+    border-radius: 30px 30px 40px 40px;
+    padding-bottom: 5%;
+    text-align: center;
+    border-left: solid 5px #833f008e;
+    border-right:  solid 1px #f8f4f4bd;
+    border-bottom: solid 2.7px #92470197;
+    
+    
+}
+.inputregistro{
+    color: white;
+    width: 60%;
+    margin: 5% 3% 0% 3%;
+    height: 40px;
+    border-radius: 40px 40px 40px 40px; 
+    border: solid 1px white;
+    text-align: center;
+   
+
+}
+.fotoUsuario{
+    color: white;
+    width: 70%;
+    margin: 5% 3% 0% 15%;
+    height: 40px;
+    text-align: center;
+    margin-top: 5%;
+
+}
+.labelfoto{
+    text-align: center;
+    margin: 5%;
+}
+.h3{
+    border: solid 1px #ffffff96;
+    background-color: rgba(255, 255, 255, 0.898);
+    box-shadow: #9f9a9a96;
+    width: 30%;
+    margin: 0% 20% 5% 35%;
+    border-radius: 0px 20px 0px 20px;
+    color: #4a2504f5;
+}
+.marca{
+    color: rgba(0, 0, 0, 0.888);
+    font-size: 18px;
+    text-align:left;
+    margin-left: 20px; 
+    padding-bottom: 25px;
+
+}
+.botones{
+    margin-top: 2%;
+    border-radius: 3px 3px 3px 3px;
+}
+/*  FOOTER  */
+/* ESTILOS DEL FOOTER */
+
+
+footer{
+    background-color: #3b1c00;
+ }
+
+ footer .content-footer ul{
+    display: flex;
+    justify-content: center;
+}
+
+footer .content-footer ul li{
+    padding-top: 7rem;
+    margin: 3rem;
+    margin-bottom: 10rem;
+    list-style: none;
+    justify-content: center;
+}
+
+footer .content-footer ul li a{
+    color: snow;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width: 326px) and (max-width: 750px){
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    header nav ul{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    header nav ul li{
+        margin: 0.2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    header nav ul li a{
+        text-decoration: none;
+        color: rgb(21, 21, 34);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    header .headerImg{
+        display: flex;
+        background-image: url(/img/fondoimg.jpg);
+        width: 100%;
+        height: 20rem;
+    }
+
+    header .headerImg h1{
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        padding-top: 9rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #ffebda;
+    }
+
+    
+    footer .content-footer ul{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+    
+    
+    footer .content-footer ul li{
+        flex-direction: column;
+        /* padding-top: 1rem; */
+        margin-bottom: 1.5rem;
+        list-style: none;
+        justify-content: center;
+    }
+    
+    footer .content-footer ul li a{
+        color: snow;
+        text-decoration: none;
+    }
+   
+ }
