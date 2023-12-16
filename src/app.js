@@ -8,8 +8,7 @@ const app = express();
 // *************** configuramos view engine *************** //
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
-app.set('/users', path.join(__dirname, '/views/users'));
-app.set('products', path.join(__dirname, '/views/products'));
+
 // *************** configuramos la carpeta public *************** //
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
