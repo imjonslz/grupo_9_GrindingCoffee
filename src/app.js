@@ -1,27 +1,32 @@
+// *************** requerimos path *************** //
 const path = require('path');
+
+// *************** requerimos y guardamos express *************** //
 const express = require('express');
 const app = express();
 
+// *************** configuramos view engine *************** //
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views'));
+app.set('/users', path.join(__dirname, '/views/users'));
+app.set('products', path.join(__dirname, '/views/products'));
+// *************** configuramos la carpeta public *************** //
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
 
-app.listen(3060, () => console.log('El servidor esta corriendo en: http://localhost:3060'));
-app.get("/",function (req,res) {
-    res.sendFile(path.resolve(__dirname, "./views/index.html"))
-})
+// *************** requerimos los enrutadores *************** //
+let mainRouter = require('./routes/mainRouter.js');
+let detailRouter = require('./routes/detailRouter.js');
+let loginRouter = require('./routes/loginRouter.js');
+let cartRouter = require('./routes/cartRouter.js');
+let registerRouter = require('./routes/registerRouter.js');
 
-app.get("/detalle",function (req,res) {
-    res.sendFile(path.resolve(__dirname, "./views/productDetail.html"))
-})
-app.get("/productCart", function (req,res) {
-    res.sendFile(path.resolve(__dirname, "./views/productCart.html"))
-});
-app.get('/register', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/register.html'));
-})
-app.post('/register', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/register.html'));
-})
-app.get("/login",function (req,res) {
-    res.sendFile(path.resolve(__dirname, "./views/login.html"))
-})
+// *************** rutas *************** //
+app.use('/', mainRouter);
+app.use('/', detailRouter);
+app.use('/', loginRouter);
+app.use('/', cartRouter);
+app.use('/', registerRouter);
+
+// *************** ponemos a escuchar el servidor *************** //
+app.listen(3060, () => console.log('El servidor esta corriendo en: http://localhost:3060'));
