@@ -1,93 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head class="head">
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width = device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/css/login.css">
-     <script src="https://kit.fontawesome.com/888d1f7b84.js" crossorigin="anonymous"></script>
 
-     
-     <title> login </title>
-
-    </head>
+<%- include("partials/head", {title:"login", css:"login"}) %>
     <body>
-        <header>
+        <%- include("partials/header.ejs") %>
+            <main>
 
-       
-        <header class="encabezado">
-            <nav class="nav">
-                <ul>
-                    <li><a href="index">Home | </a></li>
-                    <li><a href="">Todos los Productos</a></li>
-                    <li><a href="">| Nosotros</a></li>
-                </ul>
-            </nav>
-    
-            <section class="headerImg">
-                <!-- Background-img y texto por html -->
-                <h1>Grinding Coffe</h1>
-    
-            </section>
+                <form action="/login" method="post" class="form" name="registro">
+                    <section class="cajalogin">
+                        <p class="h3">Iniciá sesión<i class="fa-solid fa-mug-saucer fa-l"></i></p>
+                        <div class="line"></div>
+                        <p class="marca">Grinding Coffee®</p>
 
-     <section class="cajaheader">
 
-    </section>
 
- 
-    </header>
-    
-    
-    
-    
-    
-    <main>
-        
-        <form action="/login" method="post" class="form" name="registro">
-            <section class="cajalogin">
-                <p class="h3">Iniciá sesión<i class="fa-solid fa-mug-saucer fa-l"></i></p>
-                <div class="line"></div>
-                <p class="marca">Grinding Coffee®</p>
-            
-            
-            
-            <input class="inputlogin" type="text" name="registro" id="Nombredeusuari@" placeholder="Nombre de usuari@" required>
-            </input>
-            
-            <input class="inputlogin" type="password" name="registro" id="Contraseña" placeholder="Contraseña" required>
-            </input>
-           
-            
-            <section class="botones" >
-            
-            <a href="index.html"><button type="submit">ENVIAR</button></a>
-            
-            <button type="reset">Recuperar contraseña</button>
-            
-            </section>
-         </section>
+                        <input class="inputlogin" type="text" name="registro" id="Nombredeusuari@"
+                            placeholder="Nombre de usuari@" required>
+                        </input>
 
-            
- 
-        </form>
-        
+                        <input class="inputlogin" type="password" name="registro" id="Contraseña"
+                            placeholder="Contraseña" required>
+                        </input>
 
-    </main>
-<footer>
-    <footer>
-        <div class="content-footer">
-            <ul>
-                <li> <a href="">Quenes Somos</a></li>
-                <li> <a href="">Fabricas</a></li>
-                <li> <a href="">Colaboradoress</a></li>
-                <li> <a href="">Nuestro cafe</a></li>
-                <li> <a href="">Puntos fisicos</a></li>
-            </ul>
-        </div>
-    </section>
-    
 
-       <p class="copyright"><!-- Copyright © --> &copy; 2023 grinding coffee S.R.L.</p>
-    
-</footer>
-</body>
+                        <section class="botones">
+
+                            <a href="index.html"><button type="submit">ENVIAR</button></a>
+
+                            <button type="reset">Recuperar contraseña</button>
+
+                        </section>
+                    </section>
+
+
+
+                </form>
+
+
+            </main>
+
+            <%- include("partials/footer.ejs") %>
+    </body>
+
 </html>

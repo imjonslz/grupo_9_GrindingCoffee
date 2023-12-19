@@ -6,7 +6,7 @@ const router = express.Router();
 const cartController = require('../controllers/cartController.js')
 
 // *************** continuamos la ruta por el controlador *************** //
-router.get('/carrito', cartController.viewCart)
+router.get('/', cartController.viewCart)
 
 // *************** exportamos la variable router *************** //
 module.exports = router;

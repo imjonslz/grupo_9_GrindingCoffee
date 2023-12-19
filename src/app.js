@@ -22,10 +22,10 @@ let registerRouter = require('./routes/registerRouter.js');
 
 // *************** rutas *************** //
 app.use('/', mainRouter);
-app.use('/', detailRouter);
-app.use('/', loginRouter);
-app.use('/', cartRouter);
-app.use('/', registerRouter);
+app.use('/detail', detailRouter);
+app.use('/login', loginRouter);
+app.use('/cart', cartRouter);
+app.use('/register', registerRouter);
 
 // *************** ponemos a escuchar el servidor *************** //
 app.listen(3060, () => console.log('El servidor esta corriendo en: http://localhost:3060'));

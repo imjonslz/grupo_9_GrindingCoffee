@@ -1,109 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head class="head">
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width = device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="/css/registro.css">
-     <script src="https://kit.fontawesome.com/888d1f7b84.js" crossorigin="anonymous"></script>
-
-     
-     <title> Grinding Coffee/Registro </title>
-
-    </head>
+<%- include("partials/head", {title:"Grinding Coffee/Registro", css:"registro"}) %>
     <body>
-        <header class="encabezado">
-            <nav class="nav">
-                <ul>
-                    <li><a href="">Home | </a></li>
-                    <li><a href="">Todos los Productos</a></li>
-                    <li><a href="">| Nosotros</a></li>
-                </ul>
-            </nav>
-    
-            <section class="headerImg">
-                <!-- Background-img y texto por html -->
-                <h1>Grinding Coffe</h1>
-    
-            </section>
-        </header>
-   
+        <%- include("partials/header.ejs") %>
+            <main>
+                <form action="/register" method="post" class="form" name="registro">
+                    <section class="cajaregistro">
+                        <p class="h3">Creá tu perfil<i class="fa-solid fa-mug-saucer fa-l"></i></p>
+                        <div class="line"></div>
+                        <p class="marca">Grinding Coffee®</p>
 
-    
-    
-    
-    
-    <main>
-        
-        <form action="/register" method="post" class="form" name="registro">
-            <section class="cajaregistro">
-                <p class="h3">Creá tu perfil<i class="fa-solid fa-mug-saucer fa-l"></i></p>
-                <div class="line"></div>
-                <p class="marca">Grinding Coffee®</p>
-            
-            
-            <input class="inputregistro" type="text" name="registro" id="nombreyapellido" placeholder="Nombre y apellido" required>
-            </input>
-            
-            
-            
-            <input class="inputregistro" type="text" name="registro" id="Nombredeusuari@" placeholder="Nombre de usuari@" required>
-            </input>-
-            
-            
-            <input class="inputregistro" type="Email" name="registro" id="Email" placeholder="Email" required>
-            </input>
-           
-           
-            <input class="inputregistro" type="text" name="registro" id="date" placeholder="Fecha de nacimiento" required>
-            </input>
-           
-            
-            <input class="inputregistro" type="text" name="registro" id="Domicilio" placeholder="Domicilio" required>
-            </input>
-        
-            <div class="fotoUsuario">
-            <label>Foto de usuario:</label>
-            <input type="file" name="registro" accept=".jpg" placeholder="Foto de usuario">
-        </input>
-           </div>
-           
-           
-           
-            <input class="inputregistro" type="password" name="registro" id="Contraseña" placeholder="Contraseña" required>
-            </input>
-           
-            
-            <input class="inputregistro" type="password" name="registro" id="Confirmar Contraseña" placeholder="Confirma Contraseña" required>
-            </input>
-            
-            <section class="botones" >
-            
-            <a href="index.html"><button type="submit">ENVIAR</button></a>
-            
-            <button type="reset">BORRAR</button>
-            
-            </section>
-         </section>
+                        <input class="inputregistro" type="text" name="registro" id="nombreyapellido"
+                            placeholder="Nombre y apellido" required>
+                        </input>
 
-            
- 
-        </form>
-        
+                        <input class="inputregistro" type="text" name="registro" id="Nombredeusuari@"
+                            placeholder="Nombre de usuari@" required>
+                        </input>-
 
-    </main>
-<footer>
-        <div class="content-footer">
-            <ul>
-                <li> <a href="">Quenes Somos</a></li>
-                <li> <a href="">Fabricas</a></li>
-                <li> <a href="">Colaboradoress</a></li>
-                <li> <a href="">Nuestro cafe</a></li>
-                <li> <a href="">Puntos fisicos</a></li>
-            </ul>
-        </div>
+                        <input class="inputregistro" type="Email" name="registro" id="Email" placeholder="Email"
+                            required>
+                        </input>
 
-       <p id="copyright"><!-- Copyright © --> &copy; 2023 grinding coffee S.R.L.</p>
-    
-</footer>
-</body>
+                        <input class="inputregistro" type="text" name="registro" id="date"
+                            placeholder="Fecha de nacimiento" required>
+                        </input>
+
+                        <input class="inputregistro" type="text" name="registro" id="Domicilio" placeholder="Domicilio"
+                            required>
+                        </input>
+
+                        <div class="fotoUsuario">
+                            <label>Foto de usuario:</label>
+                            <input type="file" name="registro" accept=".jpg" placeholder="Foto de usuario">
+                            </input>
+                        </div>
+
+                        <input class="inputregistro" type="password" name="registro" id="Contraseña"
+                            placeholder="Contraseña" required>
+                        </input>
+
+                        <input class="inputregistro" type="password" name="registro" id="Confirmar Contraseña"
+                            placeholder="Confirma Contraseña" required>
+                        </input>
+
+                        <section class="botones">
+
+                            <a href="index.html"><button type="submit">ENVIAR</button></a>
+
+                            <button type="reset">BORRAR</button>
+
+                        </section>
+                    </section>
+
+                </form>
+
+
+            </main>
+            <%- include("partials/footer.ejs") %>
+                <!-- revisar despues -->
+                <!-- <p id="copyright"> &copy; 2023 grinding coffee S.R.L.</p> -->
+    </body>
+
 </html>

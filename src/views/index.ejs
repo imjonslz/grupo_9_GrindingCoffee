@@ -1,27 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grinding Coffe</title>
-    <link rel="stylesheet" href="/css/home.css">
-</head>
+
+<%- include("partials/head", {title:"Grinding Coffe", css:"home"}) %>
 <body>
-    <header class="encabezado">
-        <nav class="nav">
-            <ul>
-                <li><a href="">Home | </a></li>
-                <li><a href="">Todos los Productos</a></li>
-                <li><a href="">| Nosotros</a></li>
-            </ul>
-        </nav>
-
-        <section class="headerImg">
-            <!-- Background-img y texto por html -->
-            <h1>Grinding Coffe</h1>
-
-        </section>
-    </header>
+   <%- include("partials/header.ejs") %>
     <main class="container-main">
         <section class="container">
 
@@ -209,16 +191,6 @@
         </section>
     </main>
 
-    <footer>
-        <div class="content-footer">
-            <ul>
-                <li> <a href="">Quenes Somos</a></li>
-                <li> <a href="">Fabricas</a></li>
-                <li> <a href="">Colaboradoress</a></li>
-                <li> <a href="">Nuestro cafe</a></li>
-                <li> <a href="">Puntos fisicos</a></li>
-            </ul>
-        </div>
-    </footer>
+   <%- include("partials/footer") %>
 </body>
 </html>

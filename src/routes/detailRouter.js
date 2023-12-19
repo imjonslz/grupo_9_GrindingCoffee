@@ -6,7 +6,7 @@ const router = express.Router();
 const detailController = require('../controllers/detailController.js')
 
 // *************** continuamos la ruta por el controlador *************** //
-router.get('/detalle', detailController.viewDetail)
+router.get('/', detailController.viewDetail)
 
 // *************** exportamos la variable router *************** //
 module.exports = router;

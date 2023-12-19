@@ -4,7 +4,7 @@ Integrantes:
   
 Jonathan Salazar: Product Designer, camino a Front End Developer, Venezolano residenciado en Argentina desde el 2017.  
   
-Juan Jose Tellez  
+Juan Jose Tellez: yo estudie ingenieria industrial, quiero dedicarme al Back End, soy de Colombia.
 Mariano Herrera  
 Daniel Contreras  
 Agustin Allende  

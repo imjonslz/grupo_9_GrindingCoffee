@@ -6,7 +6,7 @@ const router = express.Router();
 const registerController = require('../controllers/registerController.js')
 
 // *************** continuamos la ruta por el controlador *************** //
-router.get('/registro', registerController.viewRegister)
+router.get('/', registerController.viewRegister)
 
 // *************** exportamos la variable router *************** //
 module.exports = router;
