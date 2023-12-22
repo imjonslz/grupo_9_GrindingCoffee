@@ -15,7 +15,7 @@ body{
 
     
 }
-
+/* 
 nav{
     background-color: #ffffff;
 }
@@ -39,7 +39,57 @@ nav ul li a{
     color: #151522;
     font-size: 1.6rem;
     font-weight: bold;
+} */
+/* 
+///////////////////////// */
+
+header{
+    overflow: hidden;
+    background-color: var(--colorTittleClear);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+header .container .flexBox{
+    height: 80px;
+}
+
+#logoHeader{
+    width: 80px;
+}
+
+#logoHeader a img{
+    width: 100%;
+}
+
+.flexBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--colorText);
+}
+
+/* 
+///////////////////////// */
 .headerImg{
     display: flex;
     background-image: url(/img/fondoimg.jpg);

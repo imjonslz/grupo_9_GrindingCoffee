@@ -14,9 +14,9 @@
 body{
     width: 100%;
 }
-header nav{
+/* header nav{
     background-color: #ffffff;
-}
+} */
 
 /* .hamburguer-bottom{
     font-size: 30px;
@@ -31,7 +31,7 @@ header nav{
     max-width: 50px;
 } */
 
-header nav ul {
+/* header nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -50,6 +50,64 @@ header nav ul li a{
     color: #151522;
     font-size: 14px;
     font-weight: bold;
+}
+ */
+
+
+
+
+
+
+
+
+
+ header{
+    overflow: hidden;
+    background-color: var(--colorTittleClear);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+header .container .flexBox{
+    height: 80px;
+}
+
+#logoHeader{
+    width: 80px;
+}
+
+#logoHeader a img{
+    width: 100%;
+}
+
+.flexBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding: 16px;
+}
+
+.flexBox li a{
+    font-size: 1.1rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--colorText);
 }
 
 

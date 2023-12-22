@@ -1,3 +1,11 @@
+:root{
+    --colorTittleClear: #ffebda;
+    --fondoGeneral: #ffffff96;
+    --colorTittleDark: #5c2f05;
+    --colorText: #833f00;
+}
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,30 +13,55 @@
     font-family: Arial, Helvetica, sans-serif;
     color: #833f00;
 }
-/*  HEADER */
-header nav{
-    background-color: #ffffff;
+
+
+ header{
+    overflow: hidden;
+    background-color: var(--colorTittleClear);
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
 }
 
-header nav ul {
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+header .container .flexBox{
+    height: 80px;
+}
+
+#logoHeader{
+    width: 80px;
+}
+
+#logoHeader a img{
+    width: 100%;
+}
+
+.flexBox{
     display: flex;
-    justify-content: center;
-    list-style: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-header nav ul li{
-    margin: 1rem;
+ul{
+    list-style-type: none;
 }
 
-header nav ul li{
-    padding-top: 3rem;
+li{
+    padding: 16px;
 }
 
-header nav ul li a{
+.flexBox li a{
+    font-size: 1.1rem;
+}
+
+a{
     text-decoration: none;
-    color: #151522;
-    font-size: 1.6rem;
-    font-weight: bold;
+    color: var(--colorText);
 }
 
 
@@ -68,6 +101,9 @@ body{
     
     
 }
+
+
+
 .cajaregistro{
     width: 50%;
     background-color: #9f9a9a96;
