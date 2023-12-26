@@ -1,0 +1,41 @@
+[{
+    "id": 1,
+    "name": "Producto 1",
+    "description": "Esta es la descripción de nuestro primer producto ",
+    "category": "primary",
+    "price": 29.99,
+    "image": "img-winner.webp"
+  },
+  {
+    "id": 2,
+    "name": "Producto 2",
+    "description": "Esta es la descripción de un producto primario",
+    "category": "primary",
+    "price": 29.99,
+    "image": "copas.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Producto 3",
+    "description": "Esta es la descripción de un producto primario",
+    "category": "primary",
+    "price": 29.99,
+    "image": "producto.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Producto 4",
+    "description": "Esta es la descripción de un producto secundario",
+    "category": "secondary",
+    "price": 29.99,
+    "image": "producto.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Producto 5",
+    "description": "Esta es la descripción de un producto secundario",
+    "category": "secondary",
+    "price": 29.99,
+    "image": "producto.jpg"
+  }
+]

@@ -5,7 +5,8 @@
 
 <body>
     <!--/////////////////// HEADER ///////////////////-->
-    <header>
+    <%- include("partials/header") %>
+    <!-- <header>
         <div class="container">
             <nav class="flexBox">
                 <ul class="flexBox">
@@ -19,24 +20,22 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </header> -->
 
     <!--/////////////////// MAIN ///////////////////-->
     <main>
         <!--/////////////////// PRODUCT DETAIL ///////////////////-->
         <section class="productDetail">
             <div class="gallery">
-                <img src="/img/producto.jpg" alt="">
+                <img src="/img/<%= singleProduct.image %>" alt="">
                 <!--<img src="/img/producto.jpg" alt="">
                 <img src="/img/producto.jpg" alt="">
                 <img src="/img/producto.jpg" alt="">
                 <img src="/img/producto.jpg" alt="">-->
             </div>
             <article class="product">
-                <h1 class="titleProduct">Nombre del producto</h1>
-                <p class="descriptionProduct">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur nisi,
-                    repellendus blanditiis veniamquod esse ipsum voluptatibus, impedit in eos provident earum maxime
-                    unde deleniti corrupti ex,cum a minima!</p>
+                <h1 class="titleProduct"><%= singleProduct.name %></h1>
+                <p class="descriptionProduct"><%= singleProduct.description %></p>
                 <button class="addCart" type="submit">Agregar al carrito</button>
             </article>
         </section>
@@ -46,7 +45,16 @@
             <section class="relatedProducts">
                 <h2 class="titleSection">Produtos relacionados</h2>
                 <div class="flexBox">
-                    <article class="card">
+                    <% relatedProducts.forEach(product => {%>
+                        
+                        <article class="card">
+                            <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image %>" alt=""></a>
+                            <h2><%= product.name%></h2>
+                            <p><%= product.description %></p>
+                            <p class="price"><%= product.price %> $</p>
+                        </article>
+                        <%}); %>
+                 <!--    <article class="card">
                         <img src="/img/producto.jpg" alt="">
                         <h2>Nombre del producto</h2>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
@@ -69,13 +77,7 @@
                         <h2>Nombre del producto</h2>
                         <p>Lorem ipsum dolor sit amet consectetur</p>
                         <p class="price">10.000 $</p>
-                    </article>
-                    <article class="card">
-                        <img src="/img/producto.jpg" alt="">
-                        <h2>Nombre del producto</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
-                        <p class="price">10.000 $</p>
-                    </article>
+                    </article> -->
                 </div>
 
             </section>

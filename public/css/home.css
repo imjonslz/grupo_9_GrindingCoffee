@@ -48,7 +48,7 @@ header .container .flexBox{
 
 .flexBox{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -237,48 +237,60 @@ main .winner{
     padding-bottom: 5rem;
     margin-left: 7rem;
     margin-right: 5rem;
+    flex-wrap: wrap;
 }
 
 main .winner img{
-    width: 60%;
-    padding: 5rem;
+    width: 100%;
+    padding: 4.5rem;
     border-radius: 7rem;
+}
+
+.linkImg{
+    width: 65%;
 }
 
 
 main .winner .descrip-winner{
-    padding-top: 2rem;
-    padding-right: 5rem;
+/*     padding-top: 2rem;
+    padding-right: 5rem; */
     /* display: flex; */
-    width: auto;
+    /* esto se cambio tambien */
+    width: 35%;
 }
 
 
 main .winner  .descrip-winner h1{
     padding-top: 5rem;
-    font-size: 3rem;
+/*     font-size: 3rem; */
+    font-size: 2rem;
     color: #5c2f05;
     padding-bottom: 2.4rem;
 }
 
 main .winner .descrip-winner p{
-    font-size: 1.8rem;
+/*     font-size: 1.8rem; */
+    font-size: 1.2rem;
     font-weight: bold;
     color: #833f00;
     padding-bottom: 3rem;
 }
 
 main .winner .descrip-winner a{
-    font-size: 1.5rem;
+/*     font-size: 1.5rem; */
+    font-size: 1rem;
     text-decoration: none;
     font-weight: bold;
     color: #ffebda;
     background-color: #5c2f05;
     padding: 1.1rem;
-    border: 4px dotted #ffebda;
+    border: 4px solid #ffebda;
+}
+main .winner .descrip-winner a:hover{
+    background-color: #e77a15;
 }
 
- /* ESTILOS CARRUCEL AUTOMATICO */
+ /* ESTILOS CARRUCEL Argb(118, 61, 7)CO */
 
  main .marquee-img{
     display: flex;
@@ -297,255 +309,228 @@ main .winner .descrip-winner a{
  /* ESTILOS DEL FOOTER */
 
 
-  footer{
-    background-color: #3b1c00;
- }
-
- footer .content-footer ul{
-    display: flex;
-    justify-content: center;
+ footer{
+    background-color: var(--colorTittleDark);
+    color: var(--colorTittleClear);
+    padding: 40px 0;
 }
 
-footer .content-footer ul li{
-    padding-top: 7rem;
-    margin: 3rem;
-    margin-bottom: 10rem;
-    list-style: none;
-    justify-content: center;
-}
-
-footer .content-footer ul li a{
-    color: snow;
+footer a{
+    color: var(--colorTittleClear);
     text-decoration: none;
-    font-size: 1.6rem;
+}
+
+.socialMedia i{
+    padding: 8px;
+}
+
+.copy{
+    padding-top: 40px;
+    text-align: center;
+}
+
+footer .flexBox{
+    justify-content: flex-end;
+}
+
+.navFooter{
+    padding-right: 48px;
+}
+
+.navFooter li{
+    padding: 8px;
 }
 
  /* MOBILE */
 
+ @media only screen and (max-width: 781px) {
+    /* Estilos específicos para pantallas hasta 781px */
 
- @media screen and (min-width: 326px) and (max-width: 750px){
-
-    *{
-        box-sizing: border-box;
-        margin: 0;
+    body {
         padding: 0;
-        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
     }
 
-
-    header nav ul{
-        display: flex;
-        justify-content: center;
-        list-style: none;
-    }
-
-    header nav ul li{
-        margin: 0.2rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-
-    header nav ul li a{
-        text-decoration: none;
-        color: rgb(21, 21, 34);
-        font-size: 1rem;
-        font-weight: bold;
-    }
-
-    header .headerImg{
-        display: flex;
-        background-image: url(/img/fondoimg.jpg);
-        width: 100%;
-        height: 20rem;
-    }
-
-    header .headerImg h1{
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-        padding-top: 9rem;
+    header .headerImg h1 {
+        padding-left: 1rem;
+        padding-right: 1rem;
         font-size: 2.5rem;
-        font-weight: bold;
-        color: #ffebda;
     }
 
-    main{
-        display: flex;
-        padding-top: 2rem;
-        background-color: #ffebda;
-        padding-bottom: 5rem;
-        flex-direction: column;
-    }
-    
-    main .container{
-        width: auto;
-        
+    main .container {
+        padding: 0.5rem;
     }
 
-    main .container .product{
-        background-color: rgba(255, 255, 255, 0.589);
-        margin: 1rem;
-        height: 20rem;
-        width: 15rem;
-        box-shadow: 0px 1px 10px rgba(56, 24, 0, 0.434);
-        cursor: default;
-        transition: all 400ms ease;
-        border-radius: 2rem 2rem 1rem 1rem;
-    }
-
-
-    main .container .product:hover{
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-        transform: translateY(-3%);
-    }
-    
-    /* main .container .product a img{
-        width: 15rem;
-        height: 12rem;
-        border-radius: 2rem 2rem 0 0;
-    } */
-
-    main .container .product p{
-        text-align: center;
-        font-size: 1.2rem;
-        padding: 1.5rem;
-    }
-
-    main .container-img{
-        margin-top: 3rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    main .container-img .box1{
-        width: auto;
-    }
-    main .container-img .box2{
-        width: auto;
-    }
-
-    main .container-img .box h3{
-        text-align: center;
-        padding-top: 10rem;
-        font-size: 1.7rem;
-        color: #fff4ea;
-        padding-bottom: 3rem;
-    }
-
-    main .container-img .box  a{
-        /* display: flex; */
-        padding-left: 37%;
-        padding-top: 1rem;
-        font-size: 1.5rem;
-        color: #ffebda;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-
-    main .recetas{
-        padding-top: 5rem;
-        display: flex;
-        justify-content: center;
-        overflow-x: auto;
-    }
-    
-    main .recetas::-webkit-scrollbar{
-        width:  0;
-    }
-
-    main .recetas .product{
-        background-color: rgba(255, 255, 255, 0.589);
+    main .container .product {
+        background-color: #ffffff96;
+        margin: 0.5rem;
+        border-radius: 1rem;
+        width: calc(50% - 1rem);
         box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
         cursor: default;
         transition: all 400ms ease;
-        text-align: center; 
-        margin-right: 2px;
-        border-radius: 2rem;
-    }
-    
-    main .recetas .product:hover{
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-        transform: translateY(-3%);
     }
 
-    main .winner{
-        display: flex;
-        margin: 0;
-        justify-content: center;
-        flex-direction: column;
-        width: auto;
-        flex-wrap: nowrap;
-    }
-    
-    main .winner img{
-        display: flex;
+    main .container .product a img {
         width: 100%;
-        justify-content: center;
-        padding: 1rem;
-        border-radius: 2rem;
+        height: auto;
+        border-radius: 1rem;
+    }
+
+    main .container .product p {
+        font-size: 1rem;
+        padding: 0.5rem;
+        height: auto;
+        max-height: 5rem; /* Ajusta según sea necesario */
+        overflow: hidden;
+    }
+
+    main .recetas .product {
+        width: calc(50% - 1rem);
+        margin: 0.5rem;
+    }
+
+    main .recetas .product a img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+    }
+
+    main .recetas .product p {
+        font-size: 1rem;
+        padding: 0.5rem;
+        height: auto;
+        max-height: 5rem; /* Ajusta según sea necesario */
+        overflow: hidden;
+    }
+
+    main .container-img {
+        flex-direction: column;
+    }
+
+    main .container-img .box1,
+    main .container-img .box2 {
+        width: 100%;
+        height: 15rem; /* Ajusta la altura según sea necesario */
+    }
+
+    main .container-img .box h3 {
+        padding-top: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    main .container-img .box a {
+        padding-left: 50%; /* Ajusta según sea necesario para centrar */
+        transform: translateX(-50%); /* Centra el botón */
+        padding-top: 1rem;
+        font-size: 1.2rem;
+
         
     }
-    
-    main .winner .descrip-winner{
-        display: inline-flex;
-        position: relative;
-        bottom: 5rem;
+
+    main .recetas {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    main .winner {
+        margin: 0;
         flex-direction: column;
-        /* width: 100%; */
-        margin-left: 1.5rem;
     }
 
-    main .winner  .descrip-winner h1{
-        font-size: 2.5rem;
-        color: #5c2f05;
-        /* margin-left: 1rem; */
-        margin-right: 1rem;
-        width: 15rem;
-        padding-bottom: 1.3rem;
-    }
-    
-    main .winner .descrip-winner p{
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #833f00;
-        /* margin-left: 1rem; */
-        margin-right: 1rem;
-        width: 15rem;
-        padding-bottom: 3rem;
-    }
-
-    main .winner .descrip-winner a{
-        font-size: 1rem;
-        text-decoration: none;
-        font-weight: bold;
-        color: #ffebda;
-        /* margin-left: 1rem; */
-        text-align: center;
-        background-color: #5c2f05;
+    main .winner img {
+        width: 100%;
+        height: auto;
         padding: 1rem;
-        border: 4px dotted #ffebda;
-        width: 15rem;
+        border-radius: 3rem;
     }
 
-    footer .content-footer ul{
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-    
+    main .winner .descrip-winner {
+        width: 100%;
+        padding-top: 0.5rem;
     }
-    
-    
-    footer .content-footer ul li{
-        flex-direction: column;
-        /* padding-top: 1rem; */
-        margin-bottom: 2rem;
-        list-style: none;
+
+    main .winner .descrip-winner h1 {
+        padding-top: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    main .winner .descrip-winner p {
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    main .winner .descrip-winner a {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem; /* Ajusta el padding según sea necesario */
+        display: inline-block; /* Permite ajustar el ancho */
+        margin-top: 1rem;
+        text-align: center;
+        width: auto; /* Ancho automático según el contenido */
+        max-width: 100%; /* Evita que el botón sea más ancho que el contenedor */
+    }
+
+    main .marquee-img {
         justify-content: center;
     }
-    
-    footer .content-footer ul li a{
-        color: snow;
-        text-decoration: none;
+
+    main .marquee-img .marq-box img {
+        width: 8rem; /* Ajusta el tamaño según sea necesario */
+        margin: 0.5rem;
     }
 
- }
+    /* Footer */
+
+    footer {
+        background-color: var(--colorTittleDark);
+        color: snow;
+        padding: 1rem;
+        position: relative;
+        z-index: 1; /* Asegura que el footer esté por encima del contenido */
+    }
+    
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    footer .flexBox {
+        display: flex;
+    }
+    
+    footer section {
+        text-align: center;
+    }
+    
+    footer .navFooter ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    footer .navFooter li {
+        margin: 0.5rem;
+    }
+    
+    footer .navFooter a {
+        color: snow;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    
+    footer .socialMedia {
+        display: flex;
+        margin-left: auto;
+    }
+    
+    footer .socialMedia div {
+        margin: 0 0.5rem;
+    }
+    
+    footer .copy {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+}

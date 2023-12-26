@@ -1,11 +1,16 @@
-
+:root{
+    --colorTittleClear: #ffebda;
+    --fondoGeneral: #ffffff96;
+    --colorTittleDark: #5c2f05;
+    --colorText: #833f00;
+}
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #833f00;
+/*     color: #833f00; */
 }
 
 
@@ -46,7 +51,6 @@ nav ul li a{
 header{
     overflow: hidden;
     background-color: var(--colorTittleClear);
-    position: fixed;
     top: 0;
     width: 100%;
 }
@@ -111,24 +115,37 @@ a{
 }
 
 
+
+
+.form{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 .cajalogin{
     width: 50%;
+    margin: auto;
     background-color: #9f9a9ad2;
     box-shadow: 0px 0px 10px #6e6d6da7;
-    margin-left: 20%;
+/*     margin-left: 20%; */
     border-radius: 30px 30px 40px 40px;
     padding-bottom: 5%;
     text-align: center;
-    margin-bottom: 5%;
+ /*    margin-bottom: 5%; */
     border-left: solid 5px #833f008e;
     border-right:  solid 1px #f8f4f4bd;
     border-bottom: solid 2.7px #94470078;
-    margin-top: 5%;
-    
+/*     margin-top: 5%; */
+    display: block;
+ 
 }
 
+main{
+    background-image: url("/img/CafeFondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .inputlogin{
-    color: white;
     width: 60%;
     margin: 5% 3% 0% 3%;
     height: 40px;
@@ -136,6 +153,34 @@ a{
     border: solid 1px white;
     text-align: center;
  }
+/* BOTONES */
+main .botones a,
+main .botones button {
+    width: 50%; /* Ajusta el ancho según sea necesario */
+    margin: 2% 0;
+    padding: 0.8rem; /* Ajusta el padding según sea necesario */
+    font-size: 1rem; /* Ajusta el tamaño de fuente según sea necesario */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main .botones a {
+    color: var(--colorText);
+    background-color: transparent; /* Quita el fondo */
+}
+
+main .botones button {
+    background-color: var(--colorTittleDark);
+    color: var(--fondoGeneral);
+}
+
+main .botones a:hover,
+main .botones button:hover {
+    background-color: var(--fondoGeneral);
+    color: var(--colorText);
+}
 
  .botones{
     margin-top: 2%;
@@ -162,26 +207,35 @@ a{
 
 
 footer{
-    background-color: #3b1c00;
- }
-
- footer .content-footer ul{
-    display: flex;
-    justify-content: center;
+    background-color: var(--colorTittleDark);
+    color: var(--colorTittleClear);
+    padding: 40px 0;
 }
 
-footer .content-footer ul li{
-    padding-top: 7rem;
-    margin: 3rem;
-    margin-bottom: 10rem;
-    list-style: none;
-    justify-content: center;
-}
-
-footer .content-footer ul li a{
-    color: snow;
+footer a{
+    color: var(--colorTittleClear);
     text-decoration: none;
-    font-size: 1.6rem;
+}
+
+.socialMedia i{
+    padding: 8px;
+}
+
+.copy{
+    padding-top: 40px;
+    text-align: center;
+}
+
+footer .flexBox{
+    justify-content: flex-end;
+}
+
+.navFooter{
+    padding-right: 48px;
+}
+
+.navFooter li{
+    padding: 8px;
 }
 
 @media screen and (min-width: 326px) and (max-width: 750px){
@@ -208,9 +262,9 @@ footer .content-footer ul li a{
 
     header nav ul li a{
         text-decoration: none;
-        color: rgb(21, 21, 34);
+/*         color: rgb(21, 21, 34); */
         font-size: 1rem;
-        font-weight: bold;
+/*         font-weight: bold; */
     }
 
     header .headerImg{
@@ -229,184 +283,90 @@ footer .content-footer ul li a{
         color: #ffebda;
     }
 
-    main{
-        display: flex;
-        padding-top: 2rem;
-        background-color: #ffebda;
-        padding-bottom: 5rem;
+    main .cajalogin {
+        width: 80%; /* Ajusta el ancho según sea necesario */
+        margin: 5% auto;
+    }
+
+    main .inputlogin {
+        width: 80%; /* Ajusta el ancho según sea necesario */
+        margin: 5% auto;
+    }
+
+    main .botones {
         flex-direction: column;
-    }
-    
-    main .container{
-        width: auto;
-        
+        align-items: center;
     }
 
-    main .container .product{
-        background-color: rgba(255, 255, 255, 0.589);
-        margin: 1rem;
-        height: 20rem;
-        width: 15rem;
-        box-shadow: 0px 1px 10px rgba(56, 24, 0, 0.434);
-        cursor: default;
-        transition: all 400ms ease;
-        border-radius: 2rem 2rem 1rem 1rem;
+    main .botones a,
+    main .botones button {
+        width: 70%; /* Ajusta el ancho según sea necesario */
+        margin: 2% 0;
+        padding: 1rem; /* Ajusta el padding según sea necesario */
+        font-size: 1rem; /* Ajusta el tamaño de fuente según sea necesario */
     }
 
-
-    main .container .product:hover{
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-        transform: translateY(-3%);
-    }
-    
-    /* main .container .product a img{
-        width: 15rem;
-        height: 12rem;
-        border-radius: 2rem 2rem 0 0;
-    } */
-
-    main .container .product p{
-        text-align: center;
-        font-size: 1.2rem;
-        padding: 1.5rem;
+    main .h3 {
+        width: 80%; /* Ajusta el ancho según sea necesario */
+        margin: 0% auto 5%;
     }
 
-    main .container-img{
-        margin-top: 3rem;
-        display: flex;
-        flex-direction: column;
+    main .marca {
+        margin-left: 5%;
+        text-align: left;
     }
 
-    main .container-img .box1{
-        width: auto;
-    }
-    main .container-img .box2{
-        width: auto;
-    }
-
-    main .container-img .box h3{
-        text-align: center;
-        padding-top: 10rem;
-        font-size: 1.7rem;
-        color: #fff4ea;
-        padding-bottom: 3rem;
-    }
-
-    main .container-img .box  a{
-        /* display: flex; */
-        padding-left: 37%;
-        padding-top: 1rem;
-        font-size: 1.5rem;
-        color: #ffebda;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-
-    main .recetas{
-        padding-top: 5rem;
-        display: flex;
-        justify-content: center;
-        overflow-x: auto;
-    }
-    
-    main .recetas::-webkit-scrollbar{
-        width:  0;
-    }
-
-    main .recetas .product{
-        background-color: rgba(255, 255, 255, 0.589);
-        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-        cursor: default;
-        transition: all 400ms ease;
-        text-align: center; 
-        margin-right: 2px;
-        border-radius: 2rem;
-    }
-    
-    main .recetas .product:hover{
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-        transform: translateY(-3%);
-    }
-
-    main .winner{
-        display: flex;
-        margin: 0;
-        justify-content: center;
-        flex-direction: column;
-        width: auto;
-        flex-wrap: nowrap;
-    }
-    
-    main .winner img{
-        display: flex;
-        width: 100%;
-        justify-content: center;
+    footer {
+        background-color: var(--colorTittleDark);
+        color: snow;
         padding: 1rem;
-        border-radius: 2rem;
-        
-    }
-    
-    main .winner .descrip-winner{
-        display: inline-flex;
         position: relative;
-        bottom: 5rem;
-        flex-direction: column;
-        /* width: 100%; */
-        margin-left: 1.5rem;
-    }
-
-    main .winner  .descrip-winner h1{
-        font-size: 2.5rem;
-        color: #5c2f05;
-        /* margin-left: 1rem; */
-        margin-right: 1rem;
-        width: 15rem;
-        padding-bottom: 1.3rem;
+        z-index: 1; /* Asegura que el footer esté por encima del contenido */
     }
     
-    main .winner .descrip-winner p{
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #833f00;
-        /* margin-left: 1rem; */
-        margin-right: 1rem;
-        width: 15rem;
-        padding-bottom: 3rem;
-    }
-
-    main .winner .descrip-winner a{
-        font-size: 1rem;
-        text-decoration: none;
-        font-weight: bold;
-        color: #ffebda;
-        /* margin-left: 1rem; */
-        text-align: center;
-        background-color: #5c2f05;
-        padding: 1rem;
-        border: 4px dotted #ffebda;
-        width: 15rem;
-    }
-
-    footer .content-footer ul{
+    footer .container {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    footer .flexBox {
+        display: flex;
+    }
+    
+    footer section {
         text-align: center;
-        flex-direction: column;
-    
     }
     
-    
-    footer .content-footer ul li{
-        flex-direction: column;
-        /* padding-top: 1rem; */
-        margin-bottom: 1.5rem;
-        list-style: none;
-        justify-content: center;
+    footer .navFooter ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
     
-    footer .content-footer ul li a{
+    footer .navFooter li {
+        margin: 0.5rem;
+    }
+    
+    footer .navFooter a {
         color: snow;
         text-decoration: none;
+        font-size: 1rem;
+    }
+    
+    footer .socialMedia {
+        display: flex;
+        margin-left: auto;
+    }
+    
+    footer .socialMedia div {
+        margin: 0 0.5rem;
+    }
+    
+    footer .copy {
+        margin-top: 1rem;
+        font-size: 0.8rem;
     }
 
  }

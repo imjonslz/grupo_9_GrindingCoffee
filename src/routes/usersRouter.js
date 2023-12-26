@@ -3,10 +3,11 @@ const express = require('express');
 const router = express.Router();
 
 // *************** requerimos el controlador del detalle *************** //
-const detailController = require('../controllers/detailController.js')
+const loginController = require('../controllers/usersController.js')
 
 // *************** continuamos la ruta por el controlador *************** //
-router.get('/', detailController.viewDetail)
+router.get('/login', loginController.viewLogin)
+router.get('/register', loginController.viewRegister)
 
 // *************** exportamos la variable router *************** //
 module.exports = router;

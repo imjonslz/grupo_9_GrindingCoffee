@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #833f00;
+/*     color: #833f00; */
 }
 
 
@@ -94,57 +94,63 @@ header .headerImg h1{
     
 }
 
-/* BODY */
-body{
-    width: 100%;
-    background-color: #d2d2d27c;
-    
-    
+
+/* MAIN */
+main{
+    background-image: url("/img/CafeFondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
+/* BODY */
+body {
+    width: 100%;
+}
 
-.cajaregistro{
-    width: 50%;
+.form {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.cajaregistro {
+    width: 80%;
+    max-width: 700px;
+    margin: 5% auto;  /* Cambié margin-left por margin */
     background-color: #9f9a9a96;
     box-shadow: 0px 0px 10px #6e6d6da7;
-    margin-top: 5%;
-    margin-left: 25%;
-    margin-bottom: 10%;
     border-radius: 30px 30px 40px 40px;
     padding-bottom: 5%;
     text-align: center;
     border-left: solid 5px #833f008e;
-    border-right:  solid 1px #f8f4f4bd;
+    border-right: solid 1px #f8f4f4bd;
     border-bottom: solid 2.7px #92470197;
-    
-    
 }
-.inputregistro{
-    color: white;
-    width: 60%;
-    margin: 5% 3% 0% 3%;
+
+.inputregistro {
+    width: 80%;
+    margin: 5% 0 0 10%;
     height: 40px;
-    border-radius: 40px 40px 40px 40px; 
+    border-radius: 40px 40px 40px 40px;
     border: solid 1px white;
     text-align: center;
-   
-
 }
-.fotoUsuario{
+
+.fotoUsuario {
     color: white;
     width: 70%;
-    margin: 5% 3% 0% 15%;
+    margin: 5% 0 0 15%;
     height: 40px;
     text-align: center;
     margin-top: 5%;
-
 }
-.labelfoto{
+
+.labelfoto {
     text-align: center;
     margin: 5%;
 }
-.h3{
+
+.h3 {
     border: solid 1px #ffffff96;
     background-color: rgba(255, 255, 255, 0.898);
     box-shadow: #9f9a9a96;
@@ -153,43 +159,80 @@ body{
     border-radius: 0px 20px 0px 20px;
     color: #4a2504f5;
 }
-.marca{
+
+.marca {
     color: rgba(0, 0, 0, 0.888);
     font-size: 18px;
-    text-align:left;
-    margin-left: 20px; 
+    text-align: left;
+    margin-left: 20px;
     padding-bottom: 25px;
-
 }
-.botones{
+
+/* BOTONES */
+.botones {
     margin-top: 2%;
-    border-radius: 3px 3px 3px 3px;
+}
+
+main .botones a,
+main .botones button {
+    margin: 2% 0;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main .botones a {
+    color: var(--colorText);
+    background-color: transparent;
+}
+
+main .botones button {
+    background-color: var(--colorTittleDark);
+    color: var(--fondoGeneral);
+}
+
+main .botones a:hover,
+main .botones button:hover {
+    background-color: var(--fondoGeneral);
+    color: var(--colorText);
 }
 /*  FOOTER  */
 /* ESTILOS DEL FOOTER */
 
 
 footer{
-    background-color: #3b1c00;
- }
-
- footer .content-footer ul{
-    display: flex;
-    justify-content: center;
+    background-color: var(--colorTittleDark);
+    color: var(--colorTittleClear);
+    padding: 40px 0;
 }
 
-footer .content-footer ul li{
-    padding-top: 7rem;
-    margin: 3rem;
-    margin-bottom: 10rem;
-    list-style: none;
-    justify-content: center;
-}
-
-footer .content-footer ul li a{
-    color: snow;
+footer a{
+    color: var(--colorTittleClear);
     text-decoration: none;
-    font-size: 1.6rem;
+}
+
+.socialMedia i{
+    padding: 8px;
+}
+
+.copy{
+    padding-top: 40px;
+    text-align: center;
+}
+
+footer .flexBox{
+    justify-content: flex-end;
+}
+
+.navFooter{
+    padding-right: 48px;
+}
+
+.navFooter li{
+    padding: 8px;
 }
 
 @media screen and (min-width: 326px) and (max-width: 750px){
@@ -216,7 +259,7 @@ footer .content-footer ul li a{
 
     header nav ul li a{
         text-decoration: none;
-        color: rgb(21, 21, 34);
+/*         color: rgb(21, 21, 34); */
         font-size: 1rem;
         font-weight: bold;
     }
@@ -238,24 +281,86 @@ footer .content-footer ul li a{
     }
 
     
-    footer .content-footer ul{
+    footer {
+        background-color: var(--colorTittleDark);
+        color: snow;
+        padding: 1rem;
+        position: relative;
+        z-index: 1; /* Asegura que el footer esté por encima del contenido */
+    }
+    
+    footer .container {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    footer .flexBox {
+        display: flex;
+    }
+    
+    footer section {
         text-align: center;
-        flex-direction: column;
     }
     
-    
-    footer .content-footer ul li{
-        flex-direction: column;
-        /* padding-top: 1rem; */
-        margin-bottom: 1.5rem;
-        list-style: none;
-        justify-content: center;
+    footer .navFooter ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
     
-    footer .content-footer ul li a{
+    footer .navFooter li {
+        margin: 0.5rem;
+    }
+    
+    footer .navFooter a {
         color: snow;
         text-decoration: none;
+        font-size: 1rem;
+    }
+    
+    footer .socialMedia {
+        display: flex;
+        margin-left: auto;
+    }
+    
+    footer .socialMedia div {
+        margin: 0 0.5rem;
+    }
+    
+    footer .copy {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+
+    main {
+        background-image: url("/img/CafeFondo.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh; /* Ajusta la altura mínima al 100% del viewport */
+        margin-bottom: -60px; /* Ajusta el margen inferior para compensar el espacio en blanco */
+    }
+    
+
+    .cajaregistro {
+        width: 80%; /* Reduce el ancho del contenedor */
+        margin: 5% 10%; /* Ajusta los márgenes */
+    }
+
+    .inputregistro,
+    .fotoUsuario {
+        width: 80%; /* Reduce el ancho de los campos de entrada y la sección de la foto del usuario */
+        margin: 5% 10%; /* Ajusta los márgenes */
+    }
+
+    .h3 {
+        width: 60%; /* Ajusta el ancho del encabezado */
+        margin: 5% 20%; /* Ajusta los márgenes */
+    }
+
+    .botones {
+        margin-top: 5%; /* Ajusta el margen superior de la sección de botones */
     }
    
  }

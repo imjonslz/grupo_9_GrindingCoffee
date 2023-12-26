@@ -64,7 +64,6 @@ header nav ul li a{
  header{
     overflow: hidden;
     background-color: var(--colorTittleClear);
-    position: fixed;
     top: 0;
     width: 100%;
 }
@@ -358,28 +357,57 @@ li input{
  /* ESTILOS DEL FOOTER */
 
 
- footer{
-    background-color: #3b1c00;
- }
+ footer {
+    background-color: var(--colorTittleDark);
+    color: snow;
+    padding: 1rem;
+    position: relative;
+    z-index: 1; /* Asegura que el footer esté por encima del contenido */
+}
 
- footer .content-footer ul{
+footer .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-footer .content-footer ul li{
-/*     padding-top: 7rem; */
-    margin: 3rem;
-/*     margin-bottom: 10rem; */
-    list-style: none;
-    justify-content: center;
+footer .flexBox {
+    display: flex;
 }
 
-footer .content-footer ul li a{
+footer section {
+    text-align: center;
+}
+
+footer .navFooter ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .navFooter li {
+    margin: 0.5rem;
+}
+
+footer .navFooter a {
     color: snow;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: 1rem;
+}
+
+footer .socialMedia {
+    display: flex;
+    margin-left: auto;
+}
+
+footer .socialMedia div {
+    margin: 0 0.5rem;
+}
+
+footer .copy {
+    margin-top: 1rem;
+    font-size: 0.8rem;
 }
 @media (min-width:500px){
     .card{
@@ -391,9 +419,8 @@ footer .content-footer ul li a{
 
     header nav ul li a{
         text-decoration: none;
-        color: #151522;
         font-size: 20px;
-        font-weight: bold;
+/*         font-weight: bold; */
     }
     
 .product-description{
@@ -438,9 +465,8 @@ li input{
 
 header nav ul li a{
     text-decoration: none;
-    color: #151522;
     font-size: 25px;
-    font-weight: bold;
+/*     font-weight: bold; */
 }
 
 .product-description{
@@ -461,6 +487,38 @@ font-size: 13px;
 }
 li input{
 font-size: 15px;
+}
+
+footer{
+    background-color: var(--colorTittleDark);
+    color: var(--colorTittleClear);
+    padding: 40px 0;
+}
+
+footer a{
+    color: var(--colorTittleClear);
+    text-decoration: none;
+}
+
+.socialMedia i{
+    padding: 8px;
+}
+
+.copy{
+    padding-top: 40px;
+    text-align: center;
+}
+
+footer .flexBox{
+    justify-content: flex-end;
+}
+
+.navFooter{
+    padding-right: 48px;
+}
+
+.navFooter li{
+    padding: 8px;
 }
 
 

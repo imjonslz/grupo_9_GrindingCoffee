@@ -2,14 +2,17 @@
 const path = require('path');
 
 // *************** objeto literal con los metodos a exportar *************** //
-let detailController = {
+let loginController = {
 
     // Renderiza la vista '/detalle'
-    viewDetail: (req, res) => {
-        res.render('productDetail');
+    viewLogin: (req, res) => {
+        res.render('login');
+    },
+    viewRegister: (req, res) => {
+        res.render('register');
     }
 
 };
     
 // *************** exportamos el objeto literal *************** //
-module.exports = detailController;
+module.exports = loginController;

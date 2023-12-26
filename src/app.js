@@ -15,17 +15,17 @@ app.use(express.static(publicPath));
 
 // *************** requerimos los enrutadores *************** //
 let mainRouter = require('./routes/mainRouter.js');
-let detailRouter = require('./routes/detailRouter.js');
-let loginRouter = require('./routes/loginRouter.js');
+let productsRouter = require('./routes/productsRouter.js');
+let usersRouter = require('./routes/usersRouter.js');
 let cartRouter = require('./routes/cartRouter.js');
-let registerRouter = require('./routes/registerRouter.js');
+/* let registerRouter = require('./routes/registerRouter.js'); */
 
 // *************** rutas *************** //
 app.use('/', mainRouter);
-app.use('/detail', detailRouter);
-app.use('/login', loginRouter);
+app.use('/products', productsRouter);
+app.use('/user', usersRouter);
 app.use('/cart', cartRouter);
-app.use('/register', registerRouter);
+/* app.use('/register', registerRouter); */
 
 // *************** ponemos a escuchar el servidor *************** //
 app.listen(3060, () => console.log('El servidor esta corriendo en: http://localhost:3060'));

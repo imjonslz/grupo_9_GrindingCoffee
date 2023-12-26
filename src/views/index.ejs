@@ -2,121 +2,126 @@
 <html lang="en">
 
 <%- include("partials/head", {title:"Grinding Coffe", css:"home"}) %>
-<body>
-   <%- include("partials/header-home.ejs") %>
-    <main class="container-main">
-        <section class="container">
 
-            <div class="product product1">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Descripcion del producto a la venta</p>
-            </div>
+    <body>
+        <%- include("partials/header-home.ejs") %>
+            <main class="container-main">
+                <section class="container">
+                    <!-- acordarse que cuando se utiliza un for each o un ciclo for, lo que sea no va el simbolo < % = sino solamente < % -->
+                    <% Primaryproducts.forEach(product=> { %>
+                        <div class="product product1">
+                            <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image%>" alt="<%= product.name %>"></a>
+                            <p><%= product.description %></p>
+                        </div>
+                        <% }); %>
+                        
+                        <!--  <div class="product product2">
+                                <a href=""><img src="/img/producto.jpg" alt=""></a>
+                                <p>Descripcion del producto a la venta</p>
+                            </div>
 
-            <div class="product product2">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Descripcion del producto a la venta</p>
-            </div>
+                            <div class="product product3">
+                                <a href=""><img src="/img/producto.jpg" alt=""></a>
+                                <p>Descripcion del producto a la venta</p>
+                            </div>
 
-            <div class="product product3">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Descripcion del producto a la venta</p>
-            </div>
+                            <div class="product product4">
+                                <a href=""><img src="/img/producto.jpg" alt=""></a>
+                                <p>Descripcion del producto a la venta</p>
+                            </div>
 
-            <div class="product product4">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Descripcion del producto a la venta</p>
-            </div>
+                            <div class="product product5">
+                                <a href=""><img src="/img/producto.jpg" alt=""></a>
+                                <p>Descripcion del producto a la venta</p>
+                            </div>
 
-            <div class="product product5">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Descripcion del producto a la venta</p>
-            </div>
+                            <div class="product product6">
+                                <a href=""><img src="/img/producto.jpg" alt=""></a>
+                                <p>Descripcion del producto a la venta</p>
+                            </div>
 
-            <div class="product product6">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Descripcion del producto a la venta</p>
-            </div>
+                            <div class="product product7">
+                                <a href=""><img src="/img/producto.jpg" alt=""></a>
+                                <p>Descripcion del producto a la venta</p>
+                            </div>
 
-            <div class="product product7">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Descripcion del producto a la venta</p>
-            </div>
+                            <div class="product product8">
+                                <a href=""><img src="/img/producto.jpg" alt=""></a>
+                                <p>Descripcion del producto a la venta</p>
+                            </div>
+                            
+                            <div class="product product9">
+                                <a href=""><img src="/img/producto.jpg" alt=""></a>
+                                <p>Descripcion del producto a la venta</p>
+                            </div>
+                            <div class="product product10">
+                                <a href=""><img src="/img/producto.jpg" alt=""></a>
+                                <p>Descripcion del producto a la venta</p>
+                            </div> -->
 
-            <div class="product product8">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Descripcion del producto a la venta</p>
-            </div>
+                </section>
 
-            <div class="product product9">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Descripcion del producto a la venta</p>
-            </div>
-            <div class="product product10">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Descripcion del producto a la venta</p>
-            </div>
+                <section class="container-img">
+                    <div class="box box1">
+                        <!-- Div con Background-img -->
+                        <h3>Mira otros productos</h3>
+                        <a href="">Ver mas</a>
+                    </div>
+                    
+                    <div class="box box2">
+                        <!-- Div con Background-img -->
+                        <h3>Nuestra historia</h3>
+                        <a href="">Ver mas</a>
+                    </div>
+                    
+                </section>
+                
+                <section class="recetas">
+                    
+                    <% Secondaryproducts.forEach(product=> { %>
+                        <div class="product">
+                            <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image %>" alt=""></a>
+                        <p><%= product.description %></p>
+                    </div>
+                    <% }); %>
 
-        </section>
+                    <!-- <div class="product">
+                        <a href=""><img src="/img/producto.jpg" alt=""></a>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
 
-        <section class="container-img">
+                    <div class="product">
+                        <a href=""><img src="/img/producto.jpg" alt=""></a>
+                        <p>Lorem ipsum dolor sit amet.</p>
 
-            <div class="box box1">
-                <!-- Div con Background-img -->
-                <h3>Mira otros productos</h3>
-                <a href="">Ver mas</a>
-            </div>
+                    </div>
 
-            <div class="box box2">
-                <!-- Div con Background-img -->
-                <h3>Nuestra historia</h3>
-                <a href="">Ver mas</a>
-            </div>
+                    <div class="product">
+                        <a href=""><img src="/img/producto.jpg" alt=""></a>
+                        <p>Lorem ipsum dolor sit amet.</p>
 
-        </section>
+                    </div>
 
-        <section class="recetas">
-            <div class="product">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
+                    <div class="product">
+                        <a href=""><img src="/img/producto.jpg" alt=""></a>
+                        <p>Lorem ipsum dolor sit amet.</p>
 
-            <div class="product">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Lorem ipsum dolor sit amet.</p>
-            </div>
+                    </div> -->
+                </section>
 
-            <div class="product">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Lorem ipsum dolor sit amet.</p>
-
-            </div>
-
-            <div class="product">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Lorem ipsum dolor sit amet.</p>
-
-            </div>
-
-            <div class="product">
-                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                <p>Lorem ipsum dolor sit amet.</p>
-
-            </div>
-        </section>
-
-        <section class="winner">
-            <img src="/img/img-winner.webp" alt="">
-            <div class="descrip-winner">
-                <h1>Cafe de seleccion Premium</h1>
-                <p>Este cafe de calidad premium es el mas vendido gracias a su alta calidad y su sabor afrutado con un toque selvatico</p>
-                <a href="">Agregar al carrito</a>
-            </div>
-        </section>
+                <section class="winner">
+                   <a href="/products/detail/<%= products[0].id %>" class="linkImg"><img src="/img/<%= products[0].image%>" alt="" class="imgMain"></a>
+                    <div class="descrip-winner">
+                        <h1><%= products[0].name%></h1>
+                        <p><%= products[0].description%></p>
+                        <a href="">Agregar al carrito</a>
+                    </div>
+                </section>
 
 
 
 
-        <!-- <section class="title-testonial">
+                <!-- <section class="title-testonial">
             <div class="content-testi">
                 <h1>Testimonios de compra</h1>
             </div>
@@ -153,44 +158,20 @@
 
 
 
-        <section class="marquee-img">
-            <div>
-                <marquee behavior="" direction="left" loop="1000000" >
-                    <div class="marq-box marq-box1">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        <img src="/img/producto.jpg" alt="">
-                        
+                <section class="marquee-img">
+                    <div>
+                        <marquee behavior="" direction="left" loop="1000000">
+                            <div class="marq-box marq-box1">
+                                <%products.forEach(product=> { %>
+                               <a href="/products/detail/<%= product.id %>"> <img src="/img/<%= product.image %>" alt="<%= product.name %>"></a>
+                                <% }); %>
+                            </div>
+                        </marquee>
                     </div>
-                </marquee>
-            </div>
-        </section>
-    </main>
+                </section>
+            </main>
 
-   <%- include("partials/footer") %>
-</body>
+            <%- include("partials/footer") %>
+    </body>
+
 </html>
