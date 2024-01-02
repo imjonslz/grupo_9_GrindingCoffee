@@ -7,6 +7,7 @@ const productsController = require('../controllers/productsController.js')
 
 // *************** continuamos la ruta por el controlador *************** //
 router.get('/detail/:id', productsController.viewDetail)
+router.get('/create', productsController.viewCreate)
 
 // *************** exportamos la variable router *************** //
 module.exports = router;

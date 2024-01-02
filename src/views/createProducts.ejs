@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head", {title:"Grinding Coffee/Registro", css:"crear"}) %>
+    <body>
+        <%- include("partials/header.ejs") %>
+            <main>
+                <form action="/create" method="post" class="form" name="registro">
+                    <section class="cajaregistro">
+                        <p class="h3">Crea tu perfil<i class="fa-solid fa-mug-saucer fa-l"></i></p>
+                        <div class="line"></div>
+                        <p class="marca">Grinding Coffee®</p>
+
+                        <input class="inputregistro" type="text" name="registro" id="nombreyapellido"
+                            placeholder="Nombre y apellido" required>
+                        </input>
+
+                        <input class="inputregistro" type="text" name="registro" id="Nombredeusuari@"
+                            placeholder="Nombre de usuari@" required>
+                        </input>
+
+                        <input class="inputregistro" type="Email" name="registro" id="Email" placeholder="Email"
+                            required>
+                        </input>
+
+                        <input class="inputregistro" type="text" name="registro" id="date"
+                            placeholder="Fecha de nacimiento" required>
+                        </input>
+
+                        <input class="inputregistro" type="text" name="registro" id="Domicilio" placeholder="Domicilio"
+                            required>
+                        </input>
+
+                        <div class="fotoUsuario">
+                            <label>Foto de usuario:</label>
+                            <input type="file" name="registro" accept=".jpg" placeholder="Foto de usuario">
+                            </input>
+                        </div>
+
+                        <input class="inputregistro" type="password" name="registro" id="Contraseña"
+                            placeholder="Contraseña" required>
+                        </input>
+
+                        <input class="inputregistro" type="password" name="registro" id="Confirmar Contraseña"
+                            placeholder="Confirma Contraseña" required>
+                        </input>
+
+                        <section class="botones">
+                            <button type="reset">Crear</button>
+                        </section>
+
+                        <section class="botones">
+                            <button type="reset">Volver</button>
+                        </section>
+                    </section>
+
+                </form>
+            </main>
+            <%- include("partials/footer.ejs") %>
+                <!-- revisar despues -->
+                <!-- <p id="copyright"> &copy; 2023 grinding coffee S.R.L.</p> -->
+    </body>
+
+</html>

@@ -19,6 +19,10 @@ let detailController = {
        })
        
         res.render('productDetail', {singleProduct, relatedProducts});
+    },
+    viewCreate: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('createProducts', {products});
     }
 
 };
