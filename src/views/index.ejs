@@ -10,6 +10,7 @@
                     <!-- acordarse que cuando se utiliza un for each o un ciclo for, lo que sea no va el simbolo < % = sino solamente < % -->
                     <% Primaryproducts.forEach(product=> { %>
                         <div class="product product1">
+                            <!-- LO DEL MULTER NO FUNCIONA CON LA RUTA IMG/PRODUCTS PORQUE EN EL INDEX, EN EL DETAIl HABRIA QUE CAMBIARLOS AGREGANDOLE LA RUTA COMPLETA PARA QUE LOS LEA, YA QUE SI SE LE PONE LA RUTA DEL MULTER ES COMO SINO EXISTIERA -->
                             <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image%>" alt="<%= product.name %>"></a>
                             <p><%= product.description %></p>
                         </div>

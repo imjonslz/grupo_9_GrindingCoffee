@@ -36,7 +36,12 @@
             <article class="product">
                 <h1 class="titleProduct"><%= singleProduct.name %></h1>
                 <p class="descriptionProduct"><%= singleProduct.description %></p>
+                <p class="descriptionProduct">Precio del Producto: <%= singleProduct.price %> $</p>
                 <button class="addCart" type="submit">Agregar al carrito</button>
+                <a class="addCart" href="/products/edit/<%= singleProduct.id %>">Editar Producto</a>
+                <form action="/products/delete/<%= singleProduct.id %>?_method=DELETE" method="POST">
+                    <button class="addCart" type="submit">Borrar Producto</button>
+                </form>
             </article>
         </section>
 

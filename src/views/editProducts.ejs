@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head", {title:"Grinding Coffee/Registro", css:"edit"}) %>
+    <body>
+        <%- include("partials/header.ejs") %>
+            <main>
+                <form action="/products/edit/<%= singleProduct.id%>?_method=PUT" method="POST" class="form" enctype="multipart/form-data">
+                    <section class="cajacreate">
+                        <p class="h3">Editar producto<i class="fa-solid fa-mug-saucer fa-l"></i></p>
+                        <div class="line"></div>
+                        <p class="marca">Grinding Coffee®</p>
+
+                        <input class="inputcreate" type="text" name="productName" value="<%=singleProduct.name%>" id="product-name" placeholder="Nombre producto" required >
+
+
+                        <label for="description" class="form-label">Descripcion:</label>
+                        <textarea class="inputcreate form" name="description" id="description" required><%= singleProduct.description %></textarea>
+
+                        <label for="category" class="form-label">Categoría:</label>
+						<select name="category" id="category" class="form-input" value="">
+							<option value="" <% if (!singleProduct.category) { %>selected<% } %>>Que tipo de producto es:</option>
+							<option value="primary" <% if (singleProduct.category === 'primary') { %>selected<% } %>>Primario</option>
+							<option value="secondary" <% if (singleProduct.category === 'secondary') { %>selected<% } %>>Secundario</option>
+						</select>
+
+                        <input class="inputcreate" type="text" name="price" id="price"
+                            placeholder="Precio del producto" value="<%= singleProduct.price %>">
+                        </input>
+
+                        <div class="fotoUsuario">
+                            <input type="file" name="productImage">
+                            </input>
+                        </div>
+
+                        <section class="botones">
+                            <button type="submit">Editar</button>
+                        </section>
+
+                        <section class="botones">
+                            <button type="reset">Volver</button>
+                        </section>
+                    </section>
+
+                </form>
+            </main>
+            <%- include("partials/footer.ejs") %>
+                <!-- revisar despues -->
+                <!-- <p id="copyright"> &copy; 2023 grinding coffee S.R.L.</p> -->
+    </body>
+
+</html>

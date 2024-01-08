@@ -104,6 +104,7 @@ main{
     border: none;
     font-size: 1.3em;
     margin-top: 40px;
+    cursor: pointer;
 }
 
 /*/////////////////// RELATED PRODUCTS ///////////////////*/

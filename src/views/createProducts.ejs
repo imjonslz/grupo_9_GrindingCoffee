@@ -4,48 +4,33 @@
     <body>
         <%- include("partials/header.ejs") %>
             <main>
-                <form action="/create" method="post" class="form" name="registro">
-                    <section class="cajaregistro">
-                        <p class="h3">Crea tu perfil<i class="fa-solid fa-mug-saucer fa-l"></i></p>
+                <form action="/products/create" method="POST" class="form" enctype="multipart/form-data">
+                    <section class="cajacreate">
+                        <p class="h3">Crear producto<i class="fa-solid fa-mug-saucer fa-l"></i></p>
                         <div class="line"></div>
                         <p class="marca">Grinding Coffee®</p>
 
-                        <input class="inputregistro" type="text" name="registro" id="nombreyapellido"
-                            placeholder="Nombre y apellido" required>
-                        </input>
+                        <input class="inputcreate" type="text" name="productName" id="product-name" placeholder="Nombre producto" required>
 
-                        <input class="inputregistro" type="text" name="registro" id="Nombredeusuari@"
-                            placeholder="Nombre de usuari@" required>
-                        </input>
+                        <label for="description" class="form-label">Descripcion:</label>
+                        <textarea class="inputcreate form"  name="description" id="description" required></textarea>
 
-                        <input class="inputregistro" type="Email" name="registro" id="Email" placeholder="Email"
-                            required>
-                        </input>
+                        <label for="category" class="form-label">Categoría:</label>
+						<select name="category" id="category" class="form-input" value="">
+							<option value="" selected>Que tipo de producto es:</option>
+							<option value="primary">Primario</option>
+							<option value="secondary">Secundario</option>
+						</select>
 
-                        <input class="inputregistro" type="text" name="registro" id="date"
-                            placeholder="Fecha de nacimiento" required>
-                        </input>
-
-                        <input class="inputregistro" type="text" name="registro" id="Domicilio" placeholder="Domicilio"
-                            required>
-                        </input>
+                        <input type="number" class="inputcreate" name="price" id="price" placeholder="Precio del producto">
 
                         <div class="fotoUsuario">
-                            <label>Foto de usuario:</label>
-                            <input type="file" name="registro" accept=".jpg" placeholder="Foto de usuario">
+                            <input type="file" name="productImage"  placeholder="Foto de producto">
                             </input>
                         </div>
 
-                        <input class="inputregistro" type="password" name="registro" id="Contraseña"
-                            placeholder="Contraseña" required>
-                        </input>
-
-                        <input class="inputregistro" type="password" name="registro" id="Confirmar Contraseña"
-                            placeholder="Confirma Contraseña" required>
-                        </input>
-
                         <section class="botones">
-                            <button type="reset">Crear</button>
+                            <button type="submit">Crear</button>
                         </section>
 
                         <section class="botones">

@@ -20,9 +20,69 @@ let detailController = {
        
         res.render('productDetail', {singleProduct, relatedProducts});
     },
+
+    destroyProduct: (req, res) => {
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+        products = products.filter(product => {
+			return product.id != req.params.id
+		})
+
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+
+		res.redirect("/")
+    },
     viewCreate: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('createProducts', {products});
+    },
+    CreateProcces: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+        const newProduct = {
+            id: products[products.length - 1].id + 1,
+				name: req.body.productName,
+				price: parseInt(req.body.price),
+				discount: req.body.discount,
+				category: req.body.category,
+				description: req.body.description,
+                image: req.file ? req.file.filename : "default-image.png"
+        }
+        products.push(newProduct);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "))
+        res.redirect("/")
+    },
+    viewEdit: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        const singleProduct = products.find(function (product) {
+            return product.id == req.params.id
+           })
+        res.render('editProducts', {singleProduct});
+    },
+    ProcessEdit: (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+        let productEdit = products.find(product => {
+			return product.id == req.params.id
+		})
+		productEdit = {
+			id: productEdit.id,
+            name: req.body.productName,
+			price: parseInt(req.body.price),
+			discount: req.body.discount,
+			category: req.body.category,
+			description: req.body.description,
+			image: req.file != undefined ? req.file.filename : productEdit.image
+		}
+        let index = products.findIndex(product =>{
+            return product.id == req.params.id
+        })
+
+        products[index] = productEdit;
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+
+		res.redirect("/")
     }
 
 };
