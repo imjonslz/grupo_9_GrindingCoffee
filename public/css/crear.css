@@ -98,144 +98,104 @@ header .headerImg h1{
 
 
 
+/* Estilos para el formulario */
 
-
-/* MAIN */
-main{
+  main .form-general{
     background-image: url("/img/FONDOCAFE.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-
-/* BODY */
-body {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cajacreate {
+    margin: 8rem;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 30px;
+    width: 800px;
+    border: 1px solid #989898;
+  }
+  
+  .h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .line {
+    height: 2px;
+    background-color: #ccc;
+    margin: 10px 0 20px;
+  }
+  
+  .marca {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .inputcreate,
+  .form-input,
+  textarea {
     width: 100%;
-}
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  select.form-input {
+    appearance: none;
+  }
+  
 
-.form {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
+  main .form-general form .cajacreate .btn-options{
+    display: flex;
+    justify-content: center;
+  }
 
-.cajacreate {
-    width: 80%;
-    max-width: 700px;
-    margin: 5% auto;  /* Cambié margin-left por margin */
-    background-color: #9f9a9a96;
-    box-shadow: 0px 0px 10px #6e6d6da7;
-    border-radius: 30px 30px 40px 40px;
-    padding-bottom: 5%;
-    text-align: center;
-    border-left: solid 5px #833f008e;
-    border-right: solid 1px #f8f4f4bd;
-    border-bottom: solid 2.7px #92470197;
-}
+  main .form-general form .cajacreate .btn-options .botones button{
+    margin: 1rem;
+  }
 
-.inputcreate {
-    width: 80%;
-    height: 40px;
-    border-radius: 40px 40px 40px 40px;
-    border: solid 1px white;
-    text-align: center;
-    display: block;
-    margin: auto;
-    margin-top: 15px;
-}
 
-.fotoUsuario {
-    color: white;
-    width: 70%;
-    margin: 5% 0 0 15%;
-    height: 40px;
-    text-align: center;
-    margin-top: 5%;
-}
-
-.labelfoto {
-    text-align: center;
-    margin: 5%;
-}
-
-.h3 {
-    border: solid 1px #ffffff96;
-    background-color: rgba(255, 255, 255, 0.898);
-    box-shadow: #9f9a9a96;
-    width: 30%;
-    margin: 0% 20% 5% 35%;
-    border-radius: 0px 20px 0px 20px;
-    color: #4a2504f5;
-}
-
-.marca {
-    color: rgba(0, 0, 0, 0.888);
-    font-size: 18px;
-    text-align: left;
-    margin-left: 20px;
-    padding-bottom: 25px;
-}
-.form-label {
-   display: inline-block;
-/*     font-size: 1.6em; */
-   margin-top: 18px;
-   margin-bottom: 5px;
- }
-.form-input {
-   display: block;
-   width: 50%;
-   height: 45px;
-   margin: auto;
-   margin-bottom: 15px;
-   font-size: 14px;
-   border-radius: 8px;
-   border: none;
-   border: solid 1px var(--gray);
-   padding: 0 15px;
- }
-
- 
- textarea.form {
-   min-height: 140px;
-   resize: vertical;
-   padding-top: 0px;
-   padding: 15px;
-   margin-top: 0px;
- }
-
-/* BOTONES */
-.botones {
-    margin-top: 2%;
-}
-
-main .botones a,
-main .botones button {
-    margin: 2% 0;
-    padding: 0.8rem;
-    padding-left: 40px;
-    padding-right: 40px;
-    font-size: 1rem;
+  .botones {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-main .botones a {
-    color: var(--colorText);
-    background-color: transparent;
-}
-
-main .botones button {
-    background-color: var(--colorTittleDark);
-    color: var(--fondoGeneral);
-}
-
-main .botones a:hover,
-main .botones button:hover {
-    background-color: var(--fondoGeneral);
-    color: var(--colorText);
-}
-
+    width: 200px;
+    font-size: 1.4rem;
+  }
+  
+  button[type="submit"] {
+    background-color: #0a81d0;
+    color: white;
+  }
+  
+  button[type="reset"] {
+    background-color: #d95041;
+    color: white;
+  }
+  
+  /* Estilos generales */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  
 @media screen and (min-width: 326px) and (max-width: 750px){
 
     *{
@@ -339,29 +299,29 @@ main .botones button:hover {
         background-image: url("/img/CafeFondo.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 100vh; /* Ajusta la altura mínima al 100% del viewport */
-        margin-bottom: -60px; /* Ajusta el margen inferior para compensar el espacio en blanco */
+        min-height: 100vh;
+        margin-bottom: -60px;
     }
     
 
     .cajacreate {
-        width: 80%; /* Reduce el ancho del contenedor */
-        margin: 5% 10%; /* Ajusta los márgenes */
+        width: 80%;
+        margin: 5% 10%; 
     }
 
     .inputcreate,
     .fotoUsuario {
-        width: 80%; /* Reduce el ancho de los campos de entrada y la sección de la foto del usuario */
-        margin: 5% 10%; /* Ajusta los márgenes */
+        width: 80%;
+        margin: 5% 10%;
     }
 
     .h3 {
-        width: 60%; /* Ajusta el ancho del encabezado */
-        margin: 5% 20%; /* Ajusta los márgenes */
+        width: 60%;
+        margin: 5% 20%;
     }
 
     .botones {
-        margin-top: 5%; /* Ajusta el margen superior de la sección de botones */
+        margin-top: 5%; 
     }
    
  }

@@ -4,45 +4,46 @@
     <body>
         <%- include("partials/header.ejs") %>
             <main>
-                <form action="/products/create" method="POST" class="form" enctype="multipart/form-data">
-                    <section class="cajacreate">
-                        <p class="h3">Crear producto<i class="fa-solid fa-mug-saucer fa-l"></i></p>
-                        <div class="line"></div>
-                        <p class="marca">Grinding Coffee®</p>
-
-                        <input class="inputcreate" type="text" name="productName" id="product-name" placeholder="Nombre producto" required>
-
-                        <label for="description" class="form-label">Descripcion:</label>
-                        <textarea class="inputcreate form"  name="description" id="description" required></textarea>
-
-                        <label for="category" class="form-label">Categoría:</label>
-						<select name="category" id="category" class="form-input" value="">
-							<option value="" selected>Que tipo de producto es:</option>
-							<option value="primary">Primario</option>
-							<option value="secondary">Secundario</option>
-						</select>
-
-                        <input type="number" class="inputcreate" name="price" id="price" placeholder="Precio del producto">
-
-                        <div class="fotoUsuario">
-                            <input type="file" name="productImage"  placeholder="Foto de producto">
-                            </input>
-                        </div>
-
-                        <section class="botones">
-                            <button type="submit">Crear</button>
+                <section class="form-general">
+                    <form action="/products/create" method="POST" class="form" enctype="multipart/form-data">
+                        <section class="cajacreate">
+                            <p class="h3">Crear producto<i class="fa-solid fa-mug-saucer fa-l"></i></p>
+                            <div class="line"></div>
+                            <p class="marca">Grinding Coffee®</p>
+    
+                            <input class="inputcreate" type="text" name="productName" id="product-name" placeholder="Nombre producto" required>
+    
+                            <label for="description" class="form-label">Descripcion:</label>
+                            <textarea class="inputcreate form"  name="description" id="description" required></textarea>
+                            <label for="category" class="form-label">Categoría:</label>
+                            <select name="category" id="category" class="form-input" value="">
+                                <option value="" selected>Que tipo de producto es:</option>
+                                <option value="primary">Primario</option>
+                                <option value="secondary">Secundario</option>
+                            </select>
+    
+                            <input type="number" class="inputcreate" name="price" id="price" placeholder="Precio del producto">
+    
+                            <div class="fotoUsuario">
+                                <input type="file" name="productImage"  placeholder="Foto de producto" required>
+                                </input>
+                            </div>
+    
+                            <section class="btn-options">
+                                <section class="botones">
+                                    <button type="submit">Crear</button>
+                                </section>
+        
+                                <section class="botones">
+                                    <button type="reset">Volver</button>
+                                </section>
+                            </section>
                         </section>
-
-                        <section class="botones">
-                            <button type="reset">Volver</button>
-                        </section>
-                    </section>
-
-                </form>
+    
+                    </form>
+                </section>
             </main>
             <%- include("partials/footer.ejs") %>
-                <!-- revisar despues -->
-                <!-- <p id="copyright"> &copy; 2023 grinding coffee S.R.L.</p> -->
     </body>
 
 </html>
