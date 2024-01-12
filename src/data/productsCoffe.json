@@ -1,66 +1,82 @@
 [
  {
   "id": 1,
-  "name": "Producto 1",
-  "description": "Esta es la descripción de nuestro primer producto ",
-  "category": "primary",
-  "price": 29.99,
-  "image": "img-winner.webp"
+  "name": "3 Kilos Café en Grano - Varietal Blend ",
+  "description": "Seleccionado de Brasil, Tostado Medio, Notas de: Chocolate amargo, cacao, cuerpo cremoso y dulce, aterciopelado y de acidez media.",
+  "category": "Materia Prima",
+  "price": 74950,
+  "image": "cafe-molido-1kg.jpg"
  },
  {
-  "id": 2,
-  "name": "Producto 2",
-  "description": "Esta es la descripción de un producto primario",
-  "category": "primary",
-  "price": 29.99,
-  "image": "copas.jpg"
+  "id": 24,
+  "name": "Café Molido - Blend Moka frutado",
+  "price": 15850,
+  "category": "Producto VA",
+  "description": "Café Molido Moka de 500grs, ideal para los amantes de un sabor intenso y aromático.",
+  "image": "productImage-1704937273368.jpg"
  },
  {
-  "id": 3,
-  "name": "Producto 3",
-  "description": "Esta es la descripción de un producto primario",
-  "category": "primary",
-  "price": 29.99,
-  "image": "producto.jpg"
+  "id": 25,
+  "name": "Café en Grano 3 Kg - Varietal Blend ",
+  "price": 75900,
+  "category": "Materia Prima",
+  "description": "Pack de 3 paquetes de 1 kg de café tostado italiano. Calidad Superior a las cafeterías históricas y conocidas. Este café es ideal para los amantes del ristretto, espresso, o mezclas con leche.",
+  "image": "productImage-1704939267272.jpg"
  },
  {
-  "id": 4,
-  "name": "Producto 4",
-  "description": "Esta es la descripción de un producto secundario",
-  "category": "secondary",
-  "price": 29.99,
-  "image": "producto.jpg"
+  "id": 26,
+  "name": "Café Molido 3kg - Blend Moka frutado ",
+  "price": 69900,
+  "category": "Materia Prima",
+  "description": "Café Molido Moka de 3kg, ideal para los amantes de un sabor intenso y aromático.",
+  "image": "productImage-1704939461212.jpg"
  },
  {
-  "id": 5,
-  "name": "Producto 5",
-  "description": "Esta es la descripción de un producto secundario",
-  "category": "secondary",
-  "price": 29.99,
-  "image": "producto.jpg"
+  "id": 27,
+  "name": "Café Molido 1kg - Blend Moka frutado ",
+  "price": 26700,
+  "category": "Materia Prima",
+  "description": "Café Molido Moka de 1kg, ideal para los amantes de un sabor intenso y aromático.",
+  "image": "productImage-1704939556310.jpg"
  },
  {
-  "id": 21,
-  "name": "Prueba 4",
-  "price": 500,
-  "category": "primary",
-  "description": "Una prueba mas",
-  "image": "productImage-1704681053564.jpg"
+  "id": 28,
+  "name": "Café Molido 500gr - Blend Moka frutado ",
+  "price": 15700,
+  "category": "Producto VA",
+  "description": "Café Molido Moka de 500grs, ideal para los amantes de un sabor intenso y aromático.\r\nPresentado en una práctica bolsa que conserva su frescura y calidad.",
+  "image": "productImage-1704939800950.jpg"
  },
  {
-  "id": 22,
-  "name": "Ultima Prueba",
-  "price": 5000,
-  "category": "primary",
-  "description": "Descripcion de prueba",
-  "image": "productImage-1704669323724.jpg"
+  "id": 29,
+  "name": "Café Grano 500gr - Blend Italiano",
+  "price": 12800,
+  "category": "Producto VA",
+  "description": "Pack de 500g de café tostado italiano. Calidad Superior a las cafeterías históricas y conocidas. Este café es ideal para los amantes del ristretto, espresso, o mezclas con leche.",
+  "image": "productImage-1704939932813.jpg"
  },
  {
-  "id": 23,
-  "name": "Un Producto totalmente nuevo",
-  "price": 7000,
-  "category": "primary",
-  "description": "Nuevo produco estrella",
-  "image": "productImage-1704681142306.jpg"
+  "id": 30,
+  "name": "Café Instantáneo 500gr  - Torrado fino Black",
+  "price": 18200,
+  "category": "Producto VA",
+  "description": "sabor intenso y dulce, con notas de caramelo y chocolate",
+  "image": "productImage-1704940045579.jpg"
+ },
+ {
+  "id": 31,
+  "name": "Café Instantáneo 250gr  - Torrado fino Black",
+  "price": 9800,
+  "category": "Producto VA",
+  "description": "sabor intenso y dulce, con notas de caramelo y chocolate",
+  "image": "productImage-1704940321371.jpg"
+ },
+ {
+  "id": 32,
+  "name": "Café Instantáneo 250gr  - Caramel",
+  "price": 9150,
+  "category": "Producto VA",
+  "description": "intenso sabor a caramelo y presentado en una práctica bolsa que conserva la frescura y calidad.",
+  "image": "productImage-1704940459773.jpg"
  }
 ]
