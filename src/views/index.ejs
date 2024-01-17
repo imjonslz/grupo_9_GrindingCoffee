@@ -12,54 +12,9 @@
                         <div class="product product1">
                             <!-- LO DEL MULTER NO FUNCIONA CON LA RUTA IMG/PRODUCTS PORQUE EN EL INDEX, EN EL DETAIl HABRIA QUE CAMBIARLOS AGREGANDOLE LA RUTA COMPLETA PARA QUE LOS LEA, YA QUE SI SE LE PONE LA RUTA DEL MULTER ES COMO SINO EXISTIERA -->
                             <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image%>" alt="<%= product.name %>"></a>
-                            <p><%= product.description %></p>
+                            <p><%= product.name %></p>
                         </div>
                         <% }); %>
-                        
-                        <!--  <div class="product product2">
-                                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                                <p>Descripcion del producto a la venta</p>
-                            </div>
-
-                            <div class="product product3">
-                                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                                <p>Descripcion del producto a la venta</p>
-                            </div>
-
-                            <div class="product product4">
-                                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                                <p>Descripcion del producto a la venta</p>
-                            </div>
-
-                            <div class="product product5">
-                                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                                <p>Descripcion del producto a la venta</p>
-                            </div>
-
-                            <div class="product product6">
-                                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                                <p>Descripcion del producto a la venta</p>
-                            </div>
-
-                            <div class="product product7">
-                                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                                <p>Descripcion del producto a la venta</p>
-                            </div>
-
-                            <div class="product product8">
-                                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                                <p>Descripcion del producto a la venta</p>
-                            </div>
-                            
-                            <div class="product product9">
-                                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                                <p>Descripcion del producto a la venta</p>
-                            </div>
-                            <div class="product product10">
-                                <a href=""><img src="/img/producto.jpg" alt=""></a>
-                                <p>Descripcion del producto a la venta</p>
-                            </div> -->
-
                 </section>
 
                 <section class="container-img">
@@ -82,32 +37,9 @@
                     <% Secondaryproducts.forEach(product=> { %>
                         <div class="product">
                             <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image %>" alt=""></a>
-                        <p><%= product.description %></p>
+                        <p><%= product.name %></p>
                     </div>
                     <% }); %>
-
-                    <!-- <div class="product">
-                        <a href=""><img src="/img/producto.jpg" alt=""></a>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
-
-                    <div class="product">
-                        <a href=""><img src="/img/producto.jpg" alt=""></a>
-                        <p>Lorem ipsum dolor sit amet.</p>
-
-                    </div>
-
-                    <div class="product">
-                        <a href=""><img src="/img/producto.jpg" alt=""></a>
-                        <p>Lorem ipsum dolor sit amet.</p>
-
-                    </div>
-
-                    <div class="product">
-                        <a href=""><img src="/img/producto.jpg" alt=""></a>
-                        <p>Lorem ipsum dolor sit amet.</p>
-
-                    </div> -->
                 </section>
 
                 <section class="winner">
@@ -118,47 +50,6 @@
                         <a href="">Agregar al carrito</a>
                     </div>
                 </section>
-
-
-
-
-                <!-- <section class="title-testonial">
-            <div class="content-testi">
-                <h1>Testimonios de compra</h1>
-            </div>
-        </section>
-        <section class="wrapper">
-            <div class="testimonial-item">
-                <div class="testimonial-client">
-                    <img src="./img/User.png" alt="">
-                    <p class="client-name">Carlos</p>
-                    <div class="testimonial-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eius!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item">
-                <div class="testimonial-client">
-                    <img src="./img/User.png" alt="">
-                    <p class="client-name">Miguel</p>
-                    <div class="testimonial-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eius!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item">
-                <div class="testimonial-client">
-                    <img src="./img/User.png" alt="">
-                    <p class="client-name">Stefany</p>
-                    <div class="testimonial-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eius!</p>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-
-
                 <section class="marquee-img">
                     <div>
                         <marquee behavior="" direction="left" loop="1000000">

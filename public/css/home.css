@@ -120,10 +120,10 @@ main .recetas::-webkit-scrollbar{
     width:  0;
 }
 
-main .container .product{
+main .product{
     background-color: #ffffff96;
     margin: 1rem;
-    border-radius: 2rem 2rem 0 0;
+    border-radius: 2rem 2rem 1rem 1rem;
     height: 20rem;
     width: 15rem;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
@@ -131,22 +131,24 @@ main .container .product{
     transition: all 400ms ease;
 }
 
-main .container .product:hover{
+main .product:hover{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-3%);
 }
 
-main .container .product a img{
+main .product a img{
     width: 15rem;
     height: 12rem;
     border-radius: 2rem 2rem 0 0;
     /* margin: 2rem; */
 }
 
-main .container .product p{
+main .product p{
     text-align: center;
     font-size: 1.2rem;
     padding: 1.5rem;
+    font-weight: bold;
+    color: #844000;
 }
 
 
@@ -196,37 +198,6 @@ main .recetas{
     /* ESTO FUE LO QUE MODIFIQUE */
     overflow: scroll;
 }
-
-
-main .recetas .product{
-    background-color: rgba(255, 255, 255, 0.589);
-    margin: 1.5rem;
-    border-radius: 2rem 2rem 0 0;
-    height: 20rem;
-    width: 15rem;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-    cursor: default;
-    transition: all 400ms ease;
-}
-
-main .recetas .product:hover{
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-3%);
-}
-
-main .recetas .product a img{
-    width: 15rem;
-    height: 12rem;
-    border-radius: 2rem 2rem 0 0;
-    /* margin: 2rem; */
-}
-
-main .recetas .product p{
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 1.5rem;
-}
-
 
 
 /* ESTILOS DE PRODUCTO WINNER */
