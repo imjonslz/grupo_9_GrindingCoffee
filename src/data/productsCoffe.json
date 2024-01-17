@@ -2,7 +2,7 @@
  {
   "id": 1,
   "name": "3 Kilos Café en Grano - Varietal Blend ",
-  "description": "Seleccionado de Brasil, Tostado Medio, Notas de: Chocolate amargo, cacao, cuerpo cremoso y dulce, aterciopelado y de acidez media.",
+  "description": "Seleccionado de Brasil, Notas de: Chocolate amargo, cacao, cuerpo cremoso y dulce, de acidez media.",
   "category": "Materia Prima",
   "price": 74950,
   "image": "cafe-molido-1kg.jpg"
@@ -17,10 +17,10 @@
  },
  {
   "id": 25,
-  "name": "Café en Grano 3 Kg - Varietal Blend ",
+  "name": "Café en Grano 3 Kg - Italiano Blend ",
   "price": 75900,
   "category": "Materia Prima",
-  "description": "Pack de 3 paquetes de 1 kg de café tostado italiano. Calidad Superior a las cafeterías históricas y conocidas. Este café es ideal para los amantes del ristretto, espresso, o mezclas con leche.",
+  "description": "Pack 3kg. Este café es ideal para los amantes del ristretto, espresso, o mezclas con leche.",
   "image": "productImage-1704939267272.jpg"
  },
  {
@@ -44,7 +44,7 @@
   "name": "Café Molido 500gr - Blend Moka frutado ",
   "price": 15700,
   "category": "Producto VA",
-  "description": "Café Molido Moka de 500grs, ideal para los amantes de un sabor intenso y aromático.\r\nPresentado en una práctica bolsa que conserva su frescura y calidad.",
+  "description": "Café Molido Moka de 500grs, ideal para los amantes de un sabor intenso y aromático.",
   "image": "productImage-1704939800950.jpg"
  },
  {
@@ -52,7 +52,7 @@
   "name": "Café Grano 500gr - Blend Italiano",
   "price": 12800,
   "category": "Producto VA",
-  "description": "Pack de 500g de café tostado italiano. Calidad Superior a las cafeterías históricas y conocidas. Este café es ideal para los amantes del ristretto, espresso, o mezclas con leche.",
+  "description": "Pack de 500g de café tostado italiano. Ideal para los amantes del ristretto, espresso, o mezclas con leche.",
   "image": "productImage-1704939932813.jpg"
  },
  {
