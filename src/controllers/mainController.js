@@ -14,10 +14,10 @@ let mainController = {
         
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         const Primaryproducts = products.filter(function (product) {
-            return product.category == "primary"
+            return product.category == "Materia Prima"
         })
         const Secondaryproducts = products.filter(function (product) {
-            return product.category == "secondary"
+            return product.category == "Producto VA"
         })
         res.render('index', {products, Primaryproducts, Secondaryproducts });
     }

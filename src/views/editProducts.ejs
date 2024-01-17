@@ -19,8 +19,8 @@
                         <label for="category" class="form-label">Categoría:</label>
 						<select name="category" id="category" class="form-input" value="">
 							<option value="" <% if (!singleProduct.category) { %>selected<% } %>>Que tipo de producto es:</option>
-							<option value="primary" <% if (singleProduct.category === 'primary') { %>selected<% } %>>Primario</option>
-							<option value="secondary" <% if (singleProduct.category === 'secondary') { %>selected<% } %>>Secundario</option>
+							<option value="Materia Prima" <% if (singleProduct.category === 'Materia Prima') { %>selected<% } %>>Materia Prima</option>
+							<option value="Producto VA" <% if (singleProduct.category === 'Producto VA') { %>selected<% } %>>Producto VA</option>
 						</select>
 
                         <input class="inputcreate" type="text" name="price" id="price"
