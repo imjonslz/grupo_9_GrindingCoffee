@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include("partials/head", {title:"Grinding Coffee/Registro", css:"edit"}) %>
     <body>
-        <%- include("partials/header.ejs") %>
+        <%- include("partials/header-home.ejs") %>
             <main>
                 <form action="/products/edit/<%= singleProduct.id%>?_method=PUT" method="POST" class="form" enctype="multipart/form-data">
                     <section class="cajacreate">

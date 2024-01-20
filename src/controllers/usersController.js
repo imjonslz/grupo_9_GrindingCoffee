@@ -9,7 +9,7 @@ let loginController = {
         res.render('login', {currentPath: req.path });
     },
     viewRegister: (req, res) => {
-        res.render('register');
+        res.render('register', {currentPath: req.path });
     }
 
 };

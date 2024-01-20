@@ -18,7 +18,7 @@ let detailController = {
         return product.category === singleProduct.category && product.id !== singleProduct.id;
        })
        
-        res.render('productDetail', {singleProduct, relatedProducts});
+        res.render('productDetail', {singleProduct, relatedProducts, currentPath: req.path });
     },
 
     destroyProduct: (req, res) => {
@@ -35,7 +35,7 @@ let detailController = {
     },
     viewCreate: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('createProducts', {products});
+        res.render('createProducts', {products, currentPath: req.path});
     },
     CreateProcces: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -58,7 +58,7 @@ let detailController = {
         const singleProduct = products.find(function (product) {
             return product.id == req.params.id
            })
-        res.render('editProducts', {singleProduct});
+        res.render('editProducts', {singleProduct, currentPath: req.path });
     },
     ProcessEdit: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
