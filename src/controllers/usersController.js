@@ -6,7 +6,7 @@ let loginController = {
 
     // Renderiza la vista '/detalle'
     viewLogin: (req, res) => {
-        res.render('login');
+        res.render('login', {currentPath: req.path });
     },
     viewRegister: (req, res) => {
         res.render('register');

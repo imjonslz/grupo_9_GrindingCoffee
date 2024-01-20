@@ -19,7 +19,7 @@ let mainController = {
         const Secondaryproducts = products.filter(function (product) {
             return product.category == "Producto VA"
         })
-        res.render('index', {products, Primaryproducts, Secondaryproducts });
+        res.render('index', {products, Primaryproducts, Secondaryproducts, currentPath: req.path });
     }
 
 };
