@@ -6,7 +6,7 @@ let cartController = {
 
     // Renderiza la vista '/detalle'
     viewCart: (req, res) => {
-        res.render('productCart');
+        res.render('productCart', {currentPath: req.path} );
     }
 
 };
