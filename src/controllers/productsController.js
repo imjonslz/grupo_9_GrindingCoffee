@@ -7,7 +7,6 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 // *************** objeto literal con los metodos a exportar *************** //
 let detailController = {
-
     // Renderiza la vista '/detalle'
     viewDetail: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

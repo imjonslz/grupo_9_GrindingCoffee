@@ -8,7 +8,7 @@
             <main class="container-main">
                 <section class="container">
                     <!-- acordarse que cuando se utiliza un for each o un ciclo for, lo que sea no va el simbolo < % = sino solamente < % -->
-                    <% Primaryproducts.forEach(product=> { %>
+                    <% EnGrano.forEach(product=> { %>
                         <div class="product product1">
                             <!-- LO DEL MULTER NO FUNCIONA CON LA RUTA IMG/PRODUCTS PORQUE EN EL INDEX, EN EL DETAIl HABRIA QUE CAMBIARLOS AGREGANDOLE LA RUTA COMPLETA PARA QUE LOS LEA, YA QUE SI SE LE PONE LA RUTA DEL MULTER ES COMO SINO EXISTIERA -->
                             <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image%>" alt="<%= product.name %>"></a>
@@ -34,7 +34,7 @@
                 
                 <section class="recetas">
                     
-                    <% Secondaryproducts.forEach(product=> { %>
+                    <% molido.forEach(product=> { %>
                         <div class="product">
                             <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image %>" alt=""></a>
                         <p><%= product.name %></p>

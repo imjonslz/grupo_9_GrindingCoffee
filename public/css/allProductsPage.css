@@ -1,0 +1,149 @@
+:root{
+    --colorTittleClear: #ffebda;
+    --fondoGeneral: #ffffff96;
+    --colorTittleDark: #5c2f05;
+    --colorText: #833f00;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ESTILOS - BARRA DE OPCIONES */
+body{
+    width: 100%;
+    background-color: var(--colorTittleClear);
+}
+
+
+
+header{
+    overflow: hidden;
+    background-color: var(--colorTittleClear);
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+}
+
+.container{
+    width: auto;
+    margin: auto;
+}
+
+header .container .flexBox{
+    height: 80px;
+}
+
+#logoHeader{
+    width: 80px;
+
+}
+
+#logoHeader a img{
+    width: 100%;
+    margin-right: 10rem;
+}
+
+.flexBox{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    padding: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--colorText);
+}
+
+
+
+
+/* Estilos de ALl productos */
+
+main .btnsSelect{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+main .btnsSelect .btn{
+    padding: 1rem;
+    margin: 1.3rem;
+    border-radius: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid #5c2f05;
+    background-color: #f0ac6d;
+    color: #5c2f05;
+}
+
+
+main .btnsSelect .btn:hover{
+    border: 1px solid #ffd9b6;
+    background-color: #5c2f05;
+    color: #f0ac6d;
+    transition: 0.3s;
+}
+
+main .container{
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+
+main .container .containerProducts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 2.2rem;
+    border-radius: 2rem;
+    background-color: #e4b28699;
+}
+
+main .container .containerProducts .product img{
+    width: 15rem;
+    height: 12rem;
+    border-radius: 2rem 2rem 0 0;
+}
+
+
+main .container .containerProducts .product{
+    align-items: center;
+    background-color: #ffffff96;
+    margin: 1rem;
+    border-radius: 2rem 2rem 1rem 1rem;
+    height: 20rem;
+    width: 15rem;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+main .container .containerProducts .product:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
+}
+
+
+
+main .container .containerProducts .product p{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    font-weight: bold;
+    color: #844000;
+}
