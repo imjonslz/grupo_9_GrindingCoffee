@@ -12,9 +12,15 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+main{
+    padding-top: 68px;
+}
+
+i{
+    margin-left: 8px;
+}
 
 /*/////////////////// NAV ///////////////////*/
-
 header{
     overflow: hidden;
     background-color: var(--colorTittleClear);
@@ -23,13 +29,11 @@ header{
     width: 100%;
 }
 
-.container{
+.containerNav{
     width: 90%;
     margin: auto;
-}
-
-header .container .flexBox{
-    height: 80px;
+    padding: 8px 0 8px 0;
+    height: 68px;
 }
 
 #logoHeader{
@@ -40,12 +44,10 @@ header .container .flexBox{
     width: 100%;
 }
 
-.flexBox{
+.flexBoxNav{
     display: flex;
-    justify-content: space-around;
-    max-width: 1200px;
-    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
 }
 
 ul{
@@ -61,13 +63,21 @@ a{
     color: var(--colorText);
 }
 
-/*/////////////////// PRODUCT DETAIL ///////////////////*/
-main{
- margin-top: 80px;
+
+.container{
+    width: 90%;
+    margin: auto;
 }
 
+.flexBox{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/*/////////////////// PRODUCT DETAIL ///////////////////*/
 .productDetail{
-    
     display: flex;
     align-items: center;
     flex-wrap: wrap;

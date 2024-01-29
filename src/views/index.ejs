@@ -4,7 +4,12 @@
 <%- include("partials/head", {title:"Grinding Coffe", css:"home"}) %>
 
     <body>
-        <%- include("partials/header-home.ejs") %>
+        <%- include("partials/nav.ejs") %>
+        
+            <section class="headerImg">
+                <h1>Grinding Coffee</h1>
+            </section>
+        
             <main class="container-main">
                 <section class="container">
                     <!-- acordarse que cuando se utiliza un for each o un ciclo for, lo que sea no va el simbolo < % = sino solamente < % -->
@@ -63,7 +68,7 @@
                 </section>
             </main>
 
-            <%- include("partials/footer") %>
+            <%- include("partials/footer.ejs") %>
             
     </body>
 

@@ -14,67 +14,25 @@
 body{
     width: 100%;
 }
-/* header nav{
-    background-color: #ffffff;
-} */
 
-/* .hamburguer-bottom{
-    font-size: 30px;
-    color: white;
-    background-color: #03264C;
-    padding: 5px;
-    border-radius: 25%;
-    text-align: center;
-    display: block;
-    margin: auto;
-    width: 45px;
-    max-width: 50px;
-} */
-
-/* header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+i{
+    margin-left: 8px;
 }
 
-header nav ul li{
-    margin: 1rem;
-}
-
-header nav ul li{
-    padding-top: 3rem;
-}
-
-header nav ul li a{
-    text-decoration: none;
-    color: #151522;
-    font-size: 14px;
-    font-weight: bold;
-}
- */
-
-
-
-
-
-
-
-
-
- header{
+/*/////////////////// NAV ///////////////////*/
+header{
     overflow: hidden;
     background-color: var(--colorTittleClear);
+    position: fixed;
     top: 0;
     width: 100%;
 }
 
-.container{
+.containerNav{
     width: 90%;
     margin: auto;
-}
-
-header .container .flexBox{
-    height: 80px;
+    padding: 8px 0 8px 0;
+    height: 68px;
 }
 
 #logoHeader{
@@ -85,11 +43,10 @@ header .container .flexBox{
     width: 100%;
 }
 
-.flexBox{
+.flexBoxNav{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
 }
 
 ul{
@@ -100,16 +57,23 @@ li{
     padding: 16px;
 }
 
-.flexBox li a{
-    font-size: 1.1rem;
-}
-
 a{
     text-decoration: none;
     color: var(--colorText);
 }
 
 
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.flexBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
 /* contenido principal */
 
@@ -122,6 +86,7 @@ main{
     background-attachment: fixed;
     padding: 0.1px;
     padding-bottom: 50px;
+    padding-top: 68px;
 
 }
 .main-container{
@@ -354,61 +319,50 @@ li input{
 }
 
 
- /* ESTILOS DEL FOOTER */
-
-
- footer {
-    background-color: var(--colorTittleDark);
-    color: snow;
-    padding: 1rem;
-    position: relative;
-    z-index: 1; /* Asegura que el footer esté por encima del contenido */
-}
-
-footer .container {
+/* /////////////////// FOOTER /////////////////// */
+.flexBox {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-footer .flexBox {
-    display: flex;
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 80px 0;
 }
 
-footer section {
+footer{
+    background-color: var(--colorTittleDark);
+    color: var(--colorTittleClear);
+}
+
+footer a{
+    color: var(--colorTittleClear);
+    text-decoration: none;
+}
+
+.socialMedia i{
+    padding: 8px;
+}
+
+.copy{
+    padding-top: 40px;
     text-align: center;
 }
 
-footer .navFooter ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+footer .flexBox{
+    justify-content: flex-end;
 }
 
-footer .navFooter li {
-    margin: 0.5rem;
+.navFooter{
+    padding-right: 48px;
 }
 
-footer .navFooter a {
-    color: snow;
-    text-decoration: none;
-    font-size: 1rem;
+.navFooter li{
+    padding: 8px;
 }
 
-footer .socialMedia {
-    display: flex;
-    margin-left: auto;
-}
-
-footer .socialMedia div {
-    margin: 0 0.5rem;
-}
-
-footer .copy {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-}
 @media (min-width:500px){
     .card{
         width: 40%
@@ -419,7 +373,7 @@ footer .copy {
 
     header nav ul li a{
         text-decoration: none;
-        font-size: 20px;
+        /*font-size: 20px;*/
 /*         font-weight: bold; */
     }
     
@@ -465,7 +419,7 @@ li input{
 
 header nav ul li a{
     text-decoration: none;
-    font-size: 25px;
+    /*font-size: 25px;*/
 /*     font-weight: bold; */
 }
 
@@ -492,7 +446,6 @@ font-size: 15px;
 footer{
     background-color: var(--colorTittleDark);
     color: var(--colorTittleClear);
-    padding: 40px 0;
 }
 
 footer a{

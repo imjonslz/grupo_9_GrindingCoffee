@@ -14,22 +14,28 @@
 /*     color: #833f00; */
 }
 
+main{
+    padding-top: 68px;
+}
 
- header{
+i{
+    margin-left: 8px;
+}
+
+/*/////////////////// NAV ///////////////////*/
+header{
     overflow: hidden;
     background-color: var(--colorTittleClear);
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     width: 100%;
 }
 
-.container{
+.containerNav{
     width: 90%;
     margin: auto;
-}
-
-header .container .flexBox{
-    height: 80px;
+    padding: 8px 0 8px 0;
+    height: 68px;
 }
 
 #logoHeader{
@@ -40,11 +46,10 @@ header .container .flexBox{
     width: 100%;
 }
 
-.flexBox{
+.flexBoxNav{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
 }
 
 ul{
@@ -55,18 +60,10 @@ li{
     padding: 16px;
 }
 
-.flexBox li a{
-    font-size: 1.1rem;
-}
-
 a{
     text-decoration: none;
     color: var(--colorText);
 }
-
-
-
-
 
 /* ESTILOS DEL HEADER COMO TAL */
 
@@ -93,12 +90,6 @@ header .headerImg h1{
     
     
 }
-
-
-
-
-
-
 
 /* MAIN */
 main{
@@ -237,6 +228,59 @@ main .botones button:hover {
     color: var(--colorText);
 }
 
+.flexBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* /////////////////// FOOTER /////////////////// */
+.flexBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+
+
+footer{
+    background-color: var(--colorTittleDark);
+    color: var(--colorTittleClear);
+}
+
+footer a{
+    color: var(--colorTittleClear);
+    text-decoration: none;
+}
+
+.socialMedia i{
+    padding: 8px;
+}
+
+.copy{
+    padding-top: 40px;
+    text-align: center;
+}
+
+footer .flexBox{
+    justify-content: flex-end;
+}
+
+.navFooter{
+    padding-right: 48px;
+}
+
+.navFooter li{
+    padding: 8px;
+}
+
 @media screen and (min-width: 326px) and (max-width: 750px){
 
     *{
@@ -366,41 +410,3 @@ main .botones button:hover {
     }
    
  }
-
-
-
-
-
-
-/* FOOTER */
-footer{
-    background-color: var(--colorTittleDark);
-    color: var(--colorTittleClear);
-    padding: 40px 0;
-}
-
-footer a{
-    color: var(--colorTittleClear);
-    text-decoration: none;
-}
-
-.socialMedia i{
-    padding: 8px;
-}
-
-.copy{
-    padding-top: 40px;
-    text-align: center;
-}
-
-footer .flexBox{
-    justify-content: flex-end;
-}
-
-.navFooter{
-    padding-right: 48px;
-}
-
-.navFooter li{
-    padding: 8px;
-}

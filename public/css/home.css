@@ -18,39 +18,42 @@ body{
     width: 100%;
 }
 
+main{
+    padding-top: 68px;
+}
 
+i{
+    margin-left: 8px;
+}
+
+/*/////////////////// NAV ///////////////////*/
 header{
     overflow: hidden;
     background-color: var(--colorTittleClear);
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     width: 100%;
 }
 
-.container{
-    width: auto;
+.containerNav{
+    width: 90%;
     margin: auto;
-}
-
-header .container .flexBox{
-    height: 80px;
+    padding: 8px 0 8px 0;
+    height: 68px;
 }
 
 #logoHeader{
     width: 80px;
-
 }
 
 #logoHeader a img{
     width: 100%;
-    margin-right: 10rem;
 }
 
-.flexBox{
+.flexBoxNav{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
 }
 
 ul{
@@ -65,13 +68,10 @@ a{
     text-decoration: none;
     color: var(--colorText);
 }
-
-
-
 /* ESTILOS DEL HEADER COMO TAL */
 
 /* Fondo del header */
-header .headerImg{
+.headerImg{
     display: flex;
     background-image: url(/img/fondoimg.jpg);
     width: 100%;
@@ -82,7 +82,7 @@ header .headerImg{
 
 /* Texto del header */
 
-header .headerImg h1{
+.headerImg h1{
     padding-left: 15rem;
     padding-right: 15rem;
     text-align: center;
@@ -277,13 +277,22 @@ main .winner .descrip-winner a:hover{
 
 
 
- /* ESTILOS DEL FOOTER */
+/* /////////////////// FOOTER /////////////////// */
+.flexBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 80px 0;
+}
 
- footer{
+footer{
     background-color: var(--colorTittleDark);
     color: var(--colorTittleClear);
-    padding: 40px 0;
 }
 
 footer a{

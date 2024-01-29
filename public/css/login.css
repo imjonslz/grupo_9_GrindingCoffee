@@ -13,55 +13,32 @@
 /*     color: #833f00; */
 }
 
-
 body{
     width: 100%;
     background-color: #ffffff96;
-
-    
-}
-/* 
-nav{
-    background-color: #ffffff;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+main{
+    padding-top: 68px;
 }
 
-nav ul li{
-    margin: 1rem;
+i{
+    margin-left: 8px;
 }
-
-nav ul li{
-    padding-top: 3rem;
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: #151522;
-    font-size: 1.6rem;
-    font-weight: bold;
-} */
-/* 
-///////////////////////// */
-
+/*/////////////////// NAV ///////////////////*/
 header{
     overflow: hidden;
     background-color: var(--colorTittleClear);
+    position: fixed;
     top: 0;
     width: 100%;
 }
 
-.container{
+.containerNav{
     width: 90%;
     margin: auto;
-}
-
-header .container .flexBox{
-    height: 80px;
+    padding: 8px 0 8px 0;
+    height: 68px;
 }
 
 #logoHeader{
@@ -72,11 +49,10 @@ header .container .flexBox{
     width: 100%;
 }
 
-.flexBox{
+.flexBoxNav{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
 }
 
 ul{
@@ -206,10 +182,22 @@ main .botones button:hover {
 }
 
 
+/* /////////////////// FOOTER /////////////////// */
+.flexBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 80px 0;
+}
+
 footer{
     background-color: var(--colorTittleDark);
     color: var(--colorTittleClear);
-    padding: 40px 0;
 }
 
 footer a{

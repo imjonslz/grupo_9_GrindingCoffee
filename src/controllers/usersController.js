@@ -1,18 +1,65 @@
-// *************** requerimos path *************** //
+// *************** Require Path *************** //
 const path = require('path');
 
-// *************** objeto literal con los metodos a exportar *************** //
-let loginController = {
+// *************** Require FileSync *************** //
+const fs = require('fs');
 
-    // Renderiza la vista '/detalle'
+// *************** Require Validations Results from Express-Validator *************** //
+const { validationResult } = require('express-validator');
+
+// *************** Config .JSON *************** //
+const usersFilePath = path.join(__dirname, '../data/users.json');
+
+// *************** User Controller HERE *************** //
+const userController = {
+
+    // Show '/login'
     viewLogin: (req, res) => {
         res.render('login', {currentPath: req.path });
     },
+
+    // Show '/register'
     viewRegister: (req, res) => {
         res.render('register', {currentPath: req.path });
-    }
+    },
 
+    userCreate: (req, res) => {
+        const errors = validationResult(req);
+
+        if (!errors.isEmpty()){
+            return res.render('register', {
+                errors : errors.mapped(),
+                oldData : req.body
+            })
+        }
+
+        let userFile = fs.readFileSync(usersFilePath, {encoding : 'utf-8'})
+        let users;
+
+        if (userFile == ''){
+            users = [];
+        } else {
+            users = JSON.parse(userFile); 
+        }
+
+        let user = {
+            id: users.length + 1,
+            name: req.body.name,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            avatar: req.body.avatar,
+            password: req.body.password
+        }
+
+        users.push(user);
+
+        let usersJSON = JSON.stringify(users);
+
+        fs.writeFileSync(usersFilePath, usersJSON);
+
+        res.redirect('/');
+    }
 };
     
-// *************** exportamos el objeto literal *************** //
-module.exports = loginController;
+// *************** Export User Controller *************** //
+module.exports = userController;

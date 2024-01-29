@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include("partials/head", {title:"Grinding Coffee/Registro", css:"crear"}) %>
     <body>
-        <%- include("partials/header-home.ejs") %>
+        <%- include("partials/nav.ejs") %>
             <main>
                 <section class="form-general">
                     <form action="/products/create" method="POST" class="form" enctype="multipart/form-data">
@@ -45,5 +45,4 @@
             </main>
             <%- include("partials/footer.ejs") %>
     </body>
-
 </html>
