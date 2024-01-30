@@ -22,12 +22,16 @@ let mainRouter = require('./routes/mainRouter.js');
 let productsRouter = require('./routes/productsRouter.js');
 let usersRouter = require('./routes/usersRouter.js');
 let cartRouter = require('./routes/cartRouter.js');
+let allProducts = require('./routes/allProductsRouter.js');
+/* let registerRouter = require('./routes/registerRouter.js'); */
 
 // *************** rutas *************** //
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/user', usersRouter);
 app.use('/cart', cartRouter);
+app.use('/allProducts', allProducts);
+/* app.use('/register', registerRouter); */
 
 // *************** ponemos a escuchar el servidor *************** //
 app.listen(3060, () => console.log('El servidor esta corriendo en: http://localhost:3060'));

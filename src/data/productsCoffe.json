@@ -1,37 +1,5 @@
 [
  {
-  "id": 1,
-  "name": "3 Kilos Café en Grano - Varietal Blend ",
-  "description": "Seleccionado de Brasil, Notas de: Chocolate amargo, cacao, cuerpo cremoso y dulce, de acidez media.",
-  "category": "Materia Prima",
-  "price": 74950,
-  "image": "cafe-molido-1kg.jpg"
- },
- {
-  "id": 24,
-  "name": "Café Molido - Blend Moka frutado",
-  "price": 15850,
-  "category": "Producto VA",
-  "description": "Café Molido Moka de 500grs, ideal para los amantes de un sabor intenso y aromático.",
-  "image": "productImage-1705457779998.png"
- },
- {
-  "id": 25,
-  "name": "Café en Grano 3 Kg - Italiano Blend ",
-  "price": 75900,
-  "category": "Materia Prima",
-  "description": "Pack 3kg. Este café es ideal para los amantes del ristretto, espresso, o mezclas con leche.",
-  "image": "productImage-1704939267272.jpg"
- },
- {
-  "id": 26,
-  "name": "Café Molido 3kg - Blend Moka frutado ",
-  "price": 69900,
-  "category": "Materia Prima",
-  "description": "pack 3kg, ideal para los amantes de un sabor intenso y aromático.",
-  "image": "productImage-1704939461212.jpg"
- },
- {
   "id": 27,
   "name": "Café Molido 1kg - Blend Moka frutado ",
   "price": 26700,
@@ -40,43 +8,91 @@
   "image": "productImage-1704939556310.jpg"
  },
  {
-  "id": 28,
-  "name": "Café Molido 500gr - Blend Moka frutado ",
-  "price": 15700,
-  "category": "Producto VA",
-  "description": "Café Molido Moka 500grs, ideal para los amantes de un sabor intenso y aromático.",
-  "image": "productImage-1704939800950.jpg"
- },
- {
-  "id": 29,
-  "name": "Café Grano 500gr - Blend Italiano",
-  "price": 12800,
-  "category": "Producto VA",
-  "description": "Pack 500g. Ideal para los amantes del ristretto, espresso, o mezclas con leche.",
-  "image": "productImage-1704939932813.jpg"
- },
- {
-  "id": 30,
-  "name": "Café Instantáneo 500gr  - Torrado fino Black",
-  "price": 18200,
-  "category": "Producto VA",
-  "description": "sabor intenso y dulce, con notas de caramelo y chocolate",
-  "image": "productImage-1704940045579.jpg"
- },
- {
-  "id": 31,
-  "name": "Café Instantáneo 250gr  - Torrado fino Black",
-  "price": 9800,
-  "category": "Producto VA",
-  "description": "sabor intenso y dulce, con notas de caramelo y chocolate",
-  "image": "productImage-1704940321371.jpg"
- },
- {
   "id": 32,
   "name": "Café Instantáneo 250gr  - Caramel",
   "price": 9150,
   "category": "Producto VA",
   "description": "intenso sabor a caramelo y presentado en una práctica bolsa que conserva la frescura y calidad.",
   "image": "productImage-1704940459773.jpg"
+ },
+ {
+  "id": 33,
+  "name": "Cafe molido de prueba",
+  "price": 3333,
+  "category": "Cafe molido",
+  "description": "cafe molido",
+  "image": "productImage-1705949965167.jpg"
+ },
+ {
+  "id": 34,
+  "name": "cafe en grano de prueba",
+  "price": 33333,
+  "category": "Cafe en grano",
+  "description": "cafe en grano",
+  "image": "productImage-1705950036966.jpeg"
+ },
+ {
+  "id": 36,
+  "name": "Cafe molido - Juan Valdez",
+  "price": 5800,
+  "category": "Cafe molido",
+  "description": "Cafe de montañas Colombianas - Calidad Premium",
+  "image": "productImage-1705950272367.jpeg"
+ },
+ {
+  "id": 37,
+  "name": "Cafe en grano - tostado alto",
+  "price": 4570,
+  "category": "Cafe en grano",
+  "description": "Cafe de alto tueste con amargor natural",
+  "image": "productImage-1705950356937.jpg"
+ },
+ {
+  "id": 38,
+  "name": "Cafe en grano boliviano",
+  "price": 2900,
+  "category": "Cafe en grano",
+  "description": "Directo de los campos bolivianos",
+  "image": "productImage-1705950609897.webp"
+ },
+ {
+  "id": 39,
+  "name": "cafe molido Antioqueño ",
+  "price": 4650,
+  "category": "Cafe molido",
+  "description": "Cafe de clima frio - Premium",
+  "image": "productImage-1705950659841.jpg"
+ },
+ {
+  "id": 40,
+  "name": "Cafe molido Clasic",
+  "price": 4500,
+  "category": "Cafe molido",
+  "description": "Cafe molido - Calidad media",
+  "image": "productImage-1705950704282.jpg"
+ },
+ {
+  "id": 41,
+  "name": "Cafe en grano - Calidad premium limitado",
+  "price": 9570,
+  "category": "Cafe en grano",
+  "description": "Un cafe ultra premium de produccion limitada",
+  "image": "productImage-1705950776313.jpg"
+ },
+ {
+  "id": 42,
+  "name": "Cafe comun molido",
+  "price": 1900,
+  "category": "Cafe molido",
+  "description": "Cafe comun de consumo diario",
+  "image": "productImage-1705950828187.jpg"
+ },
+ {
+  "id": 43,
+  "name": "Cafe comun en grano",
+  "price": 1900,
+  "category": "Cafe en grano",
+  "description": "Cafe comun de consumo diario",
+  "image": "productImage-1705950856307.jpg"
  }
 ]

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head", {title:"Todos los productos", css:"allProductsPage"}) %>
+<body>
+    <%- include("partials/nav.ejs") %>
+    <main>
+        <div class="btnsSelect">
+            <div class="nav-section">
+                <button class="btn category-btn active" data-category="">Todos</button>
+                <button class="btn category-btn active" data-category="CafeEnGrano">Grano</button>
+                <button class="btn category-btn active" data-category="CafeMolido">Molido</button>
+            </div>
+        </div>
+        <section class="container">
+            <div class="containerProducts">
+                
+            </div>
+        </section>
+    </main>
+    <%- include("partials/footer.ejs") %>
+<script>
+   ///////////////////Color de los botones al hacer click///////////////////////
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.nav-section button');
+
+    const defaultContent = cards['Todos'];
+    changeSection(defaultContent);
+
+    // Seleccionar el primer botón para 'Todos los productoas' como predeterminado
+    const defaultActiveButton = document.querySelectorAll('.nav-section button')[0];
+    changeActiveButton(defaultActiveButton);
+});
+
+    
+
+
+
+    function changeSection(cards) {
+        const sectionOther = document.querySelector('.containerProducts');
+        sectionOther.innerHTML = cards;
+    }
+
+    const cards = {
+        Todos: `
+            <% products.forEach(product => { %>
+                <div class="product product1">
+                    <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image%>" alt="<%= product.name %>"></a>
+                    <p><%= product.name %></p>
+                </div>
+            <% }); %>
+        `,  
+        Grano: `
+            <% EnGrano.forEach(product => { %>
+                <div class="product product1">
+                    <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image%>" alt="<%= product.name %>"></a>
+                    <p><%= product.name %></p>
+                </div>
+            <% }); %>
+        `,
+        Molido: `
+            <% molido.forEach(product => { %>
+                <div class="product product1">
+                    <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image%>" alt="<%= product.name %>"></a>
+                    <p><%= product.name %></p>
+                </div>
+            <% }); %>
+        `,
+};
+
+   
+    document.addEventListener('DOMContentLoaded', () => {
+        const buttons = document.querySelectorAll('.nav-section button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const buttonText = button.textContent;
+                const content = cards[buttonText];
+                changeSection(content);
+            });
+        });
+    });
+</script>
+</body>
+</html>

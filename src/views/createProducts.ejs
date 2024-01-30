@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("partials/head", {title:"Grinding Coffee/Registro", css:"crear"}) %>
+<%- include("partials/head", {title:"Nuevo producto", css:"crear"}) %>
     <body>
         <%- include("partials/nav.ejs") %>
             <main>
@@ -18,8 +18,8 @@
                             <label for="category" class="form-label">Categoría:</label>
                             <select name="category" id="category" class="form-input" value="">
                                 <option value="" selected>Que tipo de producto es:</option>
-                                <option value="Materia Prima">Materia Prima</option>
-                                <option value="Producto VA">Producto VA</option>
+                                <option value="Cafe en grano">Cafe en grano</option>
+                                <option value="Cafe molido">Cafe molido</option>
                             </select>
     
                             <input type="number" class="inputcreate" name="price" id="price" placeholder="Precio del producto">
