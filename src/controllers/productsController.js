@@ -45,6 +45,7 @@ let detailController = {
 				price: parseInt(req.body.price),
 				discount: req.body.discount,
 				category: req.body.category,
+                size: req.body.size,
 				description: req.body.description,
                 image: req.file ? req.file.filename : "default-image.png"
         }
@@ -71,6 +72,7 @@ let detailController = {
 			price: parseInt(req.body.price),
 			discount: req.body.discount,
 			category: req.body.category,
+            size: req.body.size,
 			description: req.body.description,
 			image: req.file != undefined ? req.file.filename : productEdit.image
 		}

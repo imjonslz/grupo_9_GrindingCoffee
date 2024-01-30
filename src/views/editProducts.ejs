@@ -19,8 +19,14 @@
                         <label for="category" class="form-label">Categoría:</label>
 						<select name="category" id="category" class="form-input" value="">
 							<option value="" <% if (!singleProduct.category) { %>selected<% } %>>Que tipo de producto es:</option>
-							<option value="Materia Prima" <% if (singleProduct.category === 'Materia Prima') { %>selected<% } %>>Materia Prima</option>
-							<option value="Producto VA" <% if (singleProduct.category === 'Producto VA') { %>selected<% } %>>Producto VA</option>
+							<option value="Cafe en grano" <% if (singleProduct.category === 'Cafe en grano') { %>selected<% } %>>Cafe en grano</option>
+							<option value="Cafe molido" <% if (singleProduct.category === 'Cafe molido') { %>selected<% } %>>Cafe molido</option>
+						</select>
+						<select name="size" id="size" class="form-input" value="">
+							<option value="" <% if (!singleProduct.size) { %>selected<% } %>>Cual es el tamaño del producto:</option>
+							<option value="250" <% if (singleProduct.size === '250') { %>selected<% } %>>250 gr</option>
+							<option value="500" <% if (singleProduct.size === '500') { %>selected<% } %>>500 gr</option>
+							<option value="1000" <% if (singleProduct.size === '1000') { %>selected<% } %>>1000 gr</option>
 						</select>
 
                         <input class="inputcreate" type="text" name="price" id="price"

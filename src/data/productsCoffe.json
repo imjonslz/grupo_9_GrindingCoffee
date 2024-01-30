@@ -3,7 +3,8 @@
   "id": 27,
   "name": "Café Molido 1kg - Blend Moka frutado ",
   "price": 26700,
-  "category": "Materia Prima",
+  "category": "Cafe en grano",
+  "size": "1000",
   "description": "pack 1kg, ideal para los amantes de un sabor intenso y aromático.",
   "image": "productImage-1704939556310.jpg"
  },
@@ -11,7 +12,8 @@
   "id": 32,
   "name": "Café Instantáneo 250gr  - Caramel",
   "price": 9150,
-  "category": "Producto VA",
+  "category": "Cafe en grano",
+  "size": "250",
   "description": "intenso sabor a caramelo y presentado en una práctica bolsa que conserva la frescura y calidad.",
   "image": "productImage-1704940459773.jpg"
  },
@@ -20,6 +22,7 @@
   "name": "Cafe molido de prueba",
   "price": 3333,
   "category": "Cafe molido",
+  "size": "250",
   "description": "cafe molido",
   "image": "productImage-1705949965167.jpg"
  },
@@ -28,6 +31,7 @@
   "name": "cafe en grano de prueba",
   "price": 33333,
   "category": "Cafe en grano",
+  "size": "250",
   "description": "cafe en grano",
   "image": "productImage-1705950036966.jpeg"
  },
@@ -36,6 +40,7 @@
   "name": "Cafe molido - Juan Valdez",
   "price": 5800,
   "category": "Cafe molido",
+  "size": "250",
   "description": "Cafe de montañas Colombianas - Calidad Premium",
   "image": "productImage-1705950272367.jpeg"
  },
@@ -44,6 +49,7 @@
   "name": "Cafe en grano - tostado alto",
   "price": 4570,
   "category": "Cafe en grano",
+  "size": "250",
   "description": "Cafe de alto tueste con amargor natural",
   "image": "productImage-1705950356937.jpg"
  },
@@ -52,6 +58,7 @@
   "name": "Cafe en grano boliviano",
   "price": 2900,
   "category": "Cafe en grano",
+  "size": "500",
   "description": "Directo de los campos bolivianos",
   "image": "productImage-1705950609897.webp"
  },
@@ -61,6 +68,7 @@
   "price": 4650,
   "category": "Cafe molido",
   "description": "Cafe de clima frio - Premium",
+  "size": "250",
   "image": "productImage-1705950659841.jpg"
  },
  {
@@ -69,6 +77,7 @@
   "price": 4500,
   "category": "Cafe molido",
   "description": "Cafe molido - Calidad media",
+  "size": "250",
   "image": "productImage-1705950704282.jpg"
  },
  {
@@ -76,6 +85,7 @@
   "name": "Cafe en grano - Calidad premium limitado",
   "price": 9570,
   "category": "Cafe en grano",
+  "size": "250",
   "description": "Un cafe ultra premium de produccion limitada",
   "image": "productImage-1705950776313.jpg"
  },
@@ -83,7 +93,8 @@
   "id": 42,
   "name": "Cafe comun molido",
   "price": 1900,
-  "category": "Cafe molido",
+  "category": "",
+  "size": "250",
   "description": "Cafe comun de consumo diario",
   "image": "productImage-1705950828187.jpg"
  },
@@ -92,6 +103,7 @@
   "name": "Cafe comun en grano",
   "price": 1900,
   "category": "Cafe en grano",
+  "size": "250",
   "description": "Cafe comun de consumo diario",
   "image": "productImage-1705950856307.jpg"
  }
