@@ -18,6 +18,36 @@ const userController = {
         res.render('login', {currentPath: req.path });
     },
 
+    userLogin: (req, res) =>{
+        let userFile = fs.readFileSync(usersFilePath, {encoding : 'utf-8'})
+        let users;
+
+        if (userFile == ''){
+            users = [];
+        } else {
+            users = JSON.parse(userFile); 
+        }
+
+        let userToLog = ' ';
+
+        for(let i = 0; i < users.length; i++){
+            if (users[i].email == req.body.email){
+                if(bcrypt.compareSync(req.body.password, users[i].password)){
+                    userToLog = users[i];
+                    break;
+                }
+            }
+        }
+        if (userToLog == undefined){
+            return res.render ('login', {errors: [
+                {msg: 'El mail o la contraseña son incorrectos.'}
+            ]} );
+        }
+
+        req.session.userToLog = userToLog;
+        res.redirect('/')
+    },
+
     // Show '/register'
     viewRegister: (req, res) => {
         res.render('register', {currentPath: req.path });

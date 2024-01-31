@@ -7,6 +7,12 @@ const express = require('express');
 const app = express();
 const publicPath = path.resolve(__dirname, '../public');
 
+//*************** requerimos express-session *************** //
+const session = require('express-session'); 
+
+//*************** uso de session en la aplicacion global *************** //
+app.use(session({secret:'secret!'}));
+
 // ************ Middlewares - (don't touch) ************
 app.use(express.static(publicPath));
 app.use(express.urlencoded({ extended: false })); // Para requerir del body

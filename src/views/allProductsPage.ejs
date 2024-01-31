@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Todos: `
             <% products.forEach(product => { %>
                 <div class="product product1">
-                    <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image%>" alt="<%= product.name %>"></a>
+                    <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.image%>" alt="<%= product.name %>"></a>
                     <p><%= product.name %></p>
                 </div>
             <% }); %>
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Grano: `
             <% EnGrano.forEach(product => { %>
                 <div class="product product1">
-                    <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image%>" alt="<%= product.name %>"></a>
+                    <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.image%>" alt="<%= product.name %>"></a>
                     <p><%= product.name %></p>
                 </div>
             <% }); %>
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Molido: `
             <% molido.forEach(product => { %>
                 <div class="product product1">
-                    <a href="/products/detail/<%= product.id %>"><img src="/img/<%= product.image%>" alt="<%= product.name %>"></a>
+                    <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.image%>" alt="<%= product.name %>"></a>
                     <p><%= product.name %></p>
                 </div>
             <% }); %>

@@ -106,5 +106,14 @@
   "size": "250",
   "description": "Cafe comun de consumo diario",
   "image": "productImage-1705950856307.jpg"
+ },
+ {
+  "id": 44,
+  "name": "Café molido ",
+  "price": 5000,
+  "category": "Cafe molido",
+  "size": "500",
+  "description": "Café molido de alta calidad",
+  "image": "productImage-1706656846688.jpg"
  }
 ]

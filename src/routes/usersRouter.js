@@ -61,6 +61,7 @@ const userController = require('../controllers/usersController.js')
 
 // *************** User Routes *************** //
 router.get('/login', userController.viewLogin)
+router.post('/login', validations, userController.userLogin)
 router.get('/register', userController.viewRegister)
 router.post('/register', uploadFile.single('avatar'), validations, userController.userCreate)
 
