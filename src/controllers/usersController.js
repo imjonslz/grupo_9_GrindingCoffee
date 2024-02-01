@@ -100,7 +100,7 @@ const userController = {
             name: req.body.name,
             lastName: req.body.lastName,
             email: req.body.email,
-            avatar: req.body.avatar,
+            avatar: req.file.filename,
             password: bcryptjs.hashSync(req.body.password, 10) 
         }
 
