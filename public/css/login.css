@@ -68,120 +68,9 @@ a{
     color: var(--colorText);
 }
 
-/* 
-///////////////////////// */
-.headerImg{
-    display: flex;
-    background-image: url(/img/fondoimg.jpg);
-    width: 100%;
-    height: 39rem;
-}
 
 
-
-.headerImg h1{
-    padding-left: 24rem;
-    padding-right: 15rem;
-    padding-top: 16rem;
-    font-size: 8rem;
-    font-weight: bold;
-    color: rgb(252, 228, 225);
-    width: 100%;
-
-}
-
-
-
-
-.form{
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.cajalogin{
-    width: 50%;
-    margin: auto;
-    background-color: #9f9a9ad2;
-    box-shadow: 0px 0px 10px #6e6d6da7;
-/*     margin-left: 20%; */
-    border-radius: 30px 30px 40px 40px;
-    padding-bottom: 5%;
-    text-align: center;
- /*    margin-bottom: 5%; */
-    border-left: solid 5px #833f008e;
-    border-right:  solid 1px #f8f4f4bd;
-    border-bottom: solid 2.7px #94470078;
-/*     margin-top: 5%; */
-    display: block;
- 
-}
-
-main{
-    background-image: url("/img/CafeFondo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.inputlogin{
-    width: 60%;
-    margin: 5% 3% 0% 3%;
-    height: 40px;
-    border-radius: 40px 40px 40px 40px; 
-    border: solid 1px white;
-    text-align: center;
- }
-/* BOTONES */
-main .botones a,
-main .botones button {
-    width: 50%; /* Ajusta el ancho según sea necesario */
-    margin: 2% 0;
-    padding: 0.8rem; /* Ajusta el padding según sea necesario */
-    font-size: 1rem; /* Ajusta el tamaño de fuente según sea necesario */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-main .botones a {
-    color: var(--colorText);
-    background-color: transparent; /* Quita el fondo */
-}
-
-main .botones button {
-    background-color: var(--colorTittleDark);
-    color: var(--fondoGeneral);
-}
-
-main .botones a:hover,
-main .botones button:hover {
-    background-color: var(--fondoGeneral);
-    color: var(--colorText);
-}
-
- .botones{
-    margin-top: 2%;
-    
- }
-
-.h3{
-    border: solid 1px #ffffff96;
-    background-color: rgba(255, 255, 255, 0.898);
-    box-shadow: #9f9a9a96;
-    width: 30%;
-    margin: 0% 20% 5% 35%;
-    border-radius: 0px 20px 0px 20px;
-    color: #4a2504f5;
-}
-.marca{
-    color: black;
-    font-size: 18px;
-    text-align:left;
-    margin-left: 20px; 
-    padding-bottom: 25px;
-
-}
-
-/* /////////////////// FORM /////////////////// 
+/* /////////////////// FORM /////////////////// */
 .container{
     width: 90%;
     margin: auto;
@@ -268,7 +157,7 @@ label{
 .secondaryButton:hover{
     background-color: var(--colorTittleDark);
     color: #ffffff;
-} */
+} 
 
 /* /////////////////// FOOTER /////////////////// */
 .flexBox {

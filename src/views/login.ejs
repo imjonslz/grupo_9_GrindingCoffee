@@ -4,31 +4,7 @@
 <%- include("partials/head", {title:"login", css:"login"}) %>
     <body>
         <%- include("partials/nav.ejs") %>
-        <main>
-            <form action="/user/login" method="POST" class="form" name="registro">
-                <section class="cajalogin">
-
-                    <p class="h3">Iniciá sesión<i class="fa-solid fa-mug-saucer fa-l"></i></p>
-                    <div class="line"></div>
-                    <p class="marca">Grinding Coffee®</p>
-
-                    <input class="inputlogin" type="text" name="registro" id="Nombredeusuari@"
-                        placeholder="Nombre de usuari@">
-                    </input>
-                    
-                    <input class="inputlogin" type="password" name="registro" id="Contraseña"
-                        placeholder="Contraseña">
-                    </input>
-
-                    <section class="botones">
-                        <a href="index.html"><button type="submit">ENVIAR</button></a>
-                        <button type="reset">Recuperar contraseña</button>
-                    </section>
-
-                </section>
-            </form>
-        </main>
-        <!--<main>
+       <main>
             <div class="container">
                 <h2 class="mainTitle">Iniciar sesión<i class="fa-solid fa-mug-saucer fa-l"></i></h2>
                 <div class="flexBox">
@@ -59,7 +35,7 @@
                     </form>
                 </div>
             </div>
-        </main>-->   
+        </main>
         <%- include("partials/footer.ejs") %>      
     </body>
 </html>
