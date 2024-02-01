@@ -4,6 +4,9 @@ const path = require('path');
 // *************** Require FileSync *************** //
 const fs = require('fs');
 
+// *************** Require BCrypt *************** //
+const bcrypt = require('bcrypt');
+
 // *************** Require Validations Results from Express-Validator *************** //
 const { validationResult } = require('express-validator');
 
@@ -72,13 +75,33 @@ const userController = {
             users = JSON.parse(userFile); 
         }
 
+        // Validation user exist //
+        let findByField = (field, text) =>{
+            let allUsers = users;
+            let userFound = allUsers.find(oneUser => oneUser[field] === text);
+            return userFound
+        }
+
+        let userInDB = findByField('email', req.body.email);
+        if (userInDB){
+            return res.render('register', {
+                errors : {
+                    email: {
+                        msg: 'Este correo ya pertenece a un usuario'
+                    }
+                },
+                oldData : req.body
+            })
+        }
+        // End validation user exist//
+
         let user = {
             id: users.length + 1,
             name: req.body.name,
             lastName: req.body.lastName,
             email: req.body.email,
             avatar: req.body.avatar,
-            password: req.body.password
+            password: bcrypt.hashSync(req.body.password, 10) 
         }
 
         users.push(user);
@@ -87,7 +110,7 @@ const userController = {
 
         fs.writeFileSync(usersFilePath, usersJSON);
 
-        res.redirect('/');
+        res.redirect('/user/login/');
     }
 };
     

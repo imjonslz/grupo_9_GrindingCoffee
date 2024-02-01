@@ -11,7 +11,11 @@ const publicPath = path.resolve(__dirname, '../public');
 const session = require('express-session'); 
 
 //*************** uso de session en la aplicacion global *************** //
-app.use(session({secret:'secret!'}));
+app.use(session({
+    secret:'secret!',
+    resave: false,
+    saveUninitialized: false,
+}));
 
 // ************ Middlewares - (don't touch) ************
 app.use(express.static(publicPath));

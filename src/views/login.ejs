@@ -4,43 +4,62 @@
 <%- include("partials/head", {title:"login", css:"login"}) %>
     <body>
         <%- include("partials/nav.ejs") %>
-            <main>
-                <form action="/user/login" method="POST" class="form" name="registro">
-                    <section class="cajalogin">
-                        <p class="h3">Iniciá sesión<i class="fa-solid fa-mug-saucer fa-l"></i></p>
-                        <div class="line"></div>
-                        <p class="marca">Grinding Coffee®</p>
+        <main>
+            <form action="/user/login" method="POST" class="form" name="registro">
+                <section class="cajalogin">
 
+                    <p class="h3">Iniciá sesión<i class="fa-solid fa-mug-saucer fa-l"></i></p>
+                    <div class="line"></div>
+                    <p class="marca">Grinding Coffee®</p>
 
+                    <input class="inputlogin" type="text" name="registro" id="Nombredeusuari@"
+                        placeholder="Nombre de usuari@" required>
+                    </input>
+                    
+                    <input class="inputlogin" type="password" name="registro" id="Contraseña"
+                        placeholder="Contraseña" required>
+                    </input>
 
-                        <input class="inputlogin" type="text" name="registro" id="Nombredeusuari@"
-                            placeholder="Nombre de usuari@" required>
-                        </input>
-                        
-
-                        <input class="inputlogin" type="password" name="registro" id="Contraseña"
-                            placeholder="Contraseña" required>
-                        </input>
-
-
-                        <section class="botones">
-
-                            <a href="index.html"><button type="submit">ENVIAR</button></a>
-
-                            <button type="reset">Recuperar contraseña</button>
-
-                        </section>
+                    <section class="botones">
+                        <a href="index.html"><button type="submit">ENVIAR</button></a>
+                        <button type="reset">Recuperar contraseña</button>
                     </section>
 
-
-
-                </form>
-
-
-            </main>
-
-            <%- include("partials/footer.ejs") %>
-            
+                </section>
+            </form>
+        </main>
+        <!--<main>
+            <div class="container">
+                <h2 class="mainTitle">Iniciar sesión<i class="fa-solid fa-mug-saucer fa-l"></i></h2>
+                <div class="flexBox">
+                    <form action="/user/login" method="POST" enctype="multipart/form-data">
+                        <div class="inputGroup">
+                            <label for="email">Correo electrónico:</label>
+                            <input class="inputDefault" type="email" name="email">
+                            <% if (locals.errors && errors.email) { %>
+                                <p class="errorFeedback">
+                                    <%= errors.email.msg %>
+                                </p>
+                            <% } %>
+                        </div>
+                        <div class="inputGroup">
+                            <label for="password">Contraseña:</label>
+                            <input class="inputDefault" type="password" name="password">
+                            <% if (locals.errors && errors.password) { %>
+                                <p class="errorFeedback">
+                                    <%= errors.password.msg %>
+                                </p>
+                            <% } %>
+                        </div>
+                        <div class="buttonGroup">
+                            <button class="mainButton" type="submit">Iniciar sesión</button>
+                            <label for="">¿Olvidaste tu contraseña?</label>
+                            <button class="secondaryButton" type="reset">Recuperar contraseña</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>-->   
+        <%- include("partials/footer.ejs") %>      
     </body>
-
 </html>
