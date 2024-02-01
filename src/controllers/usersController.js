@@ -5,7 +5,7 @@ const path = require('path');
 const fs = require('fs');
 
 // *************** Require BCrypt *************** //
-const bcrypt = require('bcrypt');
+const bcryptjs = require('bcryptjs');
 
 // *************** Require Validations Results from Express-Validator *************** //
 const { validationResult } = require('express-validator');
@@ -101,7 +101,7 @@ const userController = {
             lastName: req.body.lastName,
             email: req.body.email,
             avatar: req.body.avatar,
-            password: bcrypt.hashSync(req.body.password, 10) 
+            password: bcryptjs.hashSync(req.body.password, 10) 
         }
 
         users.push(user);
