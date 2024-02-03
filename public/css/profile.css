@@ -5,13 +5,17 @@
     --colorText: #833f00;
 }
 
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 /*     color: #833f00; */
+}
+
+body{
+    width: 100%;
+    background-color: #ffffff96;
 }
 
 main{
@@ -21,7 +25,6 @@ main{
 i{
     margin-left: 8px;
 }
-
 /*/////////////////// NAV ///////////////////*/
 header{
     overflow: hidden;
@@ -66,146 +69,65 @@ a{
     color: var(--colorText);
 }
 
-.container{
-    width: 90%;
-    margin: auto;
-}
 
-.flexBox{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-
-/* ESTILOS DEL HEADER COMO TAL */
-
-/* Fondo del header */
-header .headerImg{
-    display: flex;
-    background-image: url(/img/fondoimg.jpg);
-    width: 100%;
-    height: 39rem;
-}
-
-
-/* Texto del header */
-
-header .headerImg h1{
-    padding-left: 24rem;
-    padding-right: 15rem;
-    padding-top: 16rem;
-    font-size: 7rem;
-    font-weight: bold;
-    color: white;
-    /* ESTO FUE LO QUE MODIFIQUE */
-    width: 100%;
-    
-    
-}
-
-
-
-
-
-/* Estilos para el formulario */
-
-  main .form-general{
+/* MAIN CONTENT */
+main{
+    padding-bottom: 1px;
     background-image: url("/img/FONDOCAFE.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .cajacreate {
-    margin: 8rem;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    padding: 30px;
-    width: 800px;
-    border: 1px solid #989898;
-  }
-  
-  .h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .line {
-    height: 2px;
-    background-color: #ccc;
-    margin: 10px 0 20px;
-  }
-  
-  .marca {
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .inputcreate,
-  .form-input,
-  textarea {
+}
+.mainDiv{
+    background-color: #ffffff;
+    width: 55%;
+    margin: auto;
+    border: 3px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.userName{
+text-align: center;
+margin-top: 65px;
+padding-top: 10px;
+font-weight: 100;
+}
+.div1{
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  select.form-input {
-    appearance: none;
-  }
-  
+    height: 80px;
+    background-color: #833f00;
+    background-image: url("/img/CafeRepeat.png");
+    background-size: contain;
+}
+.div2{
+    padding-bottom: 30px;
+}
+.div3{
+    border-top: 1px black solid;
+}
 
-  main .form-general form .cajacreate .btn-options{
-    display: flex;
-    justify-content: center;
-  }
+.avatarimg {
+    width: 100px;
+    max-height: 85px;
+    position: absolute;
+    top: 60px;
+    margin: 0 auto; /* Centra horizontalmente */
+    left: 0;
+    right: 0;
+    border: 2px solid #f8b678dc;
+    border-radius: 20px;
+}
 
-  main .form-general form .cajacreate .btn-options .botones button{
-    margin: 1rem;
-  }
+.userEmail{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-weight: 100;
+    background-image:linear-gradient(rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.42)), url("/img/copas.jpg");
+    background-size: cover;
+}
 
 
-  .botones {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 200px;
-    font-size: 1.4rem;
-  }
-  
-  button[type="submit"] {
-    background-color: #0a81d0;
-    color: white;
-  }
-  
-  button[type="reset"] {
-    background-color: #d95041;
-    color: white;
-  }
-  
-  /* Estilos generales */
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
+
+
 /* /////////////////// FOOTER /////////////////// */
 .flexBox {
     display: flex;
@@ -249,7 +171,7 @@ footer .flexBox{
 .navFooter li{
     padding: 8px;
 }
-  
+
 @media screen and (min-width: 326px) and (max-width: 750px){
 
     *{
@@ -276,7 +198,7 @@ footer .flexBox{
         text-decoration: none;
 /*         color: rgb(21, 21, 34); */
         font-size: 1rem;
-        font-weight: bold;
+/*         font-weight: bold; */
     }
 
     header .headerImg{
@@ -295,7 +217,7 @@ footer .flexBox{
         color: #ffebda;
     }
 
-    
+ 
     footer {
         background-color: var(--colorTittleDark);
         color: snow;
@@ -349,33 +271,4 @@ footer .flexBox{
         font-size: 0.8rem;
     }
 
-    main {
-        background-image: url("/img/CafeFondo.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 100vh;
-        margin-bottom: -60px;
-    }
-    
-
-    .cajacreate {
-        width: 80%;
-        margin: 5% 10%; 
-    }
-
-    .inputcreate,
-    .fotoUsuario {
-        width: 80%;
-        margin: 5% 10%;
-    }
-
-    .h3 {
-        width: 60%;
-        margin: 5% 20%;
-    }
-
-    .botones {
-        margin-top: 5%; 
-    }
-   
  }

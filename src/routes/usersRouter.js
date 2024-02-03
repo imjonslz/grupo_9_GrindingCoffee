@@ -32,7 +32,7 @@ const validations = [
                 throw new Error('Tienes que subir una imagen');
             } else {
                 
-                let fileExtensions = path.extname(file.originalname)
+                let fileExtensions = path.extname(file.originalname).toLowerCase();
                 if (!acceptedExtensions.includes(fileExtensions))
                     throw new Error(`Los tipo de imagenes permitidas son ${acceptedExtensions.join(', ')}`);
             }
@@ -56,14 +56,19 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer ({ storage });
 
+const guestMiddleware = require("../middlewares/guestMiddleware.js")
+const authMiddleware = require("../middlewares/authMiddleware.js")
+
 // *************** Require User Controller *************** //
 const userController = require('../controllers/usersController.js')
 
 // *************** User Routes *************** //
-router.get('/login', userController.viewLogin)
+router.get('/login',guestMiddleware, userController.viewLogin)
 router.post('/login', userController.userLogin)
-router.get('/register', userController.viewRegister)
+router.get('/register', guestMiddleware, userController.viewRegister)
 router.post('/register', uploadFile.single('avatar'), validations, userController.userCreate)
+router.get('/profile',authMiddleware, userController.profile)
+router.get('/logout', userController.logout)
 
 // *************** Export Router *************** //
 module.exports = router;

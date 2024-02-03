@@ -9,6 +9,8 @@ const publicPath = path.resolve(__dirname, '../public');
 
 //*************** requerimos express-session *************** //
 const session = require('express-session'); 
+const cookies = require("cookie-parser")
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware.js")
 
 //*************** uso de session en la aplicacion global *************** //
 app.use(session({
@@ -16,6 +18,9 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }));
+app.use(cookies());
+/* si el middleware tiene que ver algo con session o con algun paquete que se instalo previamente, debe ir despues de dicho paquete */
+app.use(userLoggedMiddleware)
 
 // ************ Middlewares - (don't touch) ************
 app.use(express.static(publicPath));

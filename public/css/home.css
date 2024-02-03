@@ -33,6 +33,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
 }
 
 .containerNav{
@@ -272,6 +273,12 @@ main .winner .descrip-winner a:hover{
     flex-direction: center;
     border-radius: 5px;
     /*justify-content: center; */
+ }
+
+ .category{
+    text-align: center;
+    margin-top: 15px;
+    color: #833f00;
  }
 
 

@@ -11,6 +11,7 @@
             </section>
         
             <main class="container-main">
+                <h3 class="category">Cafe en grano:</h3>
                 <section class="container">
                     <!-- acordarse que cuando se utiliza un for each o un ciclo for, lo que sea no va el simbolo < % = sino solamente < % -->
                     <% EnGrano.forEach(product=> { %>
@@ -37,8 +38,8 @@
                     
                 </section>
                 
+                <h3 class="category">Cafe Molido:</h3>
                 <section class="recetas">
-                    
                     <% molido.forEach(product=> { %>
                         <div class="product">
                             <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.image %>" alt=""></a>

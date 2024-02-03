@@ -8,7 +8,7 @@
             <div class="container">
                 <h2 class="mainTitle">Iniciar sesión<i class="fa-solid fa-mug-saucer fa-l"></i></h2>
                 <div class="flexBox">
-                    <form action="/user/login" method="POST" enctype="multipart/form-data">
+                    <form action="/user/login" method="POST">
                         <div class="inputGroup">
                             <label for="email">Correo electrónico:</label>
                             <input class="inputDefault" type="email" name="email">
@@ -27,6 +27,10 @@
                                 </p>
                             <% } %>
                         </div>
+
+                        <label for="remember_user" class="remember_user">
+                            <input type="checkbox" id="remember_user" name="remember_user"> Recordar usuario
+                        </label>
                         <div class="buttonGroup">
                             <button class="mainButton" type="submit">Iniciar sesión</button>
                             <label for="">¿Olvidaste tu contraseña?</label>

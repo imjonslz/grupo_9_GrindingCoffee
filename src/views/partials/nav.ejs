@@ -10,9 +10,16 @@
                 <a href="/"><img src="/img/gcLogo.svg" alt="Logo de Grinding Coffee"></a>
             </div>
             <ul class="flexBoxNav">
+                <% if (locals.isLogged) { %>
+                    <li><a href="/user/logout">Cerrar Sesion</a></li>
+             <!--        de la misma manera se puede poner foto pero ahora no -->
+                    <!-- <img src="/img/avatars/locals.userLogged.avatar" alt=""> -->
+                    <li><a href="/user/profile">Mi perfil: <%= locals.userLogged.name %></a></li>
+                    <li><a href="/cart/checkout">Ir al carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <% } else{%>
                 <li><a href="/user/login">Iniciar Sesión</a></li>
                 <li><a href="/user/register">Registrarme</a></li>
-                <li><a href="/cart/checkout">Ir al carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
+                <% } %>
             </ul>
         </nav>
     </div>

@@ -38,7 +38,7 @@
                     <% relatedProducts.forEach(product => {%>
                         
                         <article class="card">
-                            <a href="/products/detail/products/<%= product.id %>"><img src="/img/<%= product.image %>" alt=""></a>
+                            <a href="/products/detail/products/<%= product.id %>"><img src="/img/products/<%= product.image %>" alt=""></a>
                             <h2><%= product.name%></h2>
                             <p><%= product.description %></p>
                             <p class="price"><%= product.price %> $</p>

@@ -13,47 +13,68 @@ const { validationResult } = require('express-validator');
 // *************** Config .JSON *************** //
 const usersFilePath = path.join(__dirname, '../data/users.json');
 
+const User = require("../models/User")
+
 // *************** User Controller HERE *************** //
 const userController = {
 
     // Show '/login'
     viewLogin: (req, res) => {
+
         res.render('login', {currentPath: req.path });
     },
 
-    userLogin: (req, res) =>{
-        let userFile = fs.readFileSync(usersFilePath, {encoding : 'utf-8'})
-        let users;
-
-        if (userFile == ''){
-            users = [];
-        } else {
-            users = JSON.parse(userFile); 
-        }
-
-        let userToLog = ' ';
-
-        for(let i = 0; i < users.length; i++){
-            if (users[i].email == req.body.email){
-                if(bcrypt.compareSync(req.body.password, users[i].password)){
-                    userToLog = users[i];
-                    break;
+    userLogin: (req, res) => {
+        let UserToLog = User.findByField("email", req.body.email);
+    
+        if (UserToLog) {
+            let RightPassword = bcryptjs.compareSync(req.body.password, UserToLog.password);
+    
+            if (RightPassword) {
+                // Caso de éxito: Contraseña correcta
+                delete UserToLog.password
+                req.session.userLogged = UserToLog
+                if (req.body.remember_user) {
+                    res.cookie("userEmail", req.body.email, {maxAge: (1000*60) * 60 })
                 }
+                res.redirect("/user/profile");
+            } else {
+                // Caso de error: Contraseña incorrecta
+                res.render("login", {
+                    errors: {
+                        email: {
+                            msg: "Los datos que ingresaste son incorrectos"
+                        }
+                    }
+                });
             }
+        } else {
+            // Caso de error: Usuario no encontrado
+            res.render("login", {
+                errors: {
+                    email: {
+                        msg: "No se encuentra el email: " + req.body.email + " en esta base de datos"
+                    }
+                }
+            });
         }
-        if (userToLog == undefined){
-            return res.render ('login', {errors: [
-                {msg: 'El mail o la contraseña son incorrectos.'}
-            ]} );
-        }
-
-        req.session.userToLog = userToLog;
-        res.redirect('/')
     },
+    profile: (req,res) =>{
+        console.log(req.cookies.userEmail);
+    res.render("UserProfile", {user: req.session.userLogged})
+    },
+    logout: (req,res) =>{
+        res.clearCookie("userEmail")
+     req.session.destroy()
+    return res.redirect("/")
+    },
+    
 
     // Show '/register'
     viewRegister: (req, res) => {
+        res.cookie("testing", "Hola Mundo", {maxAge: 1000*30})
         res.render('register', {currentPath: req.path });
+
     },
 
     userCreate: (req, res) => {
