@@ -4,11 +4,10 @@
 <%- include("partials/head", {title:"Grinding Coffe", css:"home"}) %>
 
     <body>
-        <%- include("partials/nav.ejs") %>
-        
-            <section class="headerImg">
-                <h1>Grinding Coffee</h1>
-            </section>
+        <%- include("partials/nav.ejs") %>  
+        <div class="logoHero">
+            <img src="/img/grindingCoffeeHero.svg" alt="Logo de Grinding Coffee">
+        </div>
         
             <main class="container-main">
                 <h3 class="category">Cafe en grano:</h3>
@@ -26,8 +25,8 @@
                 <section class="container-img">
                     <div class="box box1">
                         <!-- Div con Background-img -->
-                        <h3>Mira otros productos</h3>
-                        <a href="">Ver mas</a>
+                        <h3>Todos nuestros productos</h3>
+                        <a href="/allProducts">Ver mas</a>
                     </div>
                     
                     <div class="box box2">
@@ -38,7 +37,7 @@
                     
                 </section>
                 
-                <h3 class="category">Cafe Molido:</h3>
+                <h3 class="category marginTop">Cafe Molido:</h3>
                 <section class="recetas">
                     <% molido.forEach(product=> { %>
                         <div class="product">

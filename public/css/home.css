@@ -69,40 +69,30 @@ a{
     text-decoration: none;
     color: var(--colorText);
 }
-/* ESTILOS DEL HEADER COMO TAL */
 
-/* Fondo del header */
-.headerImg{
-    display: flex;
-    background-image: url(/img/fondoimg.jpg);
-    width: 100%;
-    height: 39rem;
+/*/////////////////// HERO ///////////////////*/
+
+.logoHero {
+    min-height: 100vh;
+    background-image: url(/img/imgHero.png);
+    background-repeat: no-repeat;
     background-size: cover;
-}
-
-
-/* Texto del header */
-
-.headerImg h1{
-    padding-left: 15rem;
-    padding-right: 15rem;
-    text-align: center;
-    padding-top: 16rem;
-    font-size: 8rem;
-    font-weight: bold;
-    color: var(--colorTittleClear);
-    /* ESTO FUE LO QUE MODIFIQUE */
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 
-
+.logoHero img{
+    width: 600px;
+}
 
 
 /* ESTILOS PRODUCTOS PRINCIPALES AL INICIO DEL MAIN*/
 
 main{
     padding-top: 2rem;
-    background-color: #ffebda;
     padding-bottom: 5rem;
 }
 
@@ -276,9 +266,14 @@ main .winner .descrip-winner a:hover{
  }
 
  .category{
+    font-size: 32px;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 40px;
     color: #833f00;
+ }
+
+.marginTop{
+    margin-top: 72px;
  }
 
 
