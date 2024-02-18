@@ -10,7 +10,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 /*     color: #833f00; */
 }
 
@@ -77,135 +77,110 @@ a{
     flex-wrap: wrap;
     align-items: center;
 }
-
-
-/* ESTILOS DEL HEADER COMO TAL */
-
-/* Fondo del header */
-header .headerImg{
-    display: flex;
-    background-image: url(/img/fondoimg.jpg);
-    width: 100%;
-    height: 39rem;
+  
+/* /////////////////// FORM /////////////////// */
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 80px 0;
 }
 
-
-/* Texto del header */
-
-header .headerImg h1{
-    padding-left: 24rem;
-    padding-right: 15rem;
-    padding-top: 16rem;
-    font-size: 7rem;
-    font-weight: bold;
-    color: white;
-    /* ESTO FUE LO QUE MODIFIQUE */
-    width: 100%;
-    
-    
+.flexBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.mainTitle{
+    font-size: 32px;
+    color: var(--colorText);
+    text-align: center;
+    padding-bottom: 52px;
+}
 
+.inputGroup{
+    margin-bottom: 16px;
+}
 
-
-
-/* Estilos para el formulario */
-
-  main .form-general{
-    background-image: url("/img/FONDOCAFE.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .cajacreate {
-    margin: 8rem;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    padding: 30px;
-    width: 800px;
-    border: 1px solid #989898;
-  }
-  
-  .h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .line {
-    height: 2px;
-    background-color: #ccc;
-    margin: 10px 0 20px;
-  }
-  
-  .marca {
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .inputcreate,
-  .form-input,
-  textarea {
+.textareaDefault{
+    resize: none;
+    height: 96px;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  select.form-input {
-    appearance: none;
-  }
-  
+    border-radius: 4px;
+    padding: 8px 16px;
+    border: 1px #b4b4b4 solid;
+    font-size: 16px;
+}
 
-  main .form-general form .cajacreate .btn-options{
+.inputDefault{
+    width: 100%;
+    height: 46px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    border: 1px #b4b4b4 solid;
+    font-size: 16px;
+}
+
+.errorFeedback{
+    color: red;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+label{
+    font-weight: 600;
+    padding-top: 40px;
+}
+.remember_user{
+    padding-top: 0px;
+}
+
+.buttonGroup{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-  }
+    flex-direction: column;
+}
 
-  main .form-general form .cajacreate .btn-options .botones button{
-    margin: 1rem;
-  }
-
-
-  .botones {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  button {
-    padding: 10px 20px;
+.mainButton{
+    width: 100%;
+    margin: 2% 0;
+    padding: 0.8rem;
+    font-size: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    width: 200px;
-    font-size: 1.4rem;
-  }
-  
-  button[type="submit"] {
-    background-color: #0a81d0;
-    color: white;
-  }
-  
-  button[type="reset"] {
-    background-color: #d95041;
-    color: white;
-  }
-  
-  /* Estilos generales */
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
+    background-color: var(--colorText);
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mainButton:hover{
+    background-color: var(--colorTittleDark);
+    
+}
+
+.secondaryButton{
+    width: 100%;
+    margin: 2% 0;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--colorText);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: var(--colorText);
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondaryButton:hover{
+    background-color: var(--colorTittleDark);
+    color: #ffffff;
+} 
+
+
 /* /////////////////// FOOTER /////////////////// */
 .flexBox {
     display: flex;
@@ -256,7 +231,7 @@ footer .flexBox{
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Open Sans', sans-serif;
     }
 
 

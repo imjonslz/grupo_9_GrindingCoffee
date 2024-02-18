@@ -3,54 +3,61 @@
 <%- include("partials/head", {title:"Nuevo producto", css:"crear"}) %>
     <body>
         <%- include("partials/nav.ejs") %>
-            <main>
-                <section class="form-general">
-                    <form action="/products/create" method="POST" class="form" enctype="multipart/form-data">
-                        <section class="cajacreate">
-                            <p class="h3">Crear producto<i class="fa-solid fa-mug-saucer fa-l"></i></p>
-                            <div class="line"></div>
-                            <p class="marca">Grinding Coffee®</p>
-    
-                            <input for="name" class="inputcreate" type="text" name="productName" id="product-name" placeholder="Nombre producto" required>
-    
-                            <label for="description" class="form-label">Descripcion:</label>
-                            <textarea class="inputcreate form"  name="description" id="description" required></textarea>
-                            <label for="category" class="form-label">Categoría:</label>
-                            <select name="category" id="category" class="form-input" value="">
+
+        <main>
+            <div class="container">
+                <h2 class="mainTitle">Crear producto<i class="fa-solid fa-mug-saucer fa-l"></i></h2>
+                <div class="flexBox">
+                    <form action="/products/create" method="POST" enctype="multipart/form-data">
+                       
+                        <div class="inputGroup">
+                            <label for="productName">Nombre producto:</label>
+                            <input class="inputDefault" type="text" name="productName" id="productName">
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="description">Descripción:</label>
+                            <textarea class="textareaDefault" type="text" name="description" id="description"></textarea>
+                        </div>
+                        
+                        <div class="inputGroup">
+                            <label for="category">Categoría:</label>
+                            <select class="inputDefault" name="category" id="category">
                                 <option value="" selected>Que tipo de producto es:</option>
                                 <option value="Cafe en grano">Cafe en grano</option>
                                 <option value="Cafe molido">Cafe molido</option>
-                            </select>
-
-                            <label for="size" class="form-label">Tamaño:</label>
-                            <select name="size" id="size" class="form-input" value="">
+                            </select> 
+                        </div>
+                        
+                        <div class="inputGroup">
+                            <label for="size">Tamaño:</label>
+                            <select class="inputDefault" name="size" id="size">
                                 <option value="" selected>Elige el tamaño del producto:</option>
                                 <option value="250">250 gr</option>
                                 <option value="500">500 gr</option>
                                 <option value="1000">1000 gr</option>
-                            </select>
-    
-                            <input type="number" class="inputcreate" name="price" id="price" placeholder="Precio del producto">
-    
-                            <div class="fotoUsuario">
-                                <input type="file" name="productImage"  placeholder="Foto de producto" required>
-                                </input>
-                            </div>
-    
-                            <section class="btn-options">
-                                <section class="botones">
-                                    <button type="submit">Crear</button>
-                                </section>
-        
-                                <section class="botones">
-                                    <button type="reset">Volver</button>
-                                </section>
-                            </section>
-                        </section>
-    
+                            </select>   
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="price">Precio:</label>
+                            <input class="inputDefault" type="number" name="price" id="price">
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="productImage">Foto de producto:</label>
+                            <br>
+                            <input type="file" name="productImage" id="productImage">
+                        </div>
+                        
+                        <div class="buttonGroup">
+                            <button class="mainButton" type="submit">Crear</button>
+                            <button class="secondaryButton" type="reset">Volver al inicio</button>
+                        </div>
                     </form>
-                </section>
-            </main>
+                </div>
+            </div>
+        </main>
             <%- include("partials/footer.ejs") %>
     </body>
 </html>

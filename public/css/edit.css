@@ -10,7 +10,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 /*     color: #833f00; */
 }
 
@@ -66,175 +66,107 @@ a{
     color: var(--colorText);
 }
 
-/* ESTILOS DEL HEADER COMO TAL */
-
-/* Fondo del header */
-header .headerImg{
-    display: flex;
-    background-image: url(/img/fondoimg.jpg);
-    width: 100%;
-    height: 39rem;
-}
-
-
-/* Texto del header */
-
-header .headerImg h1{
-    padding-left: 24rem;
-    padding-right: 15rem;
-    padding-top: 16rem;
-    font-size: 7rem;
-    font-weight: bold;
-    color: white;
-    /* ESTO FUE LO QUE MODIFIQUE */
-    width: 100%;
-    
-    
-}
-
-/* MAIN */
-main{
-    background-image: url("/img/FONDOCAFE.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-
-/* BODY */
-body {
-    width: 100%;
-}
-
-.form {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.cajacreate {
-    width: 80%;
-    max-width: 700px;
-    margin: 5% auto;  /* Cambié margin-left por margin */
-    background-color: #9f9a9a96;
-    box-shadow: 0px 0px 10px #6e6d6da7;
-    border-radius: 30px 30px 40px 40px;
-    padding-bottom: 5%;
-    text-align: center;
-    border-left: solid 5px #833f008e;
-    border-right: solid 1px #f8f4f4bd;
-    border-bottom: solid 2.7px #92470197;
-}
-
-.inputcreate {
-    width: 80%;
-    height: 40px;
-    border-radius: 40px 40px 40px 40px;
-    border: solid 1px white;
-    text-align: center;
-    display: block;
+/* /////////////////// FORM /////////////////// */
+.container{
+    width: 90%;
     margin: auto;
-    margin-top: 15px;
-}
-
-.fotoUsuario {
-    color: white;
-    width: 70%;
-    margin: 5% 0 0 15%;
-    height: 40px;
-    text-align: center;
-    margin-top: 5%;
-}
-
-.labelfoto {
-    text-align: center;
-    margin: 5%;
-}
-
-.h3 {
-    border: solid 1px #ffffff96;
-    background-color: rgba(255, 255, 255, 0.898);
-    box-shadow: #9f9a9a96;
-    width: 30%;
-    margin: 0% 20% 5% 35%;
-    border-radius: 0px 20px 0px 20px;
-    color: #4a2504f5;
-}
-
-.marca {
-    color: rgba(0, 0, 0, 0.888);
-    font-size: 18px;
-    text-align: left;
-    margin-left: 20px;
-    padding-bottom: 25px;
-}
-.form-label {
-   display: inline-block;
-/*     font-size: 1.6em; */
-   margin-top: 18px;
-   margin-bottom: 5px;
- }
-.form-input {
-   display: block;
-   width: 50%;
-   height: 45px;
-   margin: auto;
-   margin-bottom: 15px;
-   font-size: 14px;
-   border-radius: 8px;
-   border: none;
-   border: solid 1px var(--gray);
-   padding: 0 15px;
- }
-
- 
- textarea.form {
-   min-height: 140px;
-   resize: vertical;
-   padding-top: 0px;
-   padding: 15px;
-   margin-top: 0px;
- }
-
-/* BOTONES */
-.botones {
-    margin-top: 2%;
-}
-
-main .botones a,
-main .botones button {
-    margin: 2% 0;
-    padding: 0.8rem;
-    padding-left: 40px;
-    padding-right: 40px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-main .botones a {
-    color: var(--colorText);
-    background-color: transparent;
-}
-
-main .botones button {
-    background-color: var(--colorTittleDark);
-    color: var(--fondoGeneral);
-}
-
-main .botones a:hover,
-main .botones button:hover {
-    background-color: var(--fondoGeneral);
-    color: var(--colorText);
+    padding: 80px 0;
 }
 
 .flexBox{
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
 }
+
+.mainTitle{
+    font-size: 32px;
+    color: var(--colorText);
+    text-align: center;
+    padding-bottom: 52px;
+}
+
+.inputGroup{
+    margin-bottom: 16px;
+}
+
+.textareaDefault{
+    resize: none;
+    height: 96px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 8px 16px;
+    border: 1px #b4b4b4 solid;
+    font-size: 16px;
+}
+
+.inputDefault{
+    width: 100%;
+    height: 46px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    border: 1px #b4b4b4 solid;
+    font-size: 16px;
+}
+
+.errorFeedback{
+    color: red;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+label{
+    font-weight: 600;
+    padding-top: 40px;
+}
+.remember_user{
+    padding-top: 0px;
+}
+
+.buttonGroup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mainButton{
+    width: 100%;
+    margin: 2% 0;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--colorText);
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mainButton:hover{
+    background-color: var(--colorTittleDark);
+    
+}
+
+.secondaryButton{
+    width: 100%;
+    margin: 2% 0;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--colorText);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: var(--colorText);
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondaryButton:hover{
+    background-color: var(--colorTittleDark);
+    color: #ffffff;
+} 
 
 /* /////////////////// FOOTER /////////////////// */
 .flexBox {
@@ -288,7 +220,7 @@ footer .flexBox{
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Open Sans', sans-serif;
     }
 
 

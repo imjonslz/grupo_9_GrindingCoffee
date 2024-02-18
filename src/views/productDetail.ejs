@@ -11,14 +11,14 @@
         <!--/////////////////// PRODUCT DETAIL ///////////////////-->
         <section class="productDetail">
             <div class="gallery">
-                <img src="/img/products/<%= singleProduct.image %>" alt="">
+                <img src="/img/products/<%= singleProduct.productImage %>" alt="">
                 <!--<img src="/img/producto.jpg" alt="">
                 <img src="/img/producto.jpg" alt="">
                 <img src="/img/producto.jpg" alt="">
                 <img src="/img/producto.jpg" alt="">-->
             </div>
             <article class="product">
-                <h1 class="titleProduct"><%= singleProduct.name %></h1>
+                <h1 class="titleProduct"><%= singleProduct.productName %></h1>
                 <p class="descriptionProduct"><%= singleProduct.description %></p>
                 <p class="descriptionProduct">Precio del Producto: <%= singleProduct.price %> $</p>
                 <p class="descriptionProduct">Tamaño del producto: <%= singleProduct.size %> Gr</p>
@@ -38,8 +38,8 @@
                     <% relatedProducts.forEach(product => {%>
                         
                         <article class="card">
-                            <a href="/products/detail/products/<%= product.id %>"><img src="/img/products/<%= product.image %>" alt=""></a>
-                            <h2><%= product.name%></h2>
+                            <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.productImage %>" alt=""></a>
+                            <h2><%= product.productName%></h2>
                             <p><%= product.description %></p>
                             <p class="price"><%= product.price %> $</p>
                         </article>

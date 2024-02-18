@@ -40,14 +40,13 @@ let detailController = {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
         const newProduct = {
-            id: products[products.length - 1].id + 1,
-				name: req.body.productName,
-				price: parseInt(req.body.price),
-				discount: req.body.discount,
-				category: req.body.category,
-                size: req.body.size,
+                id: products[products.length - 1].id + 1,
+                productName: req.body.productName,
 				description: req.body.description,
-                image: req.file ? req.file.filename : "default-image.png"
+                category: req.body.category,
+                size: req.body.size,
+                price: parseInt(req.body.price),
+                productImage: req.file ? req.file.filename : "default-image.png"
         }
         products.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "))
@@ -68,13 +67,13 @@ let detailController = {
 		})
 		productEdit = {
 			id: productEdit.id,
-            name: req.body.productName,
+            productName: req.body.productName,
 			price: parseInt(req.body.price),
 			discount: req.body.discount,
 			category: req.body.category,
             size: req.body.size,
 			description: req.body.description,
-			image: req.file != undefined ? req.file.filename : productEdit.image
+			productImage: req.file != undefined ? req.file.filename : productEdit.productImage
 		}
         let index = products.findIndex(product =>{
             return product.id == req.params.id
