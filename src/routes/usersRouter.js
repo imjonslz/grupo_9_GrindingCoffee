@@ -70,7 +70,8 @@ router.post('/register', uploadFile.single('avatar'), validations, userControlle
 router.get('/profile',authMiddleware, userController.profile)
 router.get('/logout', userController.logout)
 router.get('/editProfile',authMiddleware, userController.userEdit)
-router.post('/editProfile/:id',authMiddleware, userController.userEditProcces)
+/* no se estaba trayendo nada del body, porque no se habia llamado a multer, asi que hay que tener cuidado con eso */
+router.post('/editProfile/:id',authMiddleware,uploadFile.single('avatar'), userController.userEditProcces)
 
 // *************** Export Router *************** //
 module.exports = router;

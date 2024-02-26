@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("partials/head", {title:"Registro", css:"register"}) %>
+<%- include("partials/head", {title:"Editar Perfil", css:"register"}) %>
 
     <body>
         <%- include("partials/nav.ejs") %>
@@ -8,6 +8,7 @@
                 <div class="container">
                     <h2 class="mainTitle">Usuario: <%= user.name %> <%= user.lastName%> <i class="fa-solid fa-mug-saucer fa-l"></i></h2>
                     <div class="flexBox">
+                        
                         <form action="/user/editProfile/<%= user.id %>" method="POST" enctype="multipart/form-data">
                             <div class="inputGroup">
                                 <label for="name">Nombre: </label>

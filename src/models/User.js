@@ -3,10 +3,10 @@
 //3 buscar a un usuario por su ID
 //4 editar la informacion de un usuario
 //5 eliminar a un usuario de la DB
-const fs = require("fs")
+/* Cuando es ruta relativa es necesario utilizar el path, o mejor dicho cuando es una ruta muy rebuscada */
+/* const fs = require("fs")
 const path = require("path")
 const User = {
-    /* Cuando es ruta relativa es necesario utilizar el path, o mejor dicho cuando es una ruta muy rebuscada */
     fileName: path.join(__dirname, "../data/users.json"),
     getData: function () {
         return JSON.parse(fs.readFileSync(this.fileName, "utf-8"));
@@ -32,7 +32,7 @@ const User = {
     findByField: function (field, text) {
         let allUsers = this.findAll();
         let userFound = allUsers.find(function name(user) {
-            /* en field, es como si fuera user.name o user.email o asi */
+             //en field, es como si fuera user.name o user.email o asi 
             return user[field] === text
         })
         return userFound   
@@ -57,4 +57,4 @@ const User = {
     }
 }
 
-module.exports = User;
+module.exports = User; */

@@ -124,6 +124,20 @@ font-weight: 100;
     background-image:linear-gradient(rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.42)), url("/img/copas.jpg");
     background-size: cover;
 }
+.profile-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+.edit-profile{
+    color: white;
+    align-self: center;
+    background-color: black;
+    border-radius: 10px;
+    border:  2px solid var(--colorTittleDark);
+    padding: 10px;
+}
 
 
 

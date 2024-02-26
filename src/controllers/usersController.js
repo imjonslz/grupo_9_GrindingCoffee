@@ -68,7 +68,7 @@ const userController = {
     }
     },
     profile: (req,res) =>{
-        console.log(req.cookies.userEmail);
+      /*   console.log(req.cookies.userEmail); */
     res.render("UserProfile", {user: req.session.userLogged})
     },
     logout: (req,res) =>{
@@ -86,6 +86,7 @@ const userController = {
     },
 
     userCreate: async (req, res) => {
+        
         try{
         const errors = validationResult(req);
 
@@ -127,25 +128,34 @@ const userController = {
     },
     userEdit: async (req, res) => {
         try{
-            res.render("UserEdit", {user: req.session.userLogged})
-
+            res.render("userEdit", {user: req.session.userLogged})
         }catch{
 
         }
     },
+
     userEditProcces: async (req, res) => {
+        console.log(req.body);
+
         try{
-        const user = await db.Users.findByPk(req.session.userLogged.id);
+
+        const userLog = req.session.userLogged.id
+        const user = await db.Users.findByPk(userLog);
         
-      await db.Users.update({
+        await db.Users.update({
             name: req.body.name,
             lastName: req.body.lastName,
             avatar: req.file != undefined? req.file.filename : user.avatar
         }, {
-            where: { id: req.session.userLogged.id }
+            where: { id: userLog }
         });
+        
+        /* aqui se actualizo manualmente los datos de los usuarios, independientemente si se utiliza la cookie o no, para que se vea todo instanteneamente reflejado y el nombre, apellido y avatar del usuario se vea de una vez */
+        req.session.userLogged.name = req.body.name;
+        req.session.userLogged.lastName = req.body.lastName;
+        req.session.userLogged.avatar = req.file != undefined ? req.file.filename : req.session.userLogged.avatar;
 
-            res.redirect("/user/editProfile")
+        res.redirect("/user/profile")
 
         }catch (error) {
             console.error('Error fetching data:', error);
