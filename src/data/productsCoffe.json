@@ -106,5 +106,14 @@
   "size": "250",
   "description": "prueba de edicion y creacion",
   "productImage": "productImage-1708264327982.jpeg"
+ },
+ {
+  "id": 46,
+  "productName": "",
+  "description": "",
+  "category": "",
+  "size": "",
+  "price": null,
+  "productImage": "default-image.png"
  }
 ]

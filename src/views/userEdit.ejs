@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head", {title:"Registro", css:"register"}) %>
+
+    <body>
+        <%- include("partials/nav.ejs") %>
+            <main>
+                <div class="container">
+                    <h2 class="mainTitle">Usuario: <%= user.name %> <%= user.lastName%> <i class="fa-solid fa-mug-saucer fa-l"></i></h2>
+                    <div class="flexBox">
+                        <form action="/user/editProfile/<%= user.id %>" method="POST" enctype="multipart/form-data">
+                            <div class="inputGroup">
+                                <label for="name">Nombre: </label>
+                                <input class="inputDefault" type="text" name="name" value="<%= user.name %>">
+                            </div>
+                            <div class="inputGroup">
+                                <label for="lastName">Apellido:</label>
+                                <input class="inputDefault" type="text" name="lastName" value="<%= user.lastName%>">
+                            </div>
+                            <div class="inputGroup">
+                                <label>Foto de perfil:</label>
+                                <br>
+                                <input id="avatar" type="file" name="avatar">
+                            </div>
+                            <div class="buttonGroup">
+                                <button class="mainButton" type="submit">Guardar Cambios</button>
+                                <button class="secondaryButton" type="reset">Cancelar Cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <%- include("partials/footer.ejs") %>
+    </body>
+</html>

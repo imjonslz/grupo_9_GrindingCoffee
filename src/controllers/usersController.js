@@ -15,6 +15,8 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 
 const User = require("../models/User")
 
+const db = require("../../database/models")
+
 // *************** User Controller HERE *************** //
 const userController = {
 
@@ -24,10 +26,11 @@ const userController = {
         res.render('login', {currentPath: req.path });
     },
 
-    userLogin: (req, res) => {
-        let UserToLog = User.findByField("email", req.body.email);
-    
-        if (UserToLog) {
+    userLogin: async (req, res) => {
+        try{
+
+            let UserToLog = await db.Users.findOne({ where: { email: req.body.email } });
+            if (UserToLog) {
             let RightPassword = bcryptjs.compareSync(req.body.password, UserToLog.password);
     
             if (RightPassword) {
@@ -58,6 +61,11 @@ const userController = {
                 }
             });
         }
+    }catch (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send('Internal Server Error');
+        
+    }
     },
     profile: (req,res) =>{
         console.log(req.cookies.userEmail);
@@ -77,7 +85,8 @@ const userController = {
 
     },
 
-    userCreate: (req, res) => {
+    userCreate: async (req, res) => {
+        try{
         const errors = validationResult(req);
 
         if (!errors.isEmpty()){
@@ -87,53 +96,65 @@ const userController = {
             })
         }
 
-        let userFile = fs.readFileSync(usersFilePath, {encoding : 'utf-8'})
-        let users;
-
-        if (userFile == ''){
-            users = [];
-        } else {
-            users = JSON.parse(userFile); 
-        }
-
-        // Validation user exist //
-        let findByField = (field, text) =>{
-            let allUsers = users;
-            let userFound = allUsers.find(oneUser => oneUser[field] === text);
-            return userFound
-        }
-
-        let userInDB = findByField('email', req.body.email);
-        if (userInDB){
+        const userInDB = await db.Users.findOne({ where: { email: req.body.email } });
+        if (userInDB) {
             return res.render('register', {
-                errors : {
+                errors: {
                     email: {
                         msg: 'Este correo ya pertenece a un usuario'
                     }
                 },
-                oldData : req.body
-            })
+                oldData: req.body
+            });
+        
         }
         // End validation user exist//
 
-        let user = {
-            id: users.length + 1,
+        const newUser = await db.Users.create({
             name: req.body.name,
             lastName: req.body.lastName,
             email: req.body.email,
-            avatar: req.file.filename,
+            avatar: req.file.filename, 
+            userRoll_id: 2,
             password: bcryptjs.hashSync(req.body.password, 10) 
-        }
-
-        users.push(user);
-
-        let usersJSON = JSON.stringify(users);
-
-        fs.writeFileSync(usersFilePath, usersJSON);
+        });
 
         res.redirect('/user/login/');
+     }catch (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send('Internal Server Error');
+     }
+    },
+    userEdit: async (req, res) => {
+        try{
+            res.render("UserEdit", {user: req.session.userLogged})
+
+        }catch{
+
+        }
+    },
+    userEditProcces: async (req, res) => {
+        try{
+        const user = await db.Users.findByPk(req.session.userLogged.id);
+        
+      await db.Users.update({
+            name: req.body.name,
+            lastName: req.body.lastName,
+            avatar: req.file != undefined? req.file.filename : user.avatar
+        }, {
+            where: { id: req.session.userLogged.id }
+        });
+
+            res.redirect("/user/editProfile")
+
+        }catch (error) {
+            console.error('Error fetching data:', error);
+            res.status(500).send('Internal Server Error');
+            
+        }
     }
-};
+}
+
     
 // *************** Export User Controller *************** //
 module.exports = userController;

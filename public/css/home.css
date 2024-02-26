@@ -45,10 +45,12 @@ header{
 
 #logoHeader{
     width: 80px;
+    
 }
 
 #logoHeader a img{
     width: 100%;
+    min-width: 55px;
 }
 
 .flexBoxNav{
@@ -64,6 +66,7 @@ ul{
 li{
     padding: 16px;
 }
+
 
 a{
     text-decoration: none;
@@ -85,7 +88,7 @@ a{
 }
 
 .logoHero img{
-    width: 600px;
+    width: 55%;
 }
 
 
@@ -99,7 +102,8 @@ main{
 main .container{
     display: flex;
     justify-content: center;
-    overflow-x: auto;
+    /* se cambio aqui el overflow x por el wrap */
+    flex-wrap: wrap;
 }
 
 main .container::-webkit-scrollbar{
@@ -165,18 +169,30 @@ main .container-img .box h3{
     padding-top: 12rem;
     font-size: 4rem;
     color: #fff4ea;
-    padding-bottom: 3rem;
+ /*    padding-bottom: 3rem; */
+}
+main .container-img .box h3.h3-products{
+padding-top: 7rem;
+ /*    padding-bottom: 3rem; */
 }
 
 main .container-img .box  a{
     /* display: flex; */
-    padding-left: 48%;
-    padding-top: 4rem;
+/*     padding-left: 48%;
+    padding-top: 4rem; */
     font-size: 2rem;
     color: #ffebda;
     text-decoration: none;
     font-weight: bold;
 }
+
+.see-more{
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
 
 
 /* ESTILOS PARA MAS PRODUCTOS */
@@ -186,7 +202,7 @@ main .recetas{
     display: flex;
     justify-content: center;
     /* ESTO FUE LO QUE MODIFIQUE */
-    overflow: scroll;
+    flex-wrap: wrap;
 }
 
 
@@ -250,6 +266,7 @@ main .winner .descrip-winner a{
 main .winner .descrip-winner a:hover{
     background-color: #e77a15;
 }
+
 
  /* ESTILOS CARRUCEL Argb(118, 61, 7)CO */
 
@@ -327,6 +344,10 @@ footer .flexBox{
  @media only screen and (max-width: 781px) {
     /* Estilos específicos para pantallas hasta 781px */
 
+    .li-nav{
+        font-size: 15px ;
+    }
+
     body {
         padding: 0;
         margin: 0;
@@ -399,10 +420,13 @@ footer .flexBox{
         padding-top: 1.5rem;
         font-size: 1.5rem;
     }
+    main .container-img .box h3.h3-products{
+        padding-top: 1.5rem;
+         /*    padding-bottom: 3rem; */
+        }
 
     main .container-img .box a {
-        padding-left: 50%; /* Ajusta según sea necesario para centrar */
-        transform: translateX(-50%); /* Centra el botón */
+
         padding-top: 1rem;
         font-size: 1.2rem;
 
@@ -514,4 +538,29 @@ footer .flexBox{
         margin-top: 1rem;
         font-size: 0.8rem;
     }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .li-nav{
+        font-size: 12px ;
+    }
+    
+#logoHeader a img{
+    width: 100%;
+    min-width: 45px;
+}
+
+}
+@media only screen and (max-width: 400px) {
+
+    .li-nav{
+        font-size: 9px ;
+    }
+    
+#logoHeader a img{
+    width: 100%;
+    min-width: 40px;
+}
+
 }

@@ -69,6 +69,8 @@ router.get('/register', guestMiddleware, userController.viewRegister)
 router.post('/register', uploadFile.single('avatar'), validations, userController.userCreate)
 router.get('/profile',authMiddleware, userController.profile)
 router.get('/logout', userController.logout)
+router.get('/editProfile',authMiddleware, userController.userEdit)
+router.post('/editProfile/:id',authMiddleware, userController.userEditProcces)
 
 // *************** Export Router *************** //
 module.exports = router;

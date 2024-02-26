@@ -2,23 +2,23 @@
     <div class="containerNav">
         <nav class="flexBoxNav">
             <ul class="flexBoxNav">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/products/create">Crear Producto</a></li>
-                <li><a href="/allProducts">Todos los productos</a></li>
+                <li class="li-nav"><a href="/">Inicio</a></li>
+                <li class="li-nav"><a href="/products/create">Crear Producto</a></li>
+                <li class="li-nav"><a href="/allProducts">Todos los productos</a></li>
             </ul>
             <div id="logoHeader">
                 <a href="/"><img src="/img/gcLogo.svg" alt="Logo de Grinding Coffee"></a>
             </div>
             <ul class="flexBoxNav">
                 <% if (locals.isLogged) { %>
-                    <li><a href="/user/logout">Cerrar Sesion</a></li>
+                    <li class="li-nav"><a href="/user/logout">Cerrar Sesion</a></li>
              <!--        de la misma manera se puede poner foto pero ahora no -->
                     <!-- <img src="/img/avatars/locals.userLogged.avatar" alt=""> -->
-                    <li><a href="/user/profile">Mi perfil: <%= locals.userLogged.name %></a></li>
-                    <li><a href="/cart/checkout">Ir al carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li class="li-nav"><a href="/user/profile">Mi perfil: <%= locals.userLogged.name %></a></li>
+                    <li class="li-nav"><a href="/cart/checkout">Ir al carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
                     <% } else{%>
-                <li><a href="/user/login">Iniciar Sesión</a></li>
-                <li><a href="/user/register">Registrarme</a></li>
+                <li class="li-nav"><a href="/user/login">Iniciar Sesión</a></li>
+                <li class="li-nav"><a href="/user/register">Registrarme</a></li>
                 <% } %>
             </ul>
         </nav>

@@ -23,19 +23,30 @@
                         <div class="inputGroup">
                             <label for="category">Categoría:</label>
                             <select class="inputDefault" name="category" id="category" value="">
-                                <option value=""<% if (!singleProduct.category) { %>selected<% } %>>Que tipo de producto es:</option>
-                                <option value="Cafe en grano"  <% if (singleProduct.category === 'Cafe en grano') { %>selected<% } %> >Cafe en grano</option>
-                                <option value="Cafe molido" <% if (singleProduct.category === 'Cafe molido') { %>selected<% } %> >Cafe molido</option>
+                                <option value=""<% if (!categories.category) { %>selected<% } %>>Que tipo de producto es:</option>
+                                <% categories.forEach(category => { %>
+                                <% if (singleProduct.category_id === category.id ) { %>
+                                    <option value="<%= category.id %>" selected><%= category.category %></option>
+                                    <% } else{ %>  
+                                        <option value="<%=category.id%>"><%= category.category %></option>
+                                 <% } %>
+                                <% }) %>
                             </select> 
                         </div>
 
                         <div class="inputGroup">
                             <label for="size">Tamaño:</label>
                             <select class="inputDefault" name="size" id="size">
-                                <option value="" <% if (!singleProduct.size) { %>selected<% } %> >Elige el tamaño del producto:</option>
-                                <option value="250" <% if (singleProduct.size === '250') { %>selected<% } %> >250 gr</option>
-                                <option value="500" <% if (singleProduct.size === '500') { %>selected<% } %> >500 gr</option>
-                                <option value="1000" <% if (singleProduct.size === '1000') { %>selected<% } %> >1000 gr</option>
+                                <option value="" <% if (!sizes.size) { %>selected<% } %> >Elige el tamaño del producto:</option>
+                                <% sizes.forEach(size => { %>
+                                    <% if (singleProduct.size_id === size.id) { %>
+                                        <option value="<%= size.id %>" selected ><%= size.size%></option>
+                                        <% } else{ %>
+                                            <option value="<%= size.id %>"><%= size.size%></option>
+                                    
+                                        <% } %>
+                                 
+                                <% }) %>
                             </select>   
                         </div>
 
