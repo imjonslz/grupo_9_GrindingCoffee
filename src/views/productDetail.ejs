@@ -23,10 +23,12 @@
                 <p class="descriptionProduct">Precio del Producto: <%= singleProduct.price %> $</p>
                 <p class="descriptionProduct">Tamaño del producto: <%= singleProduct.sizes.size %> Gr</p>
                 <button class="addCart" type="submit">Agregar al carrito</button>
+                <% if (locals.userRoll_id === 1) { %>
                 <a class="addCart" href="/products/edit/<%= singleProduct.id %>">Editar Producto</a>
                 <form action="/products/delete/<%= singleProduct.id %>?_method=DELETE" method="POST">
                     <button class="addCart" type="submit">Borrar Producto</button>
                 </form>
+                <% } %>
             </article>
         </section>
 

@@ -19,13 +19,15 @@ const storage = multer.diskStorage({
 });
 const upload = multer({storage:storage})
 
+const adminMiddleware = require("../middlewares/adminMiddleware.js")
+
 // *************** continuamos la ruta por el controlador *************** //
 router.get('/detail/:id', productsController.viewDetail)
-router.delete('/delete/:id', productsController.destroyProduct)
-router.get('/create', productsController.viewCreate)
-router.post('/create', upload.single("productImage"), productsController.CreateProcces)
-router.get('/edit/:id', productsController.viewEdit)
-router.put('/edit/:id', upload.single("productImage"), productsController.ProcessEdit)
+router.delete('/delete/:id',adminMiddleware, productsController.destroyProduct)
+router.get('/create', adminMiddleware, productsController.viewCreate)
+router.post('/create',adminMiddleware, upload.single("productImage"), productsController.CreateProcces)
+router.get('/edit/:id', adminMiddleware, productsController.viewEdit)
+router.put('/edit/:id',adminMiddleware, upload.single("productImage"), productsController.ProcessEdit)
 
 // *************** exportamos la variable router *************** //
 module.exports = router;

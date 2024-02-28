@@ -3,7 +3,9 @@
         <nav class="flexBoxNav">
             <ul class="flexBoxNav">
                 <li class="li-nav"><a href="/">Inicio</a></li>
+                <% if (locals.userRoll_id === 1) { %>
                 <li class="li-nav"><a href="/products/create">Crear Producto</a></li>
+                <% }%>
                 <li class="li-nav"><a href="/allProducts">Todos los productos</a></li>
             </ul>
             <div id="logoHeader">

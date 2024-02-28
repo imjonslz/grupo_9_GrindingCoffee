@@ -14,6 +14,8 @@ async function userLoggedMiddleware(req,res,next) {
     }
     if (req.session && req.session.userLogged) {
         res.locals.isLogged = true
+        /* porque hay que especificar el locals.userRoll_id? porque en EJS no se puede acceder a propiedades, hay que acceder a ellas en javascript de alguna manera antes de mandarlas a la vista */
+        res.locals.userRoll_id = req.session.userLogged.userRoll_id;
         res.locals.userLogged = req.session.userLogged;
     }
 

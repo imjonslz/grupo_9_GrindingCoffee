@@ -181,7 +181,7 @@ INSERT INTO `users` VALUES (1,'Jose','Aguilar','jaguilar@gmail.com','qwewe',2,'1
 (13,'Daniel','Diaz','ddiaz@gmail.com','$2a$10$9vUpxhlBqRuaIX.DHYrEDOpvW7XJb0Hif7IkoRWzdFe5F7QCsAfha',2,'1706825624168_img.png'),
 (14,'agustina','diaz','agustinadiaz@gmail.com','$2a$10$CiZLYl49Z/lFkt.lr4bht.bGeBS/rwUBUXxw2c./ublIO9wsW5kQy',2,'1706825813196_img.png'),
 (15,'Maria','Tobon','camilaormo03@gmail.com','$2a$10$3nY/6RhCIRUn7JTb5E.quuqm3xf92lohfOMGGYT0WgGcJgsTOeeEi',2,'1706932716322_img.png'),
-(16,'Juan Jose','tellez tobon','juanjose250699@gmail.com','$2a$10$5k7ef3J9ljuw/rncutNKvOzDAJUq/./hOik3aXXSjZECmF3TKAu.G',2,'1706934289309_img.png'),
+(16,'Juan Jose','tellez tobon','juanjose250699@gmail.com','$2a$10$5k7ef3J9ljuw/rncutNKvOzDAJUq/./hOik3aXXSjZECmF3TKAu.G',1,'1706934289309_img.png'),
 (17,'Maria','Tobon','malena1469@hotmail.com','$2a$10$HYzzHFUZahs.eOftaUYbg.02asc8WlrGw9wmZRb.aHNP38QXBI5Qe',2,'1706951499535_img.jpg');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
