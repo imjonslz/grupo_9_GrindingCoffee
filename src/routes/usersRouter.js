@@ -28,14 +28,13 @@ const validations = [
             
             let file = req.file;
 
-            if(!file){
-                throw new Error('Tienes que subir una imagen');
-            } else {
-                
+            if(file){
                 let fileExtensions = path.extname(file.originalname).toLowerCase();
                 if (!acceptedExtensions.includes(fileExtensions))
                     throw new Error(`Los tipo de imagenes permitidas son ${acceptedExtensions.join(', ')}`);
-            }
+            } 
+                
+            
 
            
             return true;

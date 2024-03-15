@@ -7,17 +7,32 @@
         <main>
             <div class="container">
                 <h2 class="mainTitle">Crear producto<i class="fa-solid fa-mug-saucer fa-l"></i></h2>
+                <div class="errors">
+                    <img src="/img/AVISO.png" alt="" class="warning">
+                    <ul>
+                    </ul>
+                </div>
                 <div class="flexBox">
-                    <form action="/products/create" method="POST" enctype="multipart/form-data">
+                    <form action="/products/create" method="POST" enctype="multipart/form-data" id="myForm" class="myForm">
                        
                         <div class="inputGroup">
                             <label for="productName">Nombre producto:</label>
-                            <input class="inputDefault" type="text" name="productName" id="productName">
+                            <input class="inputDefault" type="text" name="productName" id="productName" value="<%= locals.oldData ? oldData.productName : null%>">
+                            <% if (locals.errors && errors.productName) { %>
+                                <p class="errorFeedback">
+                                    <%= errors.productName.msg %>
+                                </p>
+                            <% } %>
                         </div>
 
                         <div class="inputGroup">
                             <label for="description">Descripción:</label>
-                            <textarea class="textareaDefault" type="text" name="description" id="description"></textarea>
+                            <textarea class="textareaDefault" type="text" name="description" id="description" ><%= locals.oldData ? oldData.description : null%></textarea>
+                            <% if (locals.errors && errors.description) { %>
+                                <p class="errorFeedback">
+                                    <%= errors.description.msg %>
+                                </p>
+                            <% } %>
                         </div>
                         
                         <div class="inputGroup">
@@ -25,9 +40,14 @@
                             <select class="inputDefault" name="category" id="category">
                                 <option value="" selected>Que tipo de producto es:</option>
                                 <% categories.forEach(category => { %>
-                                    <option value="<%= category.id %>"><%= category.category %></option>   
+                                    <option value="<%= category.id %>" <%=locals.oldData && locals.oldData.category == category.id ? 'selected' : ''  %> ><%= category.category %></option>   
                                 <% }) %>
                             </select> 
+                            <% if (locals.errors && errors.category) { %>
+                                <p class="errorFeedback">
+                                    <%= errors.category.msg %>
+                                </p>
+                            <% } %>  
                         </div>
                         
                         <div class="inputGroup">
@@ -35,22 +55,37 @@
                             <select class="inputDefault" name="size" id="size">
                                 <option value="" selected>Elige el tamaño del producto:</option>
                                 <% sizes.forEach(size => { %>
-                                    <option value="<%= size.id %>"><%= size.size %></option>
+                                    <option value="<%= size.id %> " <%=locals.oldData && locals.oldData.size == size.id ? 'selected' : ''  %>><%= size.size %></option>
                                  
                                 <% }) %>
                           
-                            </select>   
+                            </select> 
+                            <% if (locals.errors && errors.size) { %>
+                                <p class="errorFeedback">
+                                    <%= errors.size.msg %>
+                                </p>
+                            <% } %>  
                         </div>
 
                         <div class="inputGroup">
                             <label for="price">Precio:</label>
-                            <input class="inputDefault" type="number" name="price" id="price">
+                            <input class="inputDefault" type="number" name="price" id="price" value="<%= locals.oldData ? oldData.price : null%>">
+                            <% if (locals.errors && errors.price) { %>
+                                <p class="errorFeedback">
+                                    <%= errors.price.msg %>
+                                </p>
+                            <% } %>
                         </div>
 
                         <div class="inputGroup">
                             <label for="productImage">Foto de producto:</label>
                             <br>
                             <input type="file" name="productImage" id="productImage">
+                            <% if (locals.errors && errors.productImage) { %>
+                                <p class="errorFeedback">
+                                    <%= errors.productImage.msg %>
+                                </p>
+                            <% } %>
                         </div>
                         
                         <div class="buttonGroup">
@@ -61,6 +96,7 @@
                 </div>
             </div>
         </main>
-            <%- include("partials/footer.ejs") %>
+        <%- include("partials/footer.ejs") %>
+        <script src="/javascript/createProduct.js"></script>
     </body>
 </html>
