@@ -89,6 +89,7 @@ const userController = {
         
         try{
         const errors = validationResult(req);
+        console.log(errors);
 
         if (!errors.isEmpty()){
             return res.render('register', {
@@ -115,7 +116,7 @@ const userController = {
             name: req.body.name,
             lastName: req.body.lastName,
             email: req.body.email,
-            avatar: req.file.filename, 
+            avatar: req.file ? req.file.filename:"default-img.png", 
             userRoll_id: 2,
             password: bcryptjs.hashSync(req.body.password, 10) 
         });

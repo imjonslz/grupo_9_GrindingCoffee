@@ -85,6 +85,28 @@ a{
     text-align: center;
     padding-bottom: 52px;
 }
+.warning{
+    width: 7%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.display{
+    display: block;
+}
+
+.errors{
+    margin: auto;
+    text-align: center;
+    color: red;
+    background-color: var(--colorTittleClear);
+/*     display: flex; */
+    width: 60%;
+/*     flex-wrap: wrap; */
+position: relative;
+}
+
 
 .inputGroup{
     margin-bottom: 16px;

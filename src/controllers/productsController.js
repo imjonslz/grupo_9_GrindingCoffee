@@ -1,6 +1,7 @@
 // *************** requerimos path *************** //
 const path = require('path');
 const fs = require("fs")
+const { validationResult } = require('express-validator');
 
 const productsFilePath = path.join(__dirname, '../data/productsCoffe.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -68,13 +69,26 @@ let detailController = {
     },
     CreateProcces: async(req, res) => {
         try{
+            /* AQUI EN ESTE CASO, TOCO TRAER LAS CATEGORIAS Y TAMAÑOS, YA QUE ACORDARSE QUE OSN TABLAS DIFERENTES Y DENTRO DE LA BASE DE DATOS DE PRODUCTOS ES UNA LLAVE FORANEA NADA MAS */
+            const errors = validationResult(req);
+            if (errors.errors.length > 0) {
+                {
+                   const categories = await db.Categories.findAll();
+                   const sizes = await db.Sizes.findAll();
+                    return res.render('createProducts',{ categories, sizes,
+                        errors: errors.mapped(), oldData: req.body
+                       
+                    });
+                }
+            }
 
-            await db.Products.create({
+
+              const productComplete = await db.Products.create({
                 productName: req.body.productName,
                 description: req.body.description,
                 /* acordarse que tanto en category como en size, estan recibiendo un numero, un id, y en la tabla principal de productos no tienen el nombre que tenian en el JSON */
-                category_id: req.body.category,
-                size_id: req.body.size,
+                category_id: req.body? req.body.category : 1,
+                size_id: req.body? req.body.size : 2,
                 price: parseInt(req.body.price),
                 productImage: req.file ? req.file.filename : "default-image.png"
                 
@@ -104,6 +118,19 @@ let detailController = {
     },
     ProcessEdit: async (req, res) => {
         try {
+            const errors = validationResult(req);
+            if (errors.errors.length > 0) {
+                {
+                    const singleProduct = await db.Products.findByPk(req.params.id);
+                   const categories = await db.Categories.findAll();
+                   const sizes = await db.Sizes.findAll();
+                    return res.render('editProducts',{ categories, sizes,singleProduct,
+                        errors: errors.mapped(), oldData: req.body
+                       
+                    });
+                }
+            }
+
             const productEdit = await db.Products.findByPk(req.params.id)
             await db.Products.update({
                 productName: req.body.productName,
