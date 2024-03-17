@@ -1,101 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<%- include("partials/head", {title:"Grinding Coffee: Tu Carrito", css:"carrito"}) %>
 
-<%- include("partials/head", {title:"Carrito", css:"carrito"}) %>
-
-<body>
-    <%- include("partials/nav.ejs") %>
-        <main>
-            <section class="main-container">
-                <section class="product-summary">
-                    <ul class="list">
-                        <li class="li-first">Producto</li>
-                        <li class="li-second">Cantidad</li>
-                        <li class="li-subtotal">Subtotal</li>
-                    </ul>
-                </section>
-                <section class="product-total">
-                    <ul class="list">
-                        <li class="li-first">
-                            <div class="product-info">
-                                <img src="/img/producto.jpg" alt="" class="img-product">
-                                <div class="product-description">
-                                    <p>Nombre producto</p>
-                                    <small>Precio:50$</small>
-                                    <a href="#" class="remove">Borrar</a>
-                                </div>
+    <body>
+        <%- include("partials/nav.ejs") %>
+            <main class="container">
+                <h1 class="mainTitle">Mi Carrito</h1>
+                <div class="card-container">
+                    <div class="card-cart">
+                    
+                        <div class="product">
+                            <img class="product-cartImg" src="/img/products/productImage-1705950356937.jpg">
+                            <div class="product-description">
+                                <p class="product-name">Café en Grano - Tostado Alto</p>
+                                <p class="product-price">$ 4570</p>  
                             </div>
-                        </li>
-                        <li class="li-boton li-second"><input type="number" placeholder="Cantidad" value="1"></li>
-                        <li class="list-precio">Precio</li>
-                    </ul>
-                    <ul class="list">
-                        <li class="li-first">
-                            <div class="product-info">
-                                <img src="/img/producto.jpg" alt="" class="img-product">
-                                <div class="product-description">
-                                    <p>Nombre producto</p>
-                                    <small>Precio:50$</small>
-                                    <a href="#" class="remove">Borrar</a>
-                                </div>
+                        </div>
+                        <div class="product">
+                            <img class="product-cartImg" src="/img/products/productImage-1705950659841.jpg">
+                            <div class="product-description">
+                                <p class="product-name">Café Molido Antioqueño</p>
+                                <p class="product-price">$ 4650</p>  
                             </div>
-                        </li>
-                        <li class="li-boton li-second"><input type="number" placeholder="Cantidad" value="1"></li>
-                        <li class="list-precio">Precio</li>
-                    </ul>
-                </section>
-                <div class="total-summary">
-                    <a href="#" class="comprar-boton">Comprar</a>
-                    <table>
-                        <tr>
-                            <td>Subtotal</td>
-                            <td class="second-td">$200.00</td>
-                        </tr>
-                        <tr>
-                            <td>Impuesto</td>
-                            <td class="second-td">$20.00</td>
-                        </tr>
-                        <tr>
-                            <td>Subtotal</td>
-                            <td class="second-td last-td">$220.00</td>
-                        </tr>
-                    </table>
-            </section>
-            </div>
-            <section class="highlight-products">
-                <h2>Productos que te podrian interesar por tu compra</h2>
+                        </div>
+                        <div class="product">
+                            <p class="product-name"><strong>Total: </strong>$ 9220</p>
+                        </div>
+                        <button class="mainButton" type="submit">Iniciar Compra</button>
+                        <form action="/allProducts" method="GET">
+                            <button class="secondaryButton" type="submit">Seguir Comprando</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+
+            <section class="marquee">
+                <h3 class="category">Productos Relacionados</h3>
+                <div class="products-marquee">
+                    <% products.forEach(product=> { %>
+                        <div class="product-marquee">
+                            <a href="/products/detail/<%= product.id %>">
+                                <img class="product-image" src="/img/products/<%= product.productImage%>" alt="<%= product.productName %>">
+                                <p class="product-name"><%= product.productName %></p>
+                                <p class="product-price">$<%= product.price%></p>
+                            </a>
+                        </div>
+                    <% }); %>
+                </div> 
             </section>
 
-            <section class="cards-container">
-                <section class="card">
-                    <img src="/img/producto.jpg" alt="Producto#" class="img-card">
-                    <a href="#">
-                        <h2>Agregar Producto</h2>
-                    </a>
-                </section>
-                <section class="card">
-                    <img src="/img/producto.jpg" alt="Producto#" class="img-card">
-                    <a href="#">
-                        <h2>Agregar Producto</h2>
-                    </a>
-                </section>
-                <section class="card">
-                    <img src="/img/producto.jpg" alt="Producto#" class="img-card">
-                    <a href="#">
-                        <h2>Agregar Producto</h2>
-                    </a>
-                </section>
-                <section class="card">
-                    <img src="/img/producto.jpg" alt="Producto#" class="img-card">
-                    <a href="#">
-                        <h2>Agregar Producto</h2>
-                    </a>
-                </section>
-            </section>
-        </main>
-
-        <%- include("partials/footer.ejs") %>
-</body>
+            <%- include("partials/footer.ejs") %>
+    </body>
 
 </html>

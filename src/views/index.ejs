@@ -1,75 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <%- include("partials/head", {title:"Grinding Coffe", css:"home"}) %>
 
     <body>
-        <%- include("partials/nav.ejs") %>  
+        <%- include("partials/nav.ejs") %> 
+        
         <div class="logoHero">
             <img src="/img/grindingCoffeeHero.svg" alt="Logo de Grinding Coffee">
         </div>
-        
-            <main class="container-main">
-                <h3 class="category">Cafe en grano:</h3>
-                <section class="container">
-                    <!-- acordarse que cuando se utiliza un for each o un ciclo for, lo que sea no va el simbolo < % = sino solamente < % -->
-                    <% EnGrano.forEach(product=> { %>
-                        <div class="product product1">
-                            <!-- LO DEL MULTER NO FUNCIONA CON LA RUTA IMG/PRODUCTS PORQUE EN EL INDEX, EN EL DETAIl HABRIA QUE CAMBIARLOS AGREGANDOLE LA RUTA COMPLETA PARA QUE LOS LEA, YA QUE SI SE LE PONE LA RUTA DEL MULTER ES COMO SINO EXISTIERA -->
-                            <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.productImage%>" alt="<%= product.productName %>"></a>
-                            <p><%= product.productName %></p>
-                        </div>
-                        <% }); %>
-                </section>
 
-                <section class="container-img">
-                    <div class="box box1">
-                        <!-- Div con Background-img -->
-                        <h3 class="h3-products h3">Todos nuestros productos</h3>
-                        <a href="/allProducts" class="see-more">Ver mas</a>
-                    </div>
-                    
-                    <div class="box box2">
-                        <!-- Div con Background-img -->
-                        <h3 class="h3-history h3">Nuestra historia</h3>
-                        <a href="" class="see-more">Ver mas</a>
-                    </div>
-                    
-                </section>
+        <main class="container-main">
+
+            <section class="coffees">
+                <h3 class="category">Cafe en Grano</h3>
+                <div class="products">
+                    <% EnGrano.forEach(product=> { %>
+                        <div class="product">
+                            <a href="/products/detail/<%= product.id %>">
+                                <img class="product-image" src="/img/products/<%= product.productImage%>" alt="<%= product.productName %>">
+                                <p class="product-name"><%= product.productName %></p>
+                                <p class="product-price">$<%= product.price%></p>
+                            </a>
+                        </div>
+                    <% }); %>
+                </div> 
+            </section>
+            
+            <section class="all-pruducts">
+                <h3 class="title-products">Todos nuestros productos</h3>
+                <a href="/allProducts" class="see-more">Ver mas</a>
+            </section>
                 
-                <h3 class="category marginTop">Cafe Molido:</h3>
-                <section class="recetas">
+            <section class="coffees">
+                <h3 class="category">Cafe Molido</h3>
+                <div class="products">
                     <% molido.forEach(product=> { %>
                         <div class="product">
-                            <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.productImage %>" alt=""></a>
-                        <p><%= product.productName %></p>
-                    </div>
+                            <a href="/products/detail/<%= product.id %>">
+                                <img class="product-image" src="/img/products/<%= product.productImage%>" alt="<%= product.productName %>">
+                                <p class="product-name"><%= product.productName %></p>
+                                <p class="product-price">$<%= product.price%></p>
+                            </a>
+                        </div>
                     <% }); %>
-                </section>
-
-                <section class="winner">
-                   <a href="/products/detail/<%= products[0].id %>" class="linkImg"><img src="/img/products/<%= products[0].productImage %>" alt="" class="imgMain"></a>
+                </div> 
+            </section>    
+            
+            <section class="winner">
+                <h3 class="category">Más Vendido</h3>
+                <article class="content-winner">
+                    <a class="link-winner" href="/products/detail/<%= products[0].id %>">
+                        <img class="img-winner" src="/img/products/<%= products[0].productImage %>">
+                    </a>
                     <div class="descrip-winner">
                         <h1><%= products[0].productName %></h1>
                         <p><%= products[0].description %></p>
-                        <a href="">Agregar al carrito</a>
+                        <button class="mainButton" type="submit">Agregar al carrito</button>
                     </div>
-                </section>
-                <section class="marquee-img">
-                    <div>
-                        <marquee behavior="" direction="left" loop="1000000">
-                            <div class="marq-box marq-box1">
-                                <%products.forEach(product=> { %>
-                               <a href="/products/detail/<%= product.id %>"> <img src="/img/products/<%= product.productImage %>" alt="<%= product.productName %>"></a>
-                                <% }); %>
-                            </div>
-                        </marquee>
-                    </div>
-                </section>
-            </main>
+                </article>    
+            </section>
 
-            <%- include("partials/footer.ejs") %>
-            
+            <section class="marquee">
+                <h3 class="category">Productos Destacados</h3>
+                
+                <div class="products-marquee">
+                    <% products.forEach(product=> { %>
+                        <div class="product-marquee">
+                            <a href="/products/detail/<%= product.id %>">
+                                <img class="product-image" src="/img/products/<%= product.productImage%>" alt="<%= product.productName %>">
+                                <p class="product-name"><%= product.productName %></p>
+                            </a>
+                        </div>
+                    <% }); %>
+                </div> 
+            </section> 
+
+        </main>
+        <%- include("partials/footer.ejs") %>  
     </body>
-
 </html>

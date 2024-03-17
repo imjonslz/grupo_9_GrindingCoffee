@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("partials/head", {title:"Grinding Coffee", css:"detail"}) %>
+<%- include("partials/head", {title:"Grinding Coffee: Prducto", css:"detail"}) %>
 
 <body>
     <!--/////////////////// HEADER ///////////////////-->
@@ -12,72 +12,53 @@
         <section class="productDetail">
             <div class="gallery">
                 <img src="/img/products/<%= singleProduct.productImage %>" alt="">
-                <!--<img src="/img/producto.jpg" alt="">
-                <img src="/img/producto.jpg" alt="">
-                <img src="/img/producto.jpg" alt="">
-                <img src="/img/producto.jpg" alt="">-->
             </div>
             <article class="product">
-                <h1 class="titleProduct"><%= singleProduct.productName %></h1>
-                <p class="descriptionProduct"><%= singleProduct.description %></p>
-                <p class="descriptionProduct">Precio del Producto: <%= singleProduct.price %> $</p>
-                <p class="descriptionProduct">Tamaño del producto: <%= singleProduct.sizes.size %> Gr</p>
-                <button class="addCart" type="submit">Agregar al carrito</button>
+                <div class="product-header">
+                    <h1 class="titleProduct"><%= singleProduct.productName %></h1>
+                    <p class="descriptionProduct"><%= singleProduct.description %></p>
+                </div>
+                <div class="product-content">
+                    <p class="descriptionProduct"><strong>Precio del Producto: </strong>$ <%= singleProduct.price %></p>
+                    <p class="descriptionProduct"><strong>Tamaño del producto: </strong><%= singleProduct.sizes.size %> Gr</p>
+                </div>
+                
+                <button class="mainButton" type="submit">Agregar al carrito</button>
                 <% if (locals.userRoll_id === 1) { %>
-                <a class="addCart" href="/products/edit/<%= singleProduct.id %>">Editar Producto</a>
-                <form action="/products/delete/<%= singleProduct.id %>?_method=DELETE" method="POST">
-                    <button class="addCart" type="submit">Borrar Producto</button>
-                </form>
+                    <div class="secondaryButton-group">
+                        <form action="/products/edit/<%= singleProduct.id %>" method="GET">
+                            <button class="secondaryButton" type="submit">Editar Producto</button>
+                        </form>
+                        <form action="/products/delete/<%= singleProduct.id %>?_method=DELETE" method="POST">
+                            <button class="secondaryButton" type="submit">Borrar Producto</button>
+                        </form>
+                    </div>
                 <% } %>
             </article>
         </section>
 
         <!--/////////////////// RELATED PRODUCTS ///////////////////-->
         <div class="container">
-            <section class="relatedProducts">
-                <h2 class="titleSection">Produtos relacionados</h2>
-                <div class="flexBox">
-                    <% relatedProducts.forEach(product => {%>
-                        
-                        <article class="card">
-                            <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.productImage %>" alt=""></a>
-                            <h2><%= product.productName%></h2>
-                            <p><%= product.description %></p>
-                            <p class="price"><%= product.price %> $</p>
-                        </article>
-                        <%}); %>
-                 <!--    <article class="card">
-                        <img src="/img/producto.jpg" alt="">
-                        <h2>Nombre del producto</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
-                        <p class="price">10.000 $</p>
-                    </article>
-                    <article class="card">
-                        <img src="/img/producto.jpg" alt="">
-                        <h2>Nombre del producto</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
-                        <p class="price">10.000 $</p>
-                    </article>
-                    <article class="card">
-                        <img src="/img/producto.jpg" alt="">
-                        <h2>Nombre del producto</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
-                        <p class="price">10.000 $</p>
-                    </article>
-                    <article class="card">
-                        <img src="/img/producto.jpg" alt="">
-                        <h2>Nombre del producto</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur</p>
-                        <p class="price">10.000 $</p>
-                    </article> -->
-                </div>
-
-            </section>
+            <section class="coffees">
+                <h3 class="category">Productos Relacionados</h3>
+                <div class="products-cards">
+                    <% relatedProducts.forEach(product=> { %>
+                        <div class="product-card">
+                            <a href="/products/detail/<%= product.id %>">
+                                <img class="product-image" src="/img/products/<%= product.productImage%>" alt="<%= product.productName %>">
+                                <p class="product-name"><%= product.productName %></p>
+                                <p class="product-price">$<%= product.price%></p>
+                            </a>
+                        </div>
+                    <% }); %>
+                </div> 
+            </section> 
         </div>
+
         <!--/////////////////// COMMENTS ///////////////////-->
         <div class="container">
             <section class="comments">
-                <h2 class="titleSection">¿Que dicen los que compraron este producto?</h2>
+                <h2 class="category">¿Que dicen los que compraron este producto?</h2>
                 <div class="flexBox">
                     <article class="comment">
                         <h2>Sheldon Strickland</h2>

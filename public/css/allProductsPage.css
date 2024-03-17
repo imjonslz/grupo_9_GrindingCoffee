@@ -17,11 +17,9 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-around;
+    gap: 16px;
+    justify-content: center;
 }
-/* .nav-section button{
-    
-} */
 
 /* ESTILOS - BARRA DE OPCIONES */
 body{
@@ -90,10 +88,6 @@ a{
 }
 
 
-
-
-
-
 /* Estilos de ALl productos */
 
 main .btnsSelect{
@@ -102,75 +96,74 @@ main .btnsSelect{
     padding: 1rem;
 }
 
-main .btnsSelect .btn{
-    padding: 1rem;
-    margin: 1.3rem;
-    border-radius: 1.5rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: 1px solid #5c2f05;
-    background-color: #f0ac6d;
-    color: #5c2f05;
-    justify-content: space-around;
+.secondaryButton{
+    margin: 2% 0;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--colorText);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: var(--colorText);
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.secondaryButton:hover{
+    background-color: var(--colorTittleDark);
+    color: #ffffff;
+} 
 
-main .btnsSelect .btn:hover{
-    border: 1px solid #ffd9b6;
-    background-color: #5c2f05;
-    color: #f0ac6d;
-    transition: 0.3s;
+.coffees{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 6rem;
 }
 
-main .container{
-    display: flex;
-    justify-content: center;
-    height: auto;
-}
-
-
-main .container .containerProducts{
+/*///////////// CARDS /////////////*/
+.products{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 2.2rem;
-    border-radius: 2rem;
-    background-color: #e4b28699;
+    gap: 1.5rem;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    justify-items: center;
 }
 
-main .container .containerProducts .product img{
-    /* width: 15rem; */
-    width: 100%;
-    height: 12rem;
-    border-radius: 2rem 2rem 0 0;
-}
-
-
-main .container .containerProducts .product{
-    align-items: center;
-    background-color: #ffffff96;
+.product{
+    background-color: #fff;
     margin: 1rem;
-    border-radius: 2rem 2rem 1rem 1rem;
-    height: 20rem;
-    width: 90%;
+    border-radius: 1rem;
+    width: 15rem;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     cursor: default;
     transition: all 400ms ease;
 }
 
-main .container .containerProducts .product:hover{
+.product:hover{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     transform: translateY(-3%);
 }
 
+.product-image{
+    width: 15rem;
+    height: 12rem;
+    border-radius: 1rem 1rem 0 0;
+}
 
-
-main .container .containerProducts .product p{
+.product-name{
     text-align: center;
-    font-size: 1.2rem;
-    padding: 1.5rem;
-    font-weight: bold;
-    color: #844000;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    color: var(--colorTittleDark);
+}
+.product-price{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--colorText);
+    padding-bottom: 16px;
 }
 
 /* /////////////////// FOOTER /////////////////// */
@@ -211,57 +204,62 @@ footer .flexBox{
     justify-content: center;
 }
 
-@media only screen and (max-width: 580px) {
-    main .container .containerProducts{
 
-        grid-template-columns: repeat(2, 1fr);
-        
+/* /////////////////// MEDIA QUERIES /////////////////// */
+@media (min-width: 360px){
+    main {
+        padding-top: 56px;
     }
-    .li-nav{
-        font-size: 12px;
-    }
-    main .btnsSelect .btn{
-        padding: 0.8rem;
-        margin: 0.4rem;
-        border-radius: 1.5rem;
-        font-size: 1rem;
-        font-weight: bold;
-        border: 1px solid #5c2f05;
-        background-color: #f0ac6d;
-        color: #5c2f05;
-    }
-    
-#logoHeader a img{
-    width: 100%;
-    min-width: 50px;
-}
-    
-}
-@media only screen and (max-width: 481px) {
-    main .container .containerProducts{
 
-        grid-template-columns: repeat(1, 1fr);
-        
+    .flexBoxUl{
+        display: none;
     }
-    .li-nav{
-        font-size: 9px;
+    .flexBoxNav{
+        justify-content: space-between;
     }
-    #logoHeader a img{
-        width: 100%;
-        min-width: 45px;
+    #logoHeader{
+        width: 72px;
+    } 
+    .containerNav{
+        height: 56px;
+    }
+
+
+
+    footer .flexBox {
+        justify-content: space-around;
     }
 }
-@media only screen and (max-width: 350px) {
-    main .container .containerProducts{
 
-        grid-template-columns: repeat(1, 1fr);
-        
+@media (min-width: 768px){
+    #logoHeader{
+        width: 88px;
     }
-    .li-nav{
-        font-size: 8px;
+    .containerNav{
+        height: 68px;
     }
-    #logoHeader a img{
-        width: 100%;
-        min-width: 40px;
+
+
+
+    footer .flexBox {
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1024px){
+    main {
+        padding-top: 68px;
+    }
+
+
+
+    .flexBoxUl{
+        display: flex;
+    }
+    .flexBoxNav{
+        justify-content: space-around;
+    }
+    .fa-bars{
+        display: none;
     }
 }

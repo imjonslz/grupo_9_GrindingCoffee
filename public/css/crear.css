@@ -224,133 +224,61 @@ footer .flexBox{
 .navFooter li{
     padding: 8px;
 }
-  
-@media screen and (min-width: 326px) and (max-width: 750px){
-
-    *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Open Sans', sans-serif;
-    }
-
-
-    header nav ul{
-        display: flex;
-        justify-content: center;
-        list-style: none;
-    }
-
-    header nav ul li{
-        margin: 0.2rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-
-    header nav ul li a{
-        text-decoration: none;
-/*         color: rgb(21, 21, 34); */
-        font-size: 1rem;
-        font-weight: bold;
-    }
-
-    header .headerImg{
-        display: flex;
-        background-image: url(/img/fondoimg.jpg);
-        width: 100%;
-        height: 20rem;
-    }
-
-    header .headerImg h1{
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-        padding-top: 9rem;
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #ffebda;
-    }
-
-    
-    footer {
-        background-color: var(--colorTittleDark);
-        color: snow;
-        padding: 1rem;
-        position: relative;
-        z-index: 1; /* Asegura que el footer esté por encima del contenido */
-    }
-    
-    footer .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    
-    footer .flexBox {
-        display: flex;
-    }
-    
-    footer section {
-        text-align: center;
-    }
-    
-    footer .navFooter ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    footer .navFooter li {
-        margin: 0.5rem;
-    }
-    
-    footer .navFooter a {
-        color: snow;
-        text-decoration: none;
-        font-size: 1rem;
-    }
-    
-    footer .socialMedia {
-        display: flex;
-        margin-left: auto;
-    }
-    
-    footer .socialMedia div {
-        margin: 0 0.5rem;
-    }
-    
-    footer .copy {
-        margin-top: 1rem;
-        font-size: 0.8rem;
-    }
-
+ /* /////////////////// MEDIA QUERIES /////////////////// */
+@media (min-width: 360px){
     main {
-        background-image: url("/img/CafeFondo.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 100vh;
-        margin-bottom: -60px;
-    }
-    
-
-    .cajacreate {
-        width: 80%;
-        margin: 5% 10%; 
+        padding-top: 56px;
     }
 
-    .inputcreate,
-    .fotoUsuario {
-        width: 80%;
-        margin: 5% 10%;
+    .flexBoxUl{
+        display: none;
+    }
+    .flexBoxNav{
+        justify-content: space-between;
+    }
+    #logoHeader{
+        width: 72px;
+    } 
+    .containerNav{
+        height: 56px;
     }
 
-    .h3 {
-        width: 60%;
-        margin: 5% 20%;
+
+
+    footer .flexBox {
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 768px){
+    #logoHeader{
+        width: 88px;
+    }
+    .containerNav{
+        height: 68px;
     }
 
-    .botones {
-        margin-top: 5%; 
+
+
+    footer .flexBox {
+        justify-content: flex-end;
     }
-   
- }
+}
+
+@media (min-width: 1024px){
+    main {
+        padding-top: 68px;
+    }
+
+
+
+    .flexBoxUl{
+        display: flex;
+    }
+    .flexBoxNav{
+        justify-content: space-around;
+    }
+    .fa-bars{
+        display: none;
+    }
+}

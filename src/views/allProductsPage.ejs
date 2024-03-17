@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("partials/head", {title:"Todos los productos", css:"allProductsPage"}) %>
+<%- include("partials/head", {title:"Grinding Coffee: Todos los Productos", css:"allProductsPage"}) %>
+
 <body>
     <%- include("partials/nav.ejs") %>
     <main>
         <div class="btnsSelect">
             <div class="nav-section">
-                <button class="btn category-btn active" data-category="">Todos</button>
-                <button class="btn category-btn active" data-category="CafeEnGrano">Grano</button>
-                <button class="btn category-btn active" data-category="CafeMolido">Molido</button>
+                <button class="secondaryButton" data-category="">Todos</button>
+                <button class="secondaryButton" data-category="CafeEnGrano">Grano</button>
+                <button class="secondaryButton" data-category="CafeMolido">Molido</button>
             </div>
         </div>
-        <section class="container">
-            <div class="containerProducts">
+        <section class="coffees">
+            <div class="products">
                 
             </div>
         </section>
@@ -38,32 +39,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function changeSection(cards) {
-        const sectionOther = document.querySelector('.containerProducts');
+        const sectionOther = document.querySelector('.products');
         sectionOther.innerHTML = cards;
     }
 
     const cards = {
         Todos: `
-            <% products.forEach(product => { %>
-                <div class="product product1">
-                    <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.productImage%>" alt="<%= product.productName %>"></a>
-                    <p><%= product.productName %></p>
+            <% products.forEach(product=> { %>
+                <div class="product">
+                    <a href="/products/detail/<%= product.id %>">
+                        <img class="product-image" src="/img/products/<%= product.productImage%>" alt="<%= product.productName %>">
+                        <p class="product-name"><%= product.productName %></p>
+                        <p class="product-price">$<%= product.price%></p>
+                    </a>
                 </div>
             <% }); %>
         `,  
         Grano: `
-            <% EnGrano.forEach(product => { %>
-                <div class="product product1">
-                    <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.productImage%>" alt="<%= product.productName %>"></a>
-                    <p><%= product.productName %></p>
+            <% EnGrano.forEach(product=> { %>
+                <div class="product">
+                    <a href="/products/detail/<%= product.id %>">
+                        <img class="product-image" src="/img/products/<%= product.productImage%>" alt="<%= product.productName %>">
+                        <p class="product-name"><%= product.productName %></p>
+                        <p class="product-price">$<%= product.price%></p>
+                    </a>
                 </div>
             <% }); %>
         `,
         Molido: `
-            <% molido.forEach(product => { %>
-                <div class="product product1">
-                    <a href="/products/detail/<%= product.id %>"><img src="/img/products/<%= product.productImage%>" alt="<%= product.productName %>"></a>
-                    <p><%= product.productName %></p>
+            <% molido.forEach(product=> { %>
+                <div class="product">
+                    <a href="/products/detail/<%= product.id %>">
+                        <img class="product-image" src="/img/products/<%= product.productImage%>" alt="<%= product.productName %>">
+                        <p class="product-name"><%= product.productName %></p>
+                        <p class="product-price">$<%= product.price%></p>
+                    </a>
                 </div>
             <% }); %>
         `,

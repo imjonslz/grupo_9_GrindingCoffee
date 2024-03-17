@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("partials/head", {title:"UserProfile", css:"profile"}) %>
+<%- include("partials/head", {title:"Grinding Coffee: Tu Perfil", css:"profile"}) %>
 
     <body>
         <%- include("partials/nav.ejs") %>
-            <main>
-                <div class="mainDiv">
-                    <div class="div1">
-
-                    </div>
-                    <div class="div2">
-                  
-                            <img src="/img/avatars/<%= user.avatar %>" alt="" class="avatarimg">
-              
-
-                            <h1 class="userName">Bienvenido: <%= user.name %> <%= user.lastName %>  </h1>
-                    </div>
-
-                        <div class="div3">
-                            
-                            <h2 class="userEmail">Email: <%= user.email %>  </h2>
+            <main class="container">
+                <h1 class="mainTitle">Tu Perfil</h1>
+                <div class="card-container">
+                    <div class="card-profile">
+                    
+                        <div class="card-header">
+                            <img class="card-image" src="/img/avatars/<%= user.avatar %>" alt="">
+                            <h2 class="card-title">Te damos la bienvenida</h1>
                         </div>
-                    </div>
 
-                    <div class="profile-container">
-                        <a href="/user/editProfile" class="edit-profile">Editar Perfil</a>
-                    </div>
+                        <div class="card-content">
+                            <p class="userDescription"><strong>Nombre: </strong><%= user.name %> <%= user.lastName %>  </p>   
+                            <p class="userDescription"><strong>Correo Electrónico: </strong><%= user.email %>  </p>
+                        </div>
+                    
+                        <form class="card-footer" action="/user/editProfile" method="GET">
+                            <button class="secondaryButton" type="submit">Editar Perfil</button>
+                        </form>
 
+                    </div>
+                </div>
             </main>
             <%- include("partials/footer.ejs") %>
     </body>

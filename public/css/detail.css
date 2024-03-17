@@ -91,67 +91,128 @@ a{
 }
 
 .product{
-    padding: 80px;
-    width: 50%;
+    width: 40%;
+    margin: auto;
 }
-
+.product-header{
+    padding-bottom: 24px;
+}
+.product-content{
+    padding-bottom: 24px;
+}
 .titleProduct{
     font-size: 2.5em;
     color: var(--colorText);
-    padding-bottom: 16px;
 }
 
 .descriptionProduct{
     font-size: 1.3em;
-    color: #222224;
-    padding-bottom: 16px;
+    color: var(--colorTittleDark);
 }
 
-.addCart{
-    background-color: var(--colorText);
-    padding: 24px 40px;
-    border-radius: 4px;
-    color: var(--colorTittleClear);
+.product .mainButton{
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    font-size: 1rem;
     border: none;
-    font-size: 1.3em;
-    margin-top: 40px;
+    border-radius: 4px;
     cursor: pointer;
+    background-color: var(--colorText);
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.product .mainButton:hover{
+    background-color: var(--colorTittleDark);
+    
+}
+
+.product .secondaryButton{
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--colorText);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: var(--colorText);
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.product .secondaryButton:hover{
+    background-color: var(--colorTittleDark);
+    color: #ffffff;
+} 
+
+.secondaryButton-group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.secondaryButton-group form{
+    width: 49%;
 }
 
 /*/////////////////// RELATED PRODUCTS ///////////////////*/
-
-.relatedProducts{
-    padding-top: 80px;
+.coffees{
+    width: 90%;
+    margin: auto;
 }
 
-.titleSection{
-    font-size: 2em;
-    color: var(--colorText);
-    padding-bottom: 40px;
+.category{
+    display: block;
+    font-size: 3rem;
     text-align: center;
+    margin: 60px 0px 40px 0px;
+    color: #833f00;
+ }
+
+.products-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.card{
-    background-color: #ffffff ;
-    max-width: 224px;
-    color: #222224;
-    box-shadow: 0px 0px 8px 4px #5c2f0512;
-    border-radius: 8px;
-    padding: 1em;
+.product-card{
+    background-color: #fff;
+    margin: 1rem;
+    border-radius: 1rem;
+    width: 15rem;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
 }
 
-.card img{
-    width: 100%;
+.product-card:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3%);
 }
 
-.card h2{
-    font-size: 1.5em;
+.product-image{
+    width: 15rem;
+    height: 12rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.product-name{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    color: var(--colorTittleDark);
+}
+.product-price{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
     color: var(--colorText);
-    padding: 0.5em 0;
-}
-
-.price{
-    font-weight: bold;
+    padding-bottom: 16px;
 }
 
 /*/////////////////// COMMENTS ///////////////////*/
@@ -212,4 +273,79 @@ footer .flexBox{
 
 .navFooter li{
     padding: 8px;
+}
+
+/* /////////////////// MEDIA QUERIES /////////////////// */
+@media (min-width: 360px){
+    main {
+        padding-top: 56px;
+    }
+
+    .flexBoxUl{
+        display: none;
+    }
+    .flexBoxNav{
+        justify-content: space-between;
+    }
+    #logoHeader{
+        width: 72px;
+    } 
+    .containerNav{
+        height: 56px;
+    }
+
+    .productDetail{
+        flex-direction: column;
+    }
+    .gallery{
+        width: 100%;
+    }
+    .product{
+        width: 90%;
+        margin: auto;
+    }
+
+    footer .flexBox {
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 768px){
+    #logoHeader{
+        width: 88px;
+    }
+    .containerNav{
+        height: 68px;
+    }
+
+    footer .flexBox {
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1024px){
+    main {
+        padding-top: 68px;
+    }
+
+    .flexBoxUl{
+        display: flex;
+    }
+    .flexBoxNav{
+        justify-content: space-around;
+    }
+    .fa-bars{
+        display: none;
+    }
+
+    .productDetail{
+        flex-direction: row;
+    }
+    .gallery{
+        width: 50%;
+    }
+    .product{
+        width: 40%;
+        margin: auto;
+    }
 }
