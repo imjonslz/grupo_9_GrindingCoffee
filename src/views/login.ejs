@@ -8,19 +8,24 @@
             <div class="container">
                 <h2 class="mainTitle">Iniciar sesión<i class="fa-solid fa-mug-saucer fa-l"></i></h2>
                 <div class="flexBox">
-                    <form action="/user/login" method="POST">
+                    <div class="errorFeedback">
+                        <ul class="errors ">
+
+                        </ul>
+                    </div>
+                    
+                    <form action="/user/login" method="POST" id="logForm">
+                        <ul class="errors errorFeedback">
+
+                        </ul>
                         <div class="inputGroup">
                             <label for="email">Correo electrónico:</label>
-                            <input class="inputDefault" type="email" name="email">
-                            <% if (locals.errors && errors.email) { %>
-                                <p class="errorFeedback">
-                                    <%= errors.email.msg %>
-                                </p>
-                            <% } %>
+                            <input class="inputDefault email" type="email" name="email">
+                            
                         </div>
                         <div class="inputGroup">
                             <label for="password">Contraseña:</label>
-                            <input class="inputDefault" type="password" name="password">
+                            <input class="password  inputDefault" type="password" name="password">
                             <% if (locals.errors && errors.password) { %>
                                 <p class="errorFeedback">
                                     <%= errors.password.msg %>
@@ -39,6 +44,7 @@
                     </form>
                 </div>
             </div>
+            <script src="/javascript/login.js"></script>
         </main>
         <%- include("partials/footer.ejs") %>      
     </body>
