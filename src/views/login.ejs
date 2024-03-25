@@ -21,16 +21,12 @@
                         <div class="inputGroup">
                             <label for="email">Correo electrónico:</label>
                             <input class="inputDefault email" type="email" name="email">
-                            
+                            <p id="emailError" class="errorFeedback"></p>
                         </div>
                         <div class="inputGroup">
                             <label for="password">Contraseña:</label>
                             <input class="password  inputDefault" type="password" name="password">
-                            <% if (locals.errors && errors.password) { %>
-                                <p class="errorFeedback">
-                                    <%= errors.password.msg %>
-                                </p>
-                            <% } %>
+                            <p id="passwordError" class="errorFeedback"></p>
                         </div>
 
                         <label for="remember_user" class="remember_user">
