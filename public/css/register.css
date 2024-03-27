@@ -102,6 +102,7 @@ a{
     color: red;
     font-weight: 600;
     margin-bottom: 16px;
+    list-style: none;
 }
 
 label{

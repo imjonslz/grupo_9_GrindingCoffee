@@ -3,43 +3,42 @@ let form = document.querySelector("#logForm")
 let emailError = document.querySelector("#emailError");  
 let passwordError = document.querySelector("#passwordError");
 form.addEventListener("submit", function(event){
-    event.preventDefault();
-      
+    
     let emailInput = document.querySelector("input.email");
     let passwordInput = document.querySelector("input.password")
-    let errorsEmail = [];
-    let errorsPassword = []
+    let emailList = [];
+    let passwordList = [];
     let emailReg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     console.log(emailReg.test(emailInput.value));
 
     if(emailInput.value == ""){
-        errorsEmail.push("El email es obligatorio.");
+        emailList.push("El email es obligatorio.");
     }else if(!emailReg.test(emailInput.value)){
-        errorsEmail.push("El email debe ser válido.");
+        emailList.push("El email debe ser válido.");
     }
     if(passwordInput.value == ""){
-        errorsPassword.push("La contraseña es obligatoria.");
+        passwordList.push("La contraseña es obligatoria.");
     }
     
-    if(errorsEmail.length > 0){
+    if(emailList.length > 0){
 
         event.preventDefault();
 
         emailError.innerHTML = "";
 
-        errorsEmail.forEach( error =>{
+        emailList.forEach( error =>{
             emailError.innerHTML += "<li>" + error + "</li>"
         })
         
         
     };
-    if(errorsPassword.length > 0){
+    if(passwordList.length > 0){
 
         event.preventDefault();
 
         passwordError.innerHTML = "";
 
-        errorsPassword.forEach( error =>{
+        passwordList.forEach( error =>{
             passwordError.innerHTML += "<li>" + error + "</li>"
         })
         

@@ -23,6 +23,7 @@
                                         <%= errors.name.msg %>
                                     </p>
                                 <% } %>
+                                <ul id="nameError" class="errorFeedback"></ul>
                             </div>
                             <div class="inputGroup">
                                 <label for="lastName">Apellido:</label>
@@ -33,6 +34,7 @@
                                         <%= errors.lastName.msg %>
                                     </p>
                                 <% } %>
+                                <ul id="lastNameError" class="errorFeedback"></ul>
                             </div>
                             <div class="inputGroup">
                                 <label for="email">Correo electrónico:</label>
@@ -43,6 +45,7 @@
                                         <%= errors.email.msg %>
                                     </p>
                                 <% } %>
+                                <ul id="emailError" class="errorFeedback"></ul>
                             </div>
                             <div class="inputGroup">
                                 <label>Foto de perfil:</label>
@@ -53,6 +56,7 @@
                                         <%= errors.avatar.msg %>
                                     </p>
                                 <% } %>
+                                <ul id="fileError" class="errorFeedback"></ul>
                             </div>
                             <div class="inputGroup">
                                 <label for="password">Contraseña:</label>
@@ -62,6 +66,7 @@
                                         <%= errors.password.msg %>
                                     </p>
                                 <% } %>
+                                <ul id="passwordError" class="errorFeedback"></ul>
                             </div>
                             <div class="buttonGroup">
                                 <button class="mainButton" type="submit">Registrarse</button>

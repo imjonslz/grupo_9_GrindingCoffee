@@ -1,54 +1,110 @@
-let form = document.querySelector("#regForm")
-let errorsUser = document.querySelector(".errors");  
-form.addEventListener("submit", function(event){
-    event.preventDefault();
-    
 
+
+let form = document.querySelector("#regForm");
+let nameError = document.querySelector("#nameError");
+let lastNameError = document.querySelector("#lastNameError");
+let emailError = document.querySelector("#emailError");  
+let fileError = document.querySelector("#fileError");
+let passwordError = document.querySelector("#passwordError");
+form.addEventListener("submit", function(event){
+    
     let nameInput = document.querySelector("input.name");
     let lastNameInput = document.querySelector("input.lastName");
     let emailInput = document.querySelector("input.email");
     let fileInput = document.querySelector("input.file");
     let passwordInput = document.querySelector("input.password");
     
-    let errorsList = [];
+    let nameList = [];
+    let lastNameList = [];
+    let emailList = [];
+    let fileList = [];
+    let passwordList = [];
     let emailReg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     console.log(emailReg.test(emailInput.value));
-    let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+    let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif|\.JPG|\.JPEG|\.PNG|\.GIF)$/i;
 
     if (nameInput.value == "") {
-        errorsList.push("El nombre es obligatorio.");
+        nameList.push("El nombre es obligatorio.");
     } else if (nameInput.value.length < 2) {
-        errorsList.push("El nombre debe tener al menos 2 caracteres.");
+        nameList.push("El nombre debe tener al menos 2 caracteres.");
     }
     if (lastNameInput.value == "") {
-        errorsList.push("El apellido es obligatorio.");
+        lastNameList.push("El apellido es obligatorio.");
     } else if (lastNameInput.value.length < 2) {
-        errorsList.push("El apellido debe tener al menos 2 caracteres.");
+        lastNameList.push("El apellido debe tener al menos 2 caracteres.");
     }
     if(emailInput.value == ""){
-        errorsList.push("El email es obligatorio.");
+        emailList.push("El email es obligatorio.");
     }else if(!emailReg.test(emailInput.value)){
-        errorsList.push("El email debe ser válido.");
+        emailList.push("El email debe ser válido.");
     }
     if(!fileInput.files[0]){
-        errorsList.push("Porfavor seleccione una imagen de perfil")
-    }else if(!allowedExtensions.exec(fileInput.files[0])){
-        errorsList.push("Porfavor seleccione un archivo de tipo JPG, JPEG, PNG o GIF.")
+        fileList.push("Porfavor seleccione una imagen de perfil")
+    }else if(!allowedExtensions.exec(fileInput.files[0].toLowerCase())){
+        fileList.push("Porfavor seleccione un archivo de tipo JPG, JPEG, PNG o GIF.")
     }
     if(passwordInput.value == ""){
-        errorsList.push("La contraseña es obligatoria.");
+        passwordList.push("La contraseña es obligatoria.");
     }else if(passwordInput.value.length <8){
-        errorsList.push("La contraseña debe tener almenos 8 caracteres.")
+        passwordList.push("La contraseña debe tener almenos 8 caracteres.")
     }
     
-    if(errorsList.length > 0){
+    if(nameList.length > 0){
 
         event.preventDefault();
 
-        errorsUser.innerHTML = "";
+        nameError.innerHTML = "";
 
-        errorsList.forEach( error =>{
-            errorsUser.innerHTML += "<li>" + error + "<li>"
+        nameList.forEach( error =>{
+            nameError.innerHTML += "<li>" + error + "</li>"
+        })
+        
+        
+    }
+    if(lastNameList.length > 0){
+
+        event.preventDefault();
+
+        lastNameError.innerHTML = "";
+
+        lastNameList.forEach( error =>{
+            lastNameError.innerHTML += "<li>" + error + "</li>"
+        })
+        
+        
+    }
+    if(emailList.length > 0){
+
+        event.preventDefault();
+
+        emailError.innerHTML = "";
+
+        emailList.forEach( error =>{
+            emailError.innerHTML += "<li>" + error + "</li>"
+        })
+        
+        
+    }
+    if(fileList.length > 0){
+
+        event.preventDefault();
+
+        fileError.innerHTML = "";
+
+        fileList.forEach( error =>{
+            fileError.innerHTML += "<li>" + error + "</li>"
+        })
+        
+        
+    }
+    if(passwordList.length > 0){
+
+        event.preventDefault();
+
+        passwordError.innerHTML = "";
+
+        passwordList.forEach( error =>{
+            passwordError.innerHTML += "<li>" + error + "</li>"
         })
         
         
